@@ -1,0 +1,60 @@
+// =======================================
+// =======================================
+// =======================================
+// Fonts
+$Main-Header-Font: "Cairo", sans-serif;
+$Main-Body-Font: "Almarai", sans-serif;
+
+.text-main-headers {
+  font-family: $Main-Header-Font;
+}
+// =======================================
+// =======================================
+// =======================================
+// Colors
+$main-color: #005bb9;
+$secondary-color: #fced2e;
+$third-Color: #6ec1e4;
+
+// Text
+.Text-Main {
+  color: $main-color;
+}
+.Text-Secondary {
+  color: #fced2e;
+}
+.Text-Third {
+  color: $third-Color;
+}
+
+.AR {
+  direction: rtl;
+}
+
+.text-shadow{
+  text-shadow: 1px 1px #558abb;
+
+}
+
+// background
+.Bg-Main {
+  background-color: $main-color;
+  color: white;
+}
+.Bg-Secondary {
+  background-color: #fced2e;
+  color: black;
+}
+.Bg-Third {
+  background-color: $third-Color;
+  color: black;
+}
+
+// border
+
+.border-main {
+  border-color: $main-color;
+}
+.border-secondary {
+  border-color: $secondary-color;
+}

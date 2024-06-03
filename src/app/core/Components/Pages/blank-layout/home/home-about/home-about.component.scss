@@ -1,0 +1,28 @@
+
+:has(.collapse.show.one)  {
+  .one.fa-solid.fa-circle-check {
+    display: none;
+  }
+
+    .one.fa-solid.fa-caret-up {
+      display: inline;
+    }
+}
+  .one.fa-solid.fa-caret-up {
+    display: none;
+  }
+
+
+
+:has(.collapse.show.two)  {
+  .two.fa-solid.fa-circle-check {
+    display: none;
+  }
+
+    .two.fa-solid.fa-caret-up {
+      display: inline;
+    }
+}
+  .two.fa-solid.fa-caret-up {
+    display: none;
+  }

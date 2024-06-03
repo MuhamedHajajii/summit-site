@@ -1,0 +1,15 @@
+<!-- Modal -->
+<div (click)="onCloseVideoClick()" class="LightBoxContainer">
+  <div class="lightBoxContent container" (click)="stopPropegation($event)">
+    <div class="text-end">
+      <button (click)="onCloseVideoClick()" class="btn-close btn-main"></button>
+    </div>
+    <video
+      class="w-100"
+      src="assets/videos/Home - Eduverse.mp4"
+      controls
+      preload="auto"
+      autoplay
+    ></video>
+  </div>
+</div>

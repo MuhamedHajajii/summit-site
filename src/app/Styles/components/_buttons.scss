@@ -1,0 +1,26 @@
+@import "variables";
+.btn {
+  background-color: transparent;
+  border: transparent;
+}
+.btn-main {
+  background-color: $main-color;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 100vh;
+  &:hover {
+    filter: brightness(110%);
+    background-color: $main-color !important;
+  }
+}
+.btn-secondary {
+  background-color: $secondary-color;
+  color: $main-color;
+  padding: 5px 15px;
+  border-radius: 100vh;
+  &.btn:hover {
+    filter: brightness(110%);
+    background-color: black !important;
+  }
+}
+
