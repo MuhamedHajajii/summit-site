@@ -1,52 +1,12 @@
-<section class="h-100 position-relative z-2">
-  <div class="container-fluid">
-    <div
-      class="row position-relative z-2 Font-Secondary-Cairo justify-content-center align-items-center flex-column-reverse flex-md-row"
-    >
-      <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
-        <!-- ====================================== -->
-        <!-- Open Video Button -->
-        <!-- ====================================== -->
-        <div
-          (click)="onPlayVideoClick()"
-          role="button"
-          tabindex="0"
-          class="d-flex justify-content-center flex-column position-relative h-100"
-        >
-          <div class="video__Image text-center">
-            <img
-              draggable="false"
-              class="w-75"
-              src="/assets/Video-BackGround.png"
-              alt="Video-BackGround"
-            />
-          </div>
-          <div>
-            <img
-              class="position-absolute top-50 start-50 translate-middle w-25"
-              src="./assets/play-video.svg"
-              alt="play-video"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
-        <div
-          class="text-center d-flex justify-content-center align-items-center flex-column h-100"
-        >
-          <h1 class="mb-0 fw-bolder Text-Secondary text-uppercase">Summit</h1>
-          <p class="text-white fs-1 text-uppercase fw-bolder">
-            Step to the light
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ====================================== -->
+<!-- Home About (Second Section) -->
+<!-- ====================================== -->
+<app-home-header></app-home-header>
+<!-- ====================================== -->
+<!-- Home About (Second Section) -->
+<!-- ====================================== -->
 <app-home-about></app-home-about>
 <!-- ====================================== -->
-<!-- Video Component -->
+<!-- Home Core Values (Third Section) -->
 <!-- ====================================== -->
-@if(PlayVideo) {
-<app-home-video (closeVideo)="onPlayVideoClick()"></app-home-video>
-}
+<app-home-corevalues></app-home-corevalues>

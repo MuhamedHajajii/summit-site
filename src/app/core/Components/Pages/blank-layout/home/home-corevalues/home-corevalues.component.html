@@ -1,0 +1,70 @@
+<section>
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+    <hr class="border-3 py-4" />
+    <div>
+      <div class="text-center mb-5">
+        <h2 class="Text-Main AR Font-Secondary-Cairo fw-bold">
+          القيم الأساسية
+        </h2>
+        <p class="text-black fw-semibold">
+          <span class="Text-Third fw-bolder text-shadow">سامت</span> هي مؤسسة
+          تعليمية رائدة متخصصة في تقديم خدمات وحلول تعليمية عالية الجودة
+          للمتعلمين من مختلف الفئات العمرية والجنسيات
+        </p>
+      </div>
+      <div>
+        <owl-carousel-o [options]="customOptions">
+          @for (item of coreValues; track item; let i = $index) {
+          <ng-container>
+            <ng-template carouselSlide [id]="item.title">
+              <div class="Bg-Main ratio ratio-1x1 text-center rounded-4">
+                <div
+                  class="d-flex justify-content-evenly align-items-center p-3 flex-column"
+                >
+                  <div
+                    class="owl__Image"
+                    data-aos="flip-left"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="w-100"
+                      [src]="item.image"
+                      [alt]="item.title"
+                      [title]="item.title"
+                    />
+                  </div>
+                  <h3
+                    class="Text-Secondary my-2"
+                    data-aos="flip-left"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                  >
+                    {{ item.title }}
+                  </h3>
+                  <p
+                    class="text-white"
+                    data-aos="zoom-out-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                  >
+                    {{ item.pragraph }}
+                  </p>
+                </div>
+              </div>
+              <span
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                class="block mx-auto social-icons-container Bg-Main Text-Secondary mt-1 fw-bold"
+                >{{ i + 1 }}</span
+              >
+            </ng-template>
+          </ng-container>
+          }
+        </owl-carousel-o>
+      </div>
+    </div>
+    <hr class="border-3 py-4" />
+  </div>
+</section>

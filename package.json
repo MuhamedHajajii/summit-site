@@ -25,6 +25,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "express": "^4.18.2",
+    "ngx-owl-carousel-o": "^18.0.0",
     "owl.carousel": "^2.3.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

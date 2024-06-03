@@ -26,6 +26,14 @@ export const routes: Routes = [
         title: 'SUMMIT - عن الشركة',
       },
       {
+        path: 'courses',
+        loadComponent: () =>
+          import(
+            './../app/core//Components/Pages/blank-layout/courses/courses.component'
+          ).then((e) => e.CoursesComponent),
+        title: 'SUMMIT - فريقنا',
+      },
+      {
         path: 'home',
         loadComponent: () =>
           import(
