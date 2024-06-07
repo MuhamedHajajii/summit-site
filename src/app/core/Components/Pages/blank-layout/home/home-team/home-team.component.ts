@@ -27,12 +27,12 @@ export class HomeTeamComponent {
       Instractor_Job: 'مديرة تطوير الأعمال',
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/4.jpeg',
+      ImageUrl: 'assets/Home/Home-Team/4.jpg',
       Instractor_Name: 'احمد عبدالمقصود',
       Instractor_Job: 'الرئيس التنفيذي لشركة Amber & Oak',
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/5.jpeg',
+      ImageUrl: 'assets/Home/Home-Team/5.jpg',
       Instractor_Name: 'محمد شلتوت',
       Instractor_Job: 'المدير العام لشركة Summit',
     },

@@ -14,10 +14,10 @@ import { GalleriaModule } from 'primeng/galleria';
 export class HomeAboutComponent {
   value = 200;
   Images: string[] = [
-    'assets/Home/Home-About/1.png',
-    'assets/Home/Home-About/2.png',
-    'assets/Home/Home-About/3.png',
-    'assets/Home/Home-About/4.png',
+    'assets/Home/Home-About/1.jpg',
+    'assets/Home/Home-About/2.jpg',
+    'assets/Home/Home-About/3.jpg',
+    'assets/Home/Home-About/4.jpg',
   ];
 
   constructor(
