@@ -13,7 +13,7 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () =>
           import(
-            './../app/core//Components/Pages/blank-layout/home/home.component'
+            './../app/core/Components/Pages/blank-layout/home/home.component'
           ).then((e) => e.HomeComponent),
         title: 'SUMMIT - الرئيسية',
       },
@@ -21,7 +21,7 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () =>
           import(
-            './../app/core//Components/Pages/blank-layout/about/about.component'
+            './../app/core/Components/Pages/blank-layout/about/about.component'
           ).then((e) => e.AboutComponent),
         title: 'SUMMIT - عن الشركة',
       },
@@ -29,7 +29,7 @@ export const routes: Routes = [
         path: 'courses',
         loadComponent: () =>
           import(
-            './../app/core//Components/Pages/blank-layout/courses/courses.component'
+            './../app/core/Components/Pages/blank-layout/courses/courses.component'
           ).then((e) => e.CoursesComponent),
         title: 'SUMMIT - فريقنا',
       },
@@ -37,7 +37,7 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () =>
           import(
-            './../app/core//Components/Pages/blank-layout/ourteam/ourteam.component'
+            './../app/core/Components/Pages/blank-layout/ourteam/ourteam.component'
           ).then((e) => e.OurteamComponent),
         title: 'SUMMIT - فريقنا',
       },
@@ -45,7 +45,7 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () =>
           import(
-            './../app/core//Components/Pages/blank-layout/teching-tech/teching-tech.component'
+            './../app/core/Components/Pages/blank-layout/teching-tech/teching-tech.component'
           ).then((e) => e.TechingTechComponent),
         title: 'SUMMIT - فلسفتنا التعليمية',
       },
@@ -53,7 +53,7 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () =>
           import(
-            './../app/core//Components/Pages/blank-layout/contact/contact.component'
+            './../app/core/Components/Pages/blank-layout/contact/contact.component'
           ).then((e) => e.ContactComponent),
         title: 'SUMMIT - اتصل بنا',
       },

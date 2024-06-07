@@ -1,0 +1,37 @@
+<section class="py-5" data-aos="fade-left" data-aos-duration="1000">
+  <div class="container pb-5">
+    <div class="text-center">
+      <h2 class="AR Text-Main fw-bold mb-3">
+        فريق <span class="text-shadow text-uppercase">Summit</span>
+      </h2>
+      <p class="fw-semibold" data-aos="fade-left" data-aos-duration="1000">
+        يدعم مؤسيسة إديوفرس أونلاين فريق استثنائي يضم أكثر من 300 مدرس متفانٍ،
+        مهتمين بالتعليم وملتزمين بنجاح طلابنا. بالإضافة إلى ذلك، يتكون فريقنا
+        الإداري من حوالي 30 فرد من ذوي الخبرات الواسعة في مجال التعليم، يشرفون
+        على سير العمل بسلاسة وكفاءة. يشمل هذا الفريق رؤساء الأقسام، منسقي
+        المواد، ومديري المراحل. كما يضم الفريق مجموعة متميزة من موظفي إدخال
+        البيانات، ممثلي خدمة العملاء، ومتخصصي الدعم الفني.
+      </p>
+    </div>
+    <div data-aos="fade-right" data-aos-duration="1000">
+      <owl-carousel-o [options]="customOptions">
+        @for (slide of slidesStore; track slide ; let I = $index) {
+        <ng-container>
+          <ng-template carouselSlide [id]="slide.Instractor_Name">
+            <img
+              [height]="250"
+              [src]="slide.ImageUrl"
+              [alt]="slide.Instractor_Name"
+              [title]="slide.Instractor_Name"
+            />
+            <div class="text-center">
+              <p class="Text-Third fw-bolder">{{ slide.Instractor_Name }}</p>
+              <p>{{ slide.Instractor_Job }}</p>
+            </div>
+          </ng-template>
+        </ng-container>
+        }
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

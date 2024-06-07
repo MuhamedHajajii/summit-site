@@ -43,7 +43,6 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/owl.carousel/dist/owl.carousel.min.js",
               "node_modules/aos/dist/aos.js"
             ],
             "server": "src/main.server.ts",

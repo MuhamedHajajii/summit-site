@@ -8,7 +8,7 @@
           وخبرة السنين
         </h2>
         <p class="text-black fw-semibold">
-          <span class="Text-Third fw-bolder text-shadow">سامت</span> هي مؤسسة
+          <span class="Text-Third fw-bolder text-shadow">ساميت</span> هي مؤسسة
           تعليمية رائدة متخصصة في تقديم خدمات وحلول تعليمية عالية الجودة
           للمتعلمين من مختلف الفئات العمرية والجنسيات
         </p>
@@ -17,9 +17,10 @@
       <div class="row">
         <div class="col-md-6">
           <div class="row g-0" data-aos="fade-up" data-aos-duration="1000">
-            @for (item of Images; track $index) {
-            <div class="col-6 p-2">
+            @for (item of Images; track item ; let i = $index) {
+            <div (click)="toggleLightBox()" class="col-6 p-2 imgContainer">
               <img class="w-100" [src]="item" [alt]="item" />
+              <div class="layer"><i class="fa-regular fa-eye"></i></div>
             </div>
             }
           </div>
@@ -30,10 +31,12 @@
             تقدم الشركة خدماتها للقطاعين الحكومي والخاص، وتساعد الأفراد من مختلف
             الأعمار في تحقيق رؤيتهم بتوفير تعليم وتدريب عالي الجودة. يقع مقر
             الشركة في الرياض، بالمملكة العربية السعودية. على مدار السنوات
-            الماضية، قامت مؤسستنا الرائدة بتعليم أكثر من 3,000 طالب
+            الماضية، قامت مؤسستنا الرائدة بتعليم أكثر من 3,000 طالب
           </p>
           <div class="text-center">
-            <button class="btn btn-secondary px-5 rounded-pill">للمزيد</button>
+            <button class="btn btn-main-secondary px-5 rounded-pill">
+              للمزيد
+            </button>
           </div>
           <p class="mb-0 one">
             <button
@@ -90,3 +93,24 @@
     </div>
   </div>
 </section>
+
+@if (isLightBoxOpen) {
+<div class="LightBoxContainer" (click)="toggleLightBox()">
+  <div class="lightBoxContent" (click)="stopProp($event)">
+    <div class="card">
+      <p-galleria
+        [value]="Images"
+        [numVisible]="5"
+        [circular]="true"
+        [showItemNavigators]="true"
+        [showThumbnails]="false"
+        [containerStyle]="{ width: '100%' }"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item" style="width: 100%; display: block" />
+        </ng-template>
+      </p-galleria>
+    </div>
+  </div>
+</div>
+}

@@ -1,0 +1,42 @@
+p {
+  text-wrap: balance;
+}
+@import "variables";
+.owl__Image {
+  width: 140px;
+}
+:host ::ng-deep .owl-carousel .owl-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+:host ::ng-deep .owl-carousel .owl-nav .owl-prev,
+:host ::ng-deep .owl-carousel .owl-nav .owl-next {
+  background-color: $third-Color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+:host ::ng-deep .owl-carousel .owl-nav .owl-prev:hover,
+:host ::ng-deep .owl-carousel .owl-nav .owl-next:hover {
+  filter: brightness(110%);
+}
+
+:host ::ng-deep .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  left: 1px;
+  transform: translateY(-100%);
+}
+
+:host ::ng-deep .owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-100%);
+}

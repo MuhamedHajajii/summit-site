@@ -1,0 +1,47 @@
+<section data-aos="fade-up" data-aos-duration="500">
+  <div class="container my-5">
+    <div class="text-center mb-5">
+      <h2 class="Text-Main AR Font-Secondary-Cairo fw-bold">كورسات ساميت</h2>
+      <p class="text-black fw-semibold">
+        تمتلك <span class="Text-Third fw-bolder text-shadow">ساميت</span> واحدة
+        من أفضل المنصات التعليمية التي تستخدم لتدريس المناهج المختلفة
+      </p>
+    </div>
+    <div>
+      <div class="row g-4">
+        @for (item of Courses; track item ; let I = $index) {
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          class="col-12 col-sm-6 col-md-4 mb-5 mb-md-0 rounded-3"
+        >
+          <div class="flip-content h-100">
+            <div class="Front">
+              <img
+                class="w-100 h-100 rounded-3"
+                [src]="item.Image_Url"
+                alt="courses-1"
+              />
+            </div>
+            <div class="Back Bg-Main rounded-3">
+              <div
+                class="Back__content h-100 p-4 text-center d-flex justify-content-center align-items-center flex-column"
+              >
+                <div>
+                  <h2>{{ item.CourseName }}</h2>
+                  <p>
+                    {{ item.Course_Description }}
+                  </p>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-main-secondary px-5">المزيد</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

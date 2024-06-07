@@ -94,7 +94,7 @@ export class HomeCorevaluesComponent {
     pullDrag: true,
     dots: false,
     autoplay: true,
-    autoplaySpeed: 100,
+    autoplaySpeed: 500,
     margin: 10,
     navSpeed: 700,
     rtl: true,

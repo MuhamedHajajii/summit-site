@@ -7,7 +7,7 @@
           القيم الأساسية
         </h2>
         <p class="text-black fw-semibold">
-          <span class="Text-Third fw-bolder text-shadow">سامت</span> هي مؤسسة
+          <span class="Text-Third fw-bolder text-shadow">ساميت</span> هي مؤسسة
           تعليمية رائدة متخصصة في تقديم خدمات وحلول تعليمية عالية الجودة
           للمتعلمين من مختلف الفئات العمرية والجنسيات
         </p>
@@ -17,31 +17,34 @@
           @for (item of coreValues; track item; let i = $index) {
           <ng-container>
             <ng-template carouselSlide [id]="item.title">
-              <div class="Bg-Main ratio ratio-1x1 text-center rounded-4">
+              <div class="Bg-Main text-center rounded-4">
                 <div
-                  class="d-flex justify-content-evenly align-items-center p-3 flex-column"
+                  style="height: 350px"
+                  class="d-flex justify-content-evenly align-items-center p-2 flex-column"
                 >
-                  <div
-                    class="owl__Image"
-                    data-aos="flip-left"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                  >
-                    <img
-                      class="w-100"
-                      [src]="item.image"
-                      [alt]="item.title"
-                      [title]="item.title"
-                    />
+                  <div>
+                    <div
+                      class="owl__Image"
+                      data-aos="flip-left"
+                      data-aos-duration="1000"
+                      data-aos-delay="100"
+                    >
+                      <img
+                        class="w-100"
+                        [src]="item.image"
+                        [alt]="item.title"
+                        [title]="item.title"
+                      />
+                    </div>
+                    <h3
+                      class="Text-Secondary my-2"
+                      data-aos="flip-left"
+                      data-aos-duration="1000"
+                      data-aos-delay="100"
+                    >
+                      {{ item.title }}
+                    </h3>
                   </div>
-                  <h3
-                    class="Text-Secondary my-2"
-                    data-aos="flip-left"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                  >
-                    {{ item.title }}
-                  </h3>
                   <p
                     class="text-white"
                     data-aos="zoom-out-up"
@@ -53,10 +56,10 @@
                 </div>
               </div>
               <span
-                data-aos="flip-left"
+                data-aos="zoom-out-up"
                 data-aos-duration="1000"
-                data-aos-delay="100"
-                class="block mx-auto social-icons-container Bg-Main Text-Secondary mt-1 fw-bold"
+                data-aos-delay="300"
+                class="block mx-auto social-icons-container Bg-Main Text-Secondary my-1 fw-bold"
                 >{{ i + 1 }}</span
               >
             </ng-template>
@@ -65,6 +68,5 @@
         </owl-carousel-o>
       </div>
     </div>
-    <hr class="border-3 py-4" />
   </div>
 </section>

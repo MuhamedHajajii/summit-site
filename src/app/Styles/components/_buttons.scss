@@ -13,7 +13,7 @@
     background-color: $main-color !important;
   }
 }
-.btn-secondary {
+.btn-main-secondary {
   background-color: $secondary-color;
   color: $main-color;
   padding: 5px 15px;
@@ -21,6 +21,6 @@
   &.btn:hover {
     filter: brightness(110%);
     background-color: black !important;
+    color: white;
   }
 }
-

@@ -1,0 +1,34 @@
+@import "variables";
+
+img {
+  width: 150px;
+  margin: auto;
+}
+
+.footer {
+  background-color: #171f50;
+}
+
+.second ul li {
+  transition: 0.3s all;
+  cursor: pointer;
+  &:hover {
+    transform: translateX(-10px);
+    text-shadow: 1px 1px black;
+    color: $secondary-color;
+  }
+}
+ul.third li a {
+  transition: 0.3s all;
+  &:hover {
+    transform: translateX(-10px);
+    text-shadow: 1px 1px black;
+    color: $secondary-color !important;
+  }
+}
+.social-icons-container {
+  transition: 0.3s;
+  &:hover {
+    background-color: $secondary-color !important;
+  }
+}

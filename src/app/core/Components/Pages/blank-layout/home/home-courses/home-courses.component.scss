@@ -1,0 +1,29 @@
+.col-12 {
+  height: 300px;
+  perspective: 1000px;
+  &:hover {
+    .flip-content {
+      transform: rotateY(180deg);
+    }
+  }
+  .flip-content {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.5s all;
+  }
+  .Front,
+  .Back {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .Back {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    .Back__content {
+      transform: translateZ(90px);
+    }
+  }
+}
