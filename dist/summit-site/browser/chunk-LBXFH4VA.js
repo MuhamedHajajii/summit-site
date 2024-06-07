@@ -1,0 +1,1 @@
+import{da as i,fb as o,gb as a,vb as r,zb as c}from"./chunk-EXAFGS74.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["app-teching-tech"]],standalone:!0,features:[c],decls:2,vars:0,template:function(n,p){n&1&&(o(0,"p"),r(1,"teching-tech works!"),a())}});let t=e;return t})();export{d as TechingTechComponent};

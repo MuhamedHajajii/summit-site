@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{Z as i,bb as o,cb as a,rb as r,vb as c}from"./chunk-Y76N65N6.mjs";import"./chunk-VVCT4QZE.mjs";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["app-teching-tech"]],standalone:!0,features:[c],decls:2,vars:0,template:function(n,p){n&1&&(o(0,"p"),r(1,"teching-tech works!"),a())}});let t=e;return t})();export{d as TechingTechComponent};

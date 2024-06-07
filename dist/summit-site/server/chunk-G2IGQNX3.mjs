@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{Z as o,bb as a,cb as r,rb as i,vb as s}from"./chunk-Y76N65N6.mjs";import"./chunk-VVCT4QZE.mjs";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-ourteam"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,p){n&1&&(a(0,"p"),i(1,"ourteam works!"),r())}});let t=e;return t})();export{d as OurteamComponent};
