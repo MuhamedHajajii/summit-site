@@ -1,0 +1,24 @@
+<div>
+  <h3 class="h1 text-center fw-bold Text-Main mb-4">القيم الأساسية</h3>
+  <div>
+    <div class="row g-3">
+      @for (item of coreValues; track $index) {
+      <div class="col-12 col-md-4">
+        <div class="Core__Content p-5 h-100 shadow">
+          <div class="w-50 mx-auto">
+            <img
+              class="w-100 rounded-circle"
+              [src]="item.image"
+              [alt]="item.title"
+            />
+          </div>
+          <p class="text-center Text-Main fs-3 fw-bold my-3">
+            {{ item.title }}
+          </p>
+          <p class="text-center">{{ item.pragraph }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,7 +1,10 @@
 {
   "routes": [
     "/",
+    "/about",
+    "/contact",
     "/courses",
-    "/home"
+    "/home",
+    "/ourteam"
   ]
 }

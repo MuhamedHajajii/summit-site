@@ -24,3 +24,14 @@
     color: white;
   }
 }
+
+.btn-outline-main {
+  border: 2px solid $main-color;
+  border-radius: 100vh;
+  color: $main-color;
+  transition: 0.3s All;
+  &:hover {
+    background-color: $main-color;
+    color: white;
+  }
+}

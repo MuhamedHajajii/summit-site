@@ -1,0 +1,45 @@
+@import "variables";
+.Header {
+  height: 40vh;
+  background-image: url("/assets/About/backgrounds/about-backgroud.png");
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.75;
+    background-color: $main-color;
+    z-index: -1;
+  }
+}
+.section__Container {
+  &:hover {
+    .section__OneImage--Container {
+      transform: scale(0.95);
+    }
+  }
+  .section__OneImage--Container {
+    transition: 0.3s All;
+    position: relative;
+
+    img {
+      position: relative;
+      bottom: 10px;
+      left: 10px;
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 10px;
+      right: 10px;
+      bottom: -10px;
+      background-color: $main-color;
+      border-radius: 2rem;
+      z-index: 1;
+    }
+  }
+}

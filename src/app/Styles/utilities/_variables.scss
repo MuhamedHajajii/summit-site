@@ -15,7 +15,7 @@ $Main-Body-Font: "Almarai", sans-serif;
 $main-color: #005bb9;
 $secondary-color: #fced2e;
 $third-Color: #6ec1e4;
-
+$main-rgba: rgba(0, 0, 0, 0.5);
 // Text
 .Text-Main {
   color: $main-color;
@@ -31,9 +31,8 @@ $third-Color: #6ec1e4;
   direction: rtl;
 }
 
-.text-shadow{
+.text-shadow {
   text-shadow: 1px 1px #558abb;
-
 }
 
 // background

@@ -1,0 +1,60 @@
+@import "variables";
+.content__container {
+  .h1 {
+    font-size: 50px;
+  }
+  background-image: url("/assets/About/backgrounds/about-background-2.jpg");
+  background-size: contain;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $main-color;
+    opacity: 0.85;
+    z-index: 1;
+  }
+  .btn-One {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 100vh;
+    color: white;
+    transition: 0.3 All;
+    &:hover {
+      background-color: $main-color;
+      border-color: transparent;
+      animation: btn-animation infinite 0.5s alternate linear;
+    }
+  }
+  .btn-Two {
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 100vh;
+    color: $main-color;
+    transition: 0.3 All;
+    &:hover {
+      color: white;
+      background-color: $main-color;
+      border-color: white;
+      animation: btn-animation infinite 0.5s alternate linear;
+    }
+  }
+}
+
+@keyframes btn-animation {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}

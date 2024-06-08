@@ -1,3 +1,5 @@
+@import "variables";
+
 :has(.collapse.show.one) {
   .one.fa-solid.fa-circle-check {
     display: none;
@@ -34,7 +36,7 @@
   align-items: center;
   position: absolute;
   inset: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $main-rgba;
   z-index: 5;
   opacity: 0;
   transition: 0.3s all;
@@ -45,7 +47,6 @@
   opacity: 1;
 }
 
-@import "variables";
 .owl__Image {
   width: 140px;
 }
@@ -60,7 +61,7 @@
 
 :host ::ng-deep .owl-carousel .owl-nav .owl-prev,
 :host ::ng-deep .owl-carousel .owl-nav .owl-next {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $main-rgba;
   color: white;
   border: none;
   padding: 10px 20px;

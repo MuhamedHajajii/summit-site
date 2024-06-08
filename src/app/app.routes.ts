@@ -18,7 +18,7 @@ export const routes: Routes = [
         title: 'SUMMIT - الرئيسية',
       },
       {
-        path: 'home',
+        path: 'about',
         loadComponent: () =>
           import(
             './../app/core/Components/Pages/blank-layout/about/about.component'
@@ -34,7 +34,7 @@ export const routes: Routes = [
         title: 'SUMMIT - فريقنا',
       },
       {
-        path: 'home',
+        path: 'ourteam',
         loadComponent: () =>
           import(
             './../app/core/Components/Pages/blank-layout/ourteam/ourteam.component'
@@ -42,15 +42,7 @@ export const routes: Routes = [
         title: 'SUMMIT - فريقنا',
       },
       {
-        path: 'home',
-        loadComponent: () =>
-          import(
-            './../app/core/Components/Pages/blank-layout/teching-tech/teching-tech.component'
-          ).then((e) => e.TechingTechComponent),
-        title: 'SUMMIT - فلسفتنا التعليمية',
-      },
-      {
-        path: 'home',
+        path: 'contact',
         loadComponent: () =>
           import(
             './../app/core/Components/Pages/blank-layout/contact/contact.component'

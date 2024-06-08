@@ -1,0 +1,27 @@
+@import "variables";
+.Header {
+  height: 40vh;
+  background-image: url("/assets/About/backgrounds/about-backgroud.png");
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.75;
+    background-color: $main-color;
+    z-index: -1;
+  }
+}
+iframe {
+  height: 400px;
+  filter: brightness(100%) contrast(100%) saturate(0%) blur(0px)
+    hue-rotate(0deg);
+}
+.social-icons-container {
+  transition: 0.3s;
+  &:hover {
+    background-color: $secondary-color !important;
+  }
+}

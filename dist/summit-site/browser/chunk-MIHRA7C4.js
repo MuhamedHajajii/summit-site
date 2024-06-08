@@ -1,1 +1,0 @@
-import{da as o,fb as r,gb as i,vb as s,zb as a}from"./chunk-EXAFGS74.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-courses"]],standalone:!0,features:[a],decls:2,vars:0,template:function(n,p){n&1&&(r(0,"p"),s(1,"courses works!"),i())}});let t=e;return t})();export{d as CoursesComponent};

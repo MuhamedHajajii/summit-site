@@ -1,0 +1,16 @@
+@import "variables";
+.Header {
+  height: 40vh;
+  background-image: url("/assets/About/backgrounds/about-backgroud.png");
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.75;
+    background-color: $main-color;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,31 @@
+@import "variables";
+
+.section__Container {
+  &:hover {
+    .section__OneImage--Container {
+      transform: scale(0.95);
+    }
+  }
+  .section__OneImage--Container {
+    transition: 0.3s All;
+    position: relative;
+
+    img {
+      position: relative;
+      bottom: 10px;
+      left: 10px;
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      right: 5px;
+      bottom: -5px;
+      background-color: $main-color;
+      border-radius: 2rem;
+      z-index: 1;
+    }
+  }
+}
