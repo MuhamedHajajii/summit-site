@@ -10,14 +10,14 @@ import { Component } from '@angular/core';
 export class HomeCoursesComponent {
   Courses = [
     {
-      Image_Url: 'assets/Home/courses/1.jpg',
-      CourseName: 'Generative AI',
+      Image_Url: 'assets/Home/courses/2.jpg',
+      CourseName: 'British English',
       Course_Description:
         'مدرسة رائدة عبر الإنترنت مصممة خصيصًا للطلاب المصريين الذين يدرسون المنهج الحكومي المصري',
     },
     {
-      Image_Url: 'assets/Home/courses/2.jpg',
-      CourseName: 'British English',
+      Image_Url: 'assets/Home/courses/1.jpg',
+      CourseName: 'Generative AI',
       Course_Description:
         'مدرسة رائدة عبر الإنترنت مصممة خصيصًا للطلاب المصريين الذين يدرسون المنهج الحكومي المصري',
     },
@@ -29,13 +29,13 @@ export class HomeCoursesComponent {
     },
     {
       Image_Url: 'assets/Home/courses/4.jpg',
-      CourseName: 'Spanish',
+      CourseName: 'German',
       Course_Description:
         'مدرسة رائدة عبر الإنترنت مصممة خصيصًا للطلاب المصريين الذين يدرسون المنهج الحكومي المصري',
     },
     {
       Image_Url: 'assets/Home/courses/5.jpg',
-      CourseName: 'German',
+      CourseName: 'Spanish',
       Course_Description:
         'مدرسة رائدة عبر الإنترنت مصممة خصيصًا للطلاب المصريين الذين يدرسون المنهج الحكومي المصري',
     },

@@ -25,10 +25,22 @@ export class OurteamComponent {
     },
     {
       ImageUrl: 'assets/Home/Home-Team/2.jpg',
-      Instractor_Name: 'مايكل ميشيل',
-      Instractor_Job: 'استشارى التطوير بمدرسه ساميت و رئيس قسم اللغه الأسبانيه',
+      Instractor_Name: 'عبدالرحمن العربي',
+      Instractor_Job: 'استشاري التطوير بمدرسه ساميت',
       Instractor_Info: [
-        'حاصل على ماجستير الترجمه ف اللغه الأسبانيه من كليه الألسن جامعه القاهره',
+        'خريج جامعه علوم اسكندريه قسم بايوكمستري بتقدير امتياز مع مرتبه الشرف',
+        'ساهم ف تطوير اكتر من مدرسه اون لاين بدايته من المراحل الاولي وصولا لمراحل متقدمه',
+        'مقدم دورات في تدريب المعلمين علي طرق التدريس اعتمادا علي النمط السويدي',
+        'خبره في مجال تطوير المدارس الاون لاين 5 سنين',
+        'درست لاكتر من ٢٠٠٠ طالب اون لاين واكتر من ١٢٠٠ اوف لاين',
+      ],
+    },
+    {
+      ImageUrl: 'assets/Home/Home-Team/3.jpg',
+      Instractor_Name: 'مايكل ميشيل',
+      Instractor_Job: ' مدير الجوده و الاعتماد الاكاديمى',
+      Instractor_Info: [
+        'حاصل على ماجستير الترجمه ف اللغه الأسبانيه من كليه الألسن جامعه عين شمس',
         'مساعد سفيرة جمهورية الدومينيكان',
         'business specialist في مايكروسوفت',
         'professional advisor في تومتوم',
@@ -36,7 +48,7 @@ export class OurteamComponent {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/3.jpg',
+      ImageUrl: 'assets/Home/Home-Team/4.jpg',
       Instractor_Name: 'ماريان اشرف',
       Instractor_Job: 'مديره الأرشاد الأكاديمى ومسئوله قسم اللغه الألمانيه',
       Instractor_Info: [
@@ -48,29 +60,14 @@ export class OurteamComponent {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/4.jpg',
-      Instractor_Name: 'احمد عبدالمقصود',
-      Instractor_Job: 'الرئيس التنفيذي لشركة Amber & Oak',
-      Instractor_Info: [
-        'باحث دكتوراه، جامعة باكنغهام، المملكة المتحدة',
-        'ماجستير في تدريس اللغة الإنجليزية للناطقين بلغات أخرى TESOL، جامعة سندرلاند، المملكة المتحدة',
-        'استشاري تعليمي وممثل لمؤسسة الاعتماد الأمريكية Array Global Educational Services',
-        'عضو سابق في لجنة الاعتماد AIAA',
-        'وكيل و ورئيس قسم ببعض المدارس الدولية سابقاً مؤلف سلسلة كتب “I Write Right',
-        'حاصل على CELTA، TESOL، وشهادة Cambridge Train the Trainer',
-      ],
-    },
-    {
       ImageUrl: 'assets/Home/Home-Team/5.jpg',
-      Instractor_Name: 'محمد شلتوت',
-      Instractor_Job: 'المدير العام لشركة Summit',
+      Instractor_Name: 'احمد سراج',
+      Instractor_Job: 'مدير تكنولوجيا التعليم',
       Instractor_Info: [
-        'باحث دكتوراه، جامعة باكنغهام، المملكة المتحدة',
-        'ماجستير في تدريس اللغة الإنجليزية للناطقين بلغات أخرى TESOL، جامعة سندرلاند، المملكة المتحدة',
-        'استشاري تعليمي وممثل لمؤسسة الاعتماد الأمريكية Array Global Educational Services',
-        'عضو سابق في لجنة الاعتماد AIAA',
-        'وكيل و ورئيس قسم ببعض المدارس الدولية سابقاً مؤلف سلسلة كتب “I Write Right',
-        'حاصل على CELTA، TESOL، وشهادة Cambridge Train the Trainer',
+        'بكالريوس حاسبات وذكاء اصطناعى جامعة بنها',
+        'ITI intensive code camp grad',
+        'Software Quality control Engineer at Systems Egypt',
+        'Software Quality control Engineer at Banque misr',
       ],
     },
     {

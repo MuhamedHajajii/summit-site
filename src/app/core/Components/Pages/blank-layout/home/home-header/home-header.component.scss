@@ -34,3 +34,10 @@ p {
   font-size: 75px;
   line-height: 0;
 }
+.lamp__SVG {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  transform: rotate(30deg) translateY(-24%);
+  padding-left: 5px;
+}

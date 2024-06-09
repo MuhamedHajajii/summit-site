@@ -18,23 +18,23 @@ export class HomeTeamComponent {
     },
     {
       ImageUrl: 'assets/Home/Home-Team/2.jpg',
-      Instractor_Name: 'مايكل ميشيل',
-      Instractor_Job: 'استشارى التطوير بمدرسه ساميت و رئيس قسم اللغه الأسبانيه',
+      Instractor_Name: 'عبدالرحمن العربي',
+      Instractor_Job: 'استشاري التطوير بمدرسه ساميت',
     },
     {
       ImageUrl: 'assets/Home/Home-Team/3.jpg',
+      Instractor_Name: 'مايكل ميشيل',
+      Instractor_Job: 'مدير الجوده و الاعتماد الاكاديمى',
+    },
+    {
+      ImageUrl: 'assets/Home/Home-Team/4.jpg',
       Instractor_Name: 'ماريان اشرف',
       Instractor_Job: 'مديره الأرشاد الأكاديمى ومسئوله قسم اللغه الألمانيه',
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/4.jpg',
-      Instractor_Name: 'احمد عبدالمقصود',
-      Instractor_Job: 'الرئيس التنفيذي لشركة Amber & Oak',
-    },
-    {
       ImageUrl: 'assets/Home/Home-Team/5.jpg',
-      Instractor_Name: 'محمد شلتوت',
-      Instractor_Job: 'المدير العام لشركة Summit',
+      Instractor_Name: 'احمد سراج',
+      Instractor_Job: 'مدير تكنولوجيا التعليم',
     },
     {
       ImageUrl: 'assets/Home/Home-Team/6.jpg',
