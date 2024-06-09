@@ -1,0 +1,51 @@
+@import "variables";
+.vision__container {
+  background-image: url("/assets/our-vision/bg.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $main-color;
+    opacity: 0.75;
+    z-index: -1;
+  }
+}
+.icon__container {
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  color: $main-color;
+  font-size: 25px;
+}
+.vision__shadow {
+  box-shadow: -10px -69px 51px -78px
+    rgba(230.23913043478257, 230.8127599243856, 237.99999999999997, 1);
+}
+.Vision_Whiteline--right,
+.Vision_Whiteline--left {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    width: 4px;
+    background-color: white;
+  }
+}
+.Vision_Whiteline--left::after {
+  right: 0;
+}
+.Vision_Whiteline--right::after {
+  left: 0;
+}
+p {
+  text-wrap: balance;
+}

@@ -43,3 +43,16 @@
     }
   }
 }
+.instractor__Name {
+  position: relative;
+  &::after {
+    content: "";
+    margin-top: 1.5rem;
+    position: absolute;
+    height: 3px;
+    width: 34%;
+    background-color: $main-color;
+    right: 0;
+    top: 100%;
+  }
+}

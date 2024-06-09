@@ -13,18 +13,18 @@ export class HomeTeamComponent {
   slidesStore = [
     {
       ImageUrl: 'assets/Home/Home-Team/1.jpg',
-      Instractor_Name: 'شيرين زهران',
-      Instractor_Job: 'مديرة مدرسه اليمن الإلكترونية',
+      Instractor_Name: 'جورج امجد',
+      Instractor_Job: 'الرئيس التنفيذي لمدرسة summit',
     },
     {
       ImageUrl: 'assets/Home/Home-Team/2.jpg',
-      Instractor_Name: 'هناء الببلاوي',
-      Instractor_Job: 'مديرة مدرسة EIS',
+      Instractor_Name: 'مايكل ميشيل',
+      Instractor_Job: 'استشارى التطوير بمدرسه ساميت و رئيس قسم اللغه الأسبانيه',
     },
     {
       ImageUrl: 'assets/Home/Home-Team/3.jpg',
-      Instractor_Name: 'نورا أبو جازية',
-      Instractor_Job: 'مديرة تطوير الأعمال',
+      Instractor_Name: 'ماريان اشرف',
+      Instractor_Job: 'مديره الأرشاد الأكاديمى ومسئوله قسم اللغه الألمانيه',
     },
     {
       ImageUrl: 'assets/Home/Home-Team/4.jpg',

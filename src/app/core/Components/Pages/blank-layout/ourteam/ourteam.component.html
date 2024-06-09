@@ -23,12 +23,12 @@
         </div>
       </div>
       <div class="col-12 col-lg-6 AR p-5">
-        <p class="h1 Text-Main fw-medium">
+        <p class="h1 Text-Main fw-medium instractor__Name mb-5">
           {{ item.Instractor_Name }} - {{ item.Instractor_Job }}
         </p>
         <ul>
           @for (item of item.Instractor_Info; track $index) {
-          <li>{{ item }}</li>
+          <li class="mb-2 fw-bold AR">{{ item }}</li>
           }
         </ul>
       </div>
