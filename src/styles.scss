@@ -6,3 +6,8 @@
 @import "buttons";
 @import "themes";
 @import "functions", "mixins", "variables";
+
+body,
+html {
+  overflow-x: hidden;
+}
