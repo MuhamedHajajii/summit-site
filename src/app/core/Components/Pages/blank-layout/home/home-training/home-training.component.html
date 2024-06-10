@@ -1,4 +1,4 @@
-<section class="py-5">
+<section class="py-5 mb-4">
   <div class="container">
     <hr class="border-3 pt-5" />
     <div class="row flex-column-reverse flex-lg-row">
@@ -7,12 +7,18 @@
         data-aos-duration="1500"
         class="col-12 col-lg-5"
       >
-        <div>
-          <img
-            class="w-100 rounded-top-3"
-            src="assets/Home/Home-Training/1.png"
-            alt="Training"
-          />
+        <div class="row g-0" data-aos="fade-up" data-aos-duration="1000">
+          @for (item of Images; track item ; let i = $index) {
+          <div (click)="toggleLightBox()" class="col-6 p-2 imgContainer">
+            <img
+              [height]="250"
+              class="w-100 rounded-3"
+              [src]="item"
+              [alt]="item"
+            />
+            <div class="layer"><i class="fa-regular fa-eye"></i></div>
+          </div>
+          }
         </div>
       </div>
       <div
@@ -24,24 +30,62 @@
           class="d-flex justify-content-center align-items-end flex-column h-100"
         >
           <h2 class="Text-Main AR mb-4 fw-semibold">
-            دورات <span class="text-shadow">ساميت</span> للذكاء الأصطناعى
-            <span class="text-shadow">SUMMIT</span> AI training
+            دورات تدريب المعلمين على استخدام الذكاء الاصطناعي في
+            <span class="Text-Secondary fw-bold text-shadow"
+              >Summit Online School</span
+            >
           </h2>
-          <p class="AR fw-semibold">
-            في يناير 2024 أطلقت SUMMIT منصة جديدة تعني بتدريب وتوظيف المعلمين
-            لأستخدام الذكاء الاصطناعى تطوير أساليب التدريس. تم إنشاء هذا المركز
-            المبتكر لتحقيق رؤية خدمة المجتمع حيث يمكن للمعلمين تعزيز مهاراتهم
-            وكذلك العثور على فرص عمل مجزية. والمنصة حاليًا في مرحلة نشطة من
-            تطوير المحتوى، مع تصميم دورات مسجلة لتزويد المعلمين بأحدث الأساليب
-            التربوية والخبرة التخصصية. يتم تشجيع المعلمين على إنشاء ملفاتهم
-            الشخصية وصياغة السير الذاتية المهنية والمشاركة في مسارات مصممة
-            خصيصًا لتعزيز مؤهلاتهم وإظهار التزامهم بالتطوير المهني
-          </p>
+          <div>
+            <p class="AR fw-semibold">
+              <span class="Text-Main fw-bold d-block h5">
+                🔹 محتوى الدورات:
+              </span>
+              <span class="Text-Secondary text-shadow fw-bold d-block h6 mb-0">
+                مقدمة في الذكاء الاصطناعي: </span
+              >فهم الأساسيات والمفاهيم الرئيسية. تطبيقات الذكاء الاصطناعي في
+              التعليم: كيفية استخدام أدوات وتقنيات الذكاء الاصطناعي لتحسين تجربة
+              التعليم والتعلم. تحليل البيانات التعليمية: استخدام الذكاء
+              الاصطناعي لتحليل أداء الطلاب وتخصيص خطط تعليمية فردية. التعليم
+              المخصص: تصميم وتطبيق برامج تعليمية تتناسب مع احتياجات وقدرات كل
+              طالب باستخدام الذكاء الاصطناعي.
+            </p>
+          </div>
+          <div>
+            <p class="AR fw-semibold">
+              <span class="Text-Main fw-bold d-block h5">
+                🔹 ميزات الدورات:
+              </span>
+              <span class="Text-Secondary text-shadow fw-bold d-block h6 mb-0"
+                >تدريب عملي:</span
+              >تطبيقات عملية لتجهيز المعلمين لاستخدام الذكاء الاصطناعي بكفاءة في
+              الفصول الافتراضية.
+            </p>
+            <p class="AR fw-semibold">
+              <span class="Text-Secondary text-shadow fw-bold d-block h6 mb-0">
+                متابعة وتقييم: </span
+              >تقييم مستمر وتقديم ملاحظات لتحسين الأداء.
+            </p>
+            <p class="AR fw-semibold">
+              <span class="Text-Secondary text-shadow fw-bold d-block h6 mb-0"
+                >شهادات معتمدة:
+              </span>
+              الحصول على شهادات تثبت الكفاءة في استخدام الذكاء الاصطناعي في
+              التعليم.
+            </p>
+          </div>
+          <div class="AR fw-bold">
+            <span class="Text-Main fw-bold d-block h5">🔹 أهداف الدورات: </span>
+            <p>🔹تطوير مهارات المعلمين في استخدام التكنولوجيا الحديثة.</p>
+            <p>🔹تحسين جودة التعليم وتقديم تجارب تعليمية مبتكرة.</p>
+            <p>
+              🔹تعزيز قدرة المعلمين على تحليل البيانات وتخصيص التعليم لكل طالب.
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <div
-      class="row secondSection AR rounded-4 text-center p-4"
+      class="row secondSection justify-content-between AR rounded-4 text-center p-4"
       data-aos="fade-up"
       data-aos-duration="1500"
     >
@@ -51,17 +95,9 @@
         <button class="btn btn-main-secondary">للاشتراك</button>
       </div>
       <div
-        class="col-12 col-lg-6 text-white d-flex justify-content-center align-items-start flex-column"
+        class="col-12 col-lg-6 text-white d-flex justify-content-center align-items-center flex-column"
       >
-        <div class="p-4">
-          <h3 class="fw-bolder fs-2">إعداد المعلمين للمستقبل</h3>
-          <p>
-            تعمل المنصة كجسر يربط المعلمين بالمؤسسات التعليمية؛ حيث يحظى أصحاب
-            العمل بفرصة فريدة لاستكشاف ملفات المعلمين التعليمية الشاملة التي
-            أعدوها من قبل، ومراجعة الأوراق والشهادات الموثقة، واستقطاب المواهب
-            عالية المستوى
-          </p>
-        </div>
+        <h3 class="fw-bolder fs-2">إعداد المعلمين للمستقبل</h3>
       </div>
       <div class="col-12 col-lg-3 d-none d-lg-block">
         <div class="p-4 w-75 mx-auto">
@@ -75,3 +111,24 @@
     </div>
   </div>
 </section>
+
+@if (isLightBoxOpen) {
+<div class="LightBoxContainer" (click)="toggleLightBox()">
+  <div class="lightBoxContent" (click)="stopProp($event)">
+    <div class="card">
+      <p-galleria
+        [value]="Images"
+        [numVisible]="5"
+        [circular]="true"
+        [showItemNavigators]="true"
+        [showThumbnails]="false"
+        [containerStyle]="{ width: '100%' }"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item" style="width: 100%; display: block" />
+        </ng-template>
+      </p-galleria>
+    </div>
+  </div>
+</div>
+}

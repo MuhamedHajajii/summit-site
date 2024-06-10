@@ -1,6 +1,13 @@
 import { HomeVideoComponent } from './home-video/home-video.component';
 import AOS from 'aos';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Inject,
+  PLATFORM_ID,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -13,15 +20,26 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 export class HomeHeaderComponent {
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private _Renderer2: Renderer2
   ) {}
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       if (this.document.readyState !== 'loading') {
         AOS.init();
         AOS.refresh();
+        setTimeout(() => {
+          this.getHeaderBg();
+        }, 1500);
       }
     }
+  }
+  @ViewChild('mainSection') mainSection!: ElementRef;
+  getHeaderBg(): void {
+    this._Renderer2.addClass(
+      this.mainSection.nativeElement,
+      'secondBackground'
+    );
   }
 
   PlayVideo: boolean = false;

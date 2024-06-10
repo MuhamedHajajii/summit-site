@@ -1,19 +1,24 @@
 .Logo {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
 }
 
 .nav-link {
-    transition: 0.3s all;
-    transform-origin: right center;
-    font-weight: 400;
-    &:hover {
-            transform: scale(1.1);
-            font-weight: 500;
-        }
-        &.active {
-            font-weight: 600;
-            text-shadow: 2px 2px #558abb;
-        }
+  transition: 0.3s all;
+  transform-origin: right center;
+  font-weight: 400;
+  border: 1px solid transparent;
+  border-radius: 100vh;
+  &:hover {
+    transform: scale(1.1);
+    font-weight: 500;
+    border: 1px solid white;
+  }
+  &.active {
+    font-weight: 600;
+    text-shadow: 2px 2px #558abb;
+    border: 1px solid white;
+    border-radius: 100vh;
+  }
 }

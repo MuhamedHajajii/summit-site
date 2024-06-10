@@ -1,7 +1,70 @@
+@import "variables";
+
 p {
   text-wrap: balance;
 }
 
 .secondSection {
   background-image: linear-gradient(180deg, #1757a5 0%, #706fe6 100%);
+}
+
+.imgContainer {
+  position: relative;
+}
+.imgContainer .layer {
+  color: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0.5rem;
+  background-color: $main-rgba;
+  z-index: 5;
+  opacity: 0;
+  transition: 0.3s all;
+  cursor: zoom-in;
+}
+
+.imgContainer:hover .layer {
+  opacity: 1;
+}
+
+.owl__Image {
+  width: 140px;
+}
+:host ::ng-deep .owl-carousel .owl-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+:host ::ng-deep .owl-carousel .owl-nav .owl-prev,
+:host ::ng-deep .owl-carousel .owl-nav .owl-next {
+  background-color: $main-rgba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+:host ::ng-deep .owl-carousel .owl-nav .owl-prev:hover,
+:host ::ng-deep .owl-carousel .owl-nav .owl-next:hover {
+  filter: brightness(110%);
+}
+
+:host ::ng-deep .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  left: 10px;
+  transform: translateY(-100%);
+}
+
+:host ::ng-deep .owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-100%);
 }

@@ -38,13 +38,18 @@ export class HomeTeamComponent {
     },
     {
       ImageUrl: 'assets/Home/Home-Team/6.jpg',
-      Instractor_Name: 'تامر أنور',
-      Instractor_Job: 'المدير العام لشركة Summit',
+      Instractor_Name: 'ساره محمد',
+      Instractor_Job: 'مسؤل تطوير المدرسين',
     },
     {
       ImageUrl: 'assets/Home/Home-Team/7.jpg',
       Instractor_Name: 'تامر أنور',
       Instractor_Job: 'المدير العام لشركة Summit',
+    },
+    {
+      ImageUrl: 'assets/Home/Home-Team/7.jpg',
+      Instractor_Name: 'جوزيف رفيق',
+      Instractor_Job: 'مسئول قسم اللغة الإنجليزية',
     },
   ];
   customOptions: OwlOptions = {
