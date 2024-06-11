@@ -9,8 +9,15 @@
       >
         <div class="row g-0" data-aos="fade-up" data-aos-duration="1000">
           @for (item of Images; track item ; let i = $index) {
-          <div (click)="toggleLightBox()" class="col-6 p-2 imgContainer">
+          <div
+            data-aos="flip-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            (click)="toggleLightBox()"
+            class="col-12 col-md-6 p-2 imgContainer"
+          >
             <img
+              loading="lazy"
               [height]="250"
               class="w-100 rounded-3"
               [src]="item"
@@ -51,7 +58,12 @@
             </p>
           </div>
           <div>
-            <p class="AR fw-semibold">
+            <p
+              data-aos="flip-up"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+              class="AR fw-semibold"
+            >
               <span class="Text-Main fw-bold d-block h5">
                 🔹 ميزات الدورات:
               </span>
@@ -60,12 +72,22 @@
               >تطبيقات عملية لتجهيز المعلمين لاستخدام الذكاء الاصطناعي بكفاءة في
               الفصول الافتراضية.
             </p>
-            <p class="AR fw-semibold">
+            <p
+              data-aos="flip-up"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+              class="AR fw-semibold"
+            >
               <span class="Text-Secondary text-shadow fw-bold d-block h6 mb-0">
                 متابعة وتقييم: </span
               >تقييم مستمر وتقديم ملاحظات لتحسين الأداء.
             </p>
-            <p class="AR fw-semibold">
+            <p
+              data-aos="flip-up"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+              class="AR fw-semibold"
+            >
               <span class="Text-Secondary text-shadow fw-bold d-block h6 mb-0"
                 >شهادات معتمدة:
               </span>
@@ -73,39 +95,50 @@
               التعليم.
             </p>
           </div>
-          <div class="AR fw-bold">
+          <div
+            data-aos="flip-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            class="AR fw-bold"
+          >
             <span class="Text-Main fw-bold d-block h5">🔹 أهداف الدورات: </span>
             <p>🔹تطوير مهارات المعلمين في استخدام التكنولوجيا الحديثة.</p>
             <p>🔹تحسين جودة التعليم وتقديم تجارب تعليمية مبتكرة.</p>
             <p>
-              🔹تعزيز قدرة المعلمين على تحليل البيانات وتخصيص التعليم لكل طالب.
+              🔹تعزيز قدرة المعلمين على تحليل البيانات وتخصيص التعليم لكل طالب.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <div
-      class="row secondSection justify-content-between AR rounded-4 text-center p-4"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
+
+    <div class="container-fluid">
       <div
-        class="col-12 col-lg-3 d-flex justify-content-center align-items-center"
+        class="row secondSection justify-content-between AR rounded-4 text-center p-4"
+        data-aos="fade-up"
+        data-aos-duration="1500"
       >
-        <button class="btn btn-main-secondary">للاشتراك</button>
-      </div>
-      <div
-        class="col-12 col-lg-6 text-white d-flex justify-content-center align-items-center flex-column"
-      >
-        <h3 class="fw-bolder fs-2">إعداد المعلمين للمستقبل</h3>
-      </div>
-      <div class="col-12 col-lg-3 d-none d-lg-block">
-        <div class="p-4 w-75 mx-auto">
-          <img
-            class="w-100 rounded-circle"
-            src="assets/Summit-Logo/logo2.jpg"
-            alt="Summit-Logo"
-          />
+        <div
+          class="col-12 col-lg-3 d-flex justify-content-center align-items-center"
+        >
+          <button routerLink="/contact" class="btn btn-main-secondary">
+            للاشتراك
+          </button>
+        </div>
+        <div
+          class="col-12 col-lg-6 text-white d-flex justify-content-center align-items-center flex-column"
+        >
+          <h3 class="fw-bolder fs-2">إعداد المعلمين للمستقبل</h3>
+        </div>
+        <div class="col-12 col-lg-3 d-none d-lg-block">
+          <div class="p-4 w-75 mx-auto">
+            <img
+              loading="lazy"
+              class="w-100 rounded-circle"
+              src="assets/Summit-Logo/logo2.jpg"
+              alt="Summit-Logo"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -125,7 +158,11 @@
         [containerStyle]="{ width: '100%' }"
       >
         <ng-template pTemplate="item" let-item>
-          <img [src]="item" style="width: 100%; display: block" />
+          <img
+            loading="lazy"
+            [src]="item"
+            style="width: 100%; display: block"
+          />
         </ng-template>
       </p-galleria>
     </div>

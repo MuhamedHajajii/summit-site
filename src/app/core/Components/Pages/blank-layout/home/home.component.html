@@ -9,19 +9,21 @@
 <!-- ====================================== -->
 <!-- Home Core Values (Third Section) -->
 <!-- ====================================== -->
-<app-home-corevalues></app-home-corevalues>
-<!-- ====================================== -->
+@defer(when showComponents === true){
+<app-home-corevalues />
+}
 <!-- ====================================== -->
 <!-- Home our vision (Third Section) -->
 <!-- ====================================== -->
 <app-home-our-vision></app-home-our-vision>
-<!-- Home Testimonial (Fourth Section) -->
-<!-- ====================================== -->
-<app-home-testimonial></app-home-testimonial>
 <!-- ====================================== -->
 <!-- Home Courses (Fifth Section) -->
 <!-- ====================================== -->
 <app-home-courses></app-home-courses>
+<!-- ====================================== -->
+<!-- Home Testimonial (Fourth Section) -->
+<!-- ====================================== -->
+<app-home-testimonial></app-home-testimonial>
 <!-- ====================================== -->
 <!-- Home Training (Sixth Section) -->
 <!-- ====================================== -->
@@ -29,4 +31,6 @@
 <!-- ====================================== -->
 <!-- Home Training (Sixth Section) -->
 <!-- ====================================== -->
-<app-home-team></app-home-team>
+@defer(when showComponents === true){
+<app-home-team />
+}

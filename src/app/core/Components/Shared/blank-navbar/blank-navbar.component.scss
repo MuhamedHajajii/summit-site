@@ -1,3 +1,4 @@
+@import "variables";
 .Logo {
   display: inline-block;
   width: 60px;
@@ -21,4 +22,11 @@
     border: 1px solid white;
     border-radius: 100vh;
   }
+}
+* {
+  transition: 0.3s all;
+}
+
+nav:not(:has([routerLink="home"].active)) {
+  background-color: $main-color;
 }

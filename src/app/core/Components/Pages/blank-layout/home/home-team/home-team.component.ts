@@ -1,6 +1,7 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { TeamService } from '../../../../../services/team.service';
 
 @Component({
   selector: 'app-home-team',
@@ -10,49 +11,9 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
   styleUrl: './home-team.component.scss',
 })
 export class HomeTeamComponent {
-  slidesStore = [
-    {
-      ImageUrl: 'assets/Home/Home-Team/1.jpg',
-      Instractor_Name: 'جورج امجد',
-      Instractor_Job: 'الرئيس التنفيذي لمدرسة summit',
-    },
-    {
-      ImageUrl: 'assets/Home/Home-Team/2.jpg',
-      Instractor_Name: 'عبدالرحمن العربي',
-      Instractor_Job: 'استشاري التطوير بمدرسه ساميت',
-    },
-    {
-      ImageUrl: 'assets/Home/Home-Team/3.jpg',
-      Instractor_Name: 'مايكل ميشيل',
-      Instractor_Job: 'مدير الجوده و الاعتماد الاكاديمى',
-    },
-    {
-      ImageUrl: 'assets/Home/Home-Team/4.jpg',
-      Instractor_Name: 'ماريان اشرف',
-      Instractor_Job: 'مديره الأرشاد الأكاديمى ومسئوله قسم اللغه الألمانيه',
-    },
-    {
-      ImageUrl: 'assets/Home/Home-Team/5.jpg',
-      Instractor_Name: 'احمد سراج',
-      Instractor_Job: 'مدير تكنولوجيا التعليم',
-    },
-    {
-      ImageUrl: 'assets/Home/Home-Team/6.jpg',
-      Instractor_Name: 'ساره محمد',
-      Instractor_Job: 'مسؤل تطوير المدرسين',
-    },
-    {
-      ImageUrl: 'assets/Home/Home-Team/7.jpg',
-      Instractor_Name: 'تامر أنور',
-      Instractor_Job: 'المدير العام لشركة Summit',
-    },
-    {
-      ImageUrl: 'assets/Home/Home-Team/7.jpg',
-      Instractor_Name: 'جوزيف رفيق',
-      Instractor_Job: 'مسئول قسم اللغة الإنجليزية',
-    },
-  ];
+  constructor(public _Team: TeamService) {}
   customOptions: OwlOptions = {
+    lazyLoad: true,
     loop: true,
     mouseDrag: true,
     touchDrag: true,

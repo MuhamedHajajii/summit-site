@@ -1,13 +1,12 @@
-import AOS from 'aos';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { GalleriaModule } from 'primeng/galleria';
 
 @Component({
   selector: 'app-home-training',
   standalone: true,
-  imports: [GalleriaModule, ButtonModule],
+  imports: [GalleriaModule, ButtonModule, RouterLink],
   templateUrl: './home-training.component.html',
   styleUrl: './home-training.component.scss',
 })
@@ -19,20 +18,8 @@ export class HomeTrainingComponent {
     'assets/Home/Home-Training/3.jpg',
     'assets/Home/Home-Training/4.jpg',
   ];
-
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      if (this.document.readyState !== 'loading') {
-        AOS.init();
-        AOS.refresh();
-      }
-    }
-  }
   isLightBoxOpen: boolean = false;
+
   toggleLightBox(): void {
     this.isLightBoxOpen = !this.isLightBoxOpen;
   }

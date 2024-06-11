@@ -5,20 +5,25 @@
         فريق <span class="text-shadow text-uppercase">Summit</span>
       </h2>
       <p class="fw-semibold" data-aos="fade-left" data-aos-duration="1000">
-        يدعم مؤسيسة إديوفرس أونلاين فريق استثنائي يضم أكثر من 300 مدرس متفانٍ،
-        مهتمين بالتعليم وملتزمين بنجاح طلابنا. بالإضافة إلى ذلك، يتكون فريقنا
-        الإداري من حوالي 30 فرد من ذوي الخبرات الواسعة في مجال التعليم، يشرفون
+        يدعم مؤسسة إديوفرس أونلاين فريق استثنائي يضم أكثر من 300 مدرس متفان،
+        مهتمون بالتعليم وملتزمين بنجاح طلابنا بالإضافة إلى ذلك، يتكون فريقنا
+        الإداري من حوالي 30 فردا من ذوي الخبرات الواسعة في مجال التعليم، يشرفون
         على سير العمل بسلاسة وكفاءة. يشمل هذا الفريق رؤساء الأقسام، منسقي
-        المواد، ومديري المراحل. كما يضم الفريق مجموعة متميزة من موظفي إدخال
-        البيانات، ممثلي خدمة العملاء، ومتخصصي الدعم الفني.
+        المواد، ومديرو المراحل. كما يضم الفريق مجموعة متميزة من موظفي إدخال
+        البيانات، ممثلي خدمة العملاء، ومتخصصي الدعم الفني
       </p>
     </div>
     <div data-aos="fade-right" data-aos-duration="1000">
       <owl-carousel-o [options]="customOptions">
-        @for (slide of slidesStore; track slide ; let I = $index) {
+        @for (slide of _Team.Team; track slide ; let I = $index) {
         <ng-container>
           <ng-template carouselSlide [id]="slide.Instractor_Name">
             <img
+              loading="lazy"
+              decoding="async"
+              data-aos="flip-right"
+              data-aos-duration="1000"
+              data-aos-delay="100"
               class="rounded-3"
               [height]="450"
               [src]="slide.ImageUrl"
@@ -26,8 +31,22 @@
               [title]="slide.Instractor_Name"
             />
             <div class="text-center">
-              <p class="Text-Third fw-bolder">{{ slide.Instractor_Name }}</p>
-              <p>{{ slide.Instractor_Job }}</p>
+              <p
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                class="Text-Third fw-bolder my-2 fw-bold"
+              >
+                {{ slide.Instractor_Name }}
+              </p>
+              <p
+                data-aos="flip-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                class="fw-bold"
+              >
+                {{ slide.Instractor_Job }}
+              </p>
             </div>
           </ng-template>
         </ng-container>

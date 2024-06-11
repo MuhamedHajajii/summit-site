@@ -1,5 +1,6 @@
 export interface Corevalues {
   title: string;
-  image: string;
+  image_1: string;
+  image_2: string;
   pragraph: string;
 }

@@ -1,5 +1,14 @@
-import { Component } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import {
+  Component,
+  ElementRef,
+  Inject,
+  PLATFORM_ID,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-blank-layout',
@@ -8,4 +17,16 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './blank-layout.component.html',
   styleUrl: './blank-layout.component.scss',
 })
-export class BlankLayoutComponent {}
+export class BlankLayoutComponent {
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private _Renderer2: Renderer2
+  ) {}
+  @ViewChild('mainLoading') mainLoading!: ElementRef;
+  ngAfterViewInit(): void {
+    if (this.document.readyState !== 'loading') {
+      this._Renderer2.addClass(this.mainLoading.nativeElement, 'animateHide');
+    }
+  }
+}

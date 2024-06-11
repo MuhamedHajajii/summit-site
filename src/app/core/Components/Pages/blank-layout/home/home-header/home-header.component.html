@@ -15,14 +15,16 @@
         >
           <div class="video__Image text-center">
             <img
+              loading="lazy"
               draggable="false"
               class="w-50 rounded-circle"
-              src="/assets/Video-BackGround.png"
+              [src]="'assets/Video-BackGround.png'"
               alt="Video-BackGround"
             />
           </div>
           <div>
             <img
+              loading="lazy"
               class="position-absolute top-50 start-50 translate-middle w-25"
               src="./assets/play-video.svg"
               alt="play-video"
@@ -38,12 +40,13 @@
           <p class="text-white fs-1 text-uppercase fw-bolder">
             Step into the light
             <span class="lamp__SVG">
-              <img class="w-100" src="assets/Home/knowledge-icon.svg" alt="" />
+              <img
+                loading="lazy"
+                class="w-100"
+                [src]="'assets/Home/knowledge-icon.svg'"
+                alt="knowledge-icon"
+              />
             </span>
-            <!-- <i class="pi pi-lightbulb fs-1 Text-Secondary"></i> -->
-            <!-- <i class="pi pi-sun fs-1 Text-Secondary"></i> -->
-            <!-- <i class="fa-regular fa-lightbulb fs-1 Text-Secondary"></i> -->
-            <!-- <i class="fa-solid fa-lightbulb fs-1 Text-Secondary"></i> -->
           </p>
         </div>
       </div>

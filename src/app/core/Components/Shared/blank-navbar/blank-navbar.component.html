@@ -1,10 +1,13 @@
-<nav class="navbar navbar-expand-lg Bg-Main fixed-top">
+<nav #NavBar class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <div class="d-flex justify-content-center align-items-center">
       <span class="Logo me-2">
         <img
+          loading="lazy"
           class="w-100 rounded-circle"
-          src="assets/Summit-Logo/logo2.jpg"
+          [src]="'assets/Summit-Logo/navbar__Logo.jpg'"
+          [width]="60"
+          [height]="60"
           alt="Summit-Logo"
         />
       </span>
@@ -25,13 +28,13 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <div #navbarUL class="collapse navbar-collapse" id="collapsibleNavId">
       <ul
-        class="navbar-nav ms-auto mt-2 mt-lg-0 flex-column text-end text-lg-center flex-lg-row-reverse"
+        class="navbar-nav ms-auto mt-4 mt-lg-0 flex-column text-end text-lg-center flex-lg-row-reverse align-items-end px-3 px-lg-0"
       >
-        <li class="nav-item mx-1 mx-md-2">
+        <li (click)="CloseNavBar()" class="mb-3 mb-lg-0 nav-item mx-1 mx-md-2">
           <a
-            class="nav-link text-white"
+            class="nav-link text-white p-2"
             routerLink="home"
             routerLinkActive="active"
           >
@@ -39,27 +42,27 @@
             <i class="fa-solid fa-house ms-1"></i>
           </a>
         </li>
-        <li class="nav-item mx-1 mx-md-2">
+        <li (click)="CloseNavBar()" class="mb-3 mb-lg-0 nav-item mx-1 mx-md-2">
           <a
-            class="nav-link text-white"
+            class="nav-link text-white p-2"
             routerLink="about"
             routerLinkActive="active"
             >عن الشركة
             <i class="pi pi-building-columns ms-1"></i>
           </a>
         </li>
-        <li class="nav-item mx-1 mx-md-2">
+        <li (click)="CloseNavBar()" class="mb-3 mb-lg-0 nav-item mx-1 mx-md-2">
           <a
-            class="nav-link AR text-white"
+            class="nav-link AR text-white p-2"
             routerLink="courses"
             routerLinkActive="active"
           >
             <i class="pi pi-book ms-1"></i> كورسات Summit
           </a>
         </li>
-        <li class="nav-item mx-1 mx-md-2">
+        <li (click)="CloseNavBar()" class="mb-3 mb-lg-0 nav-item mx-1 mx-md-2">
           <a
-            class="AR nav-link text-white"
+            class="AR nav-link text-white p-2"
             routerLink="ourteam"
             routerLinkActive="active"
           >
@@ -67,9 +70,9 @@
             فريقنا
           </a>
         </li>
-        <li class="nav-item mx-1 mx-md-2">
+        <li (click)="CloseNavBar()" class="mb-3 mb-lg-0 nav-item mx-1 mx-md-2">
           <a
-            class="AR nav-link text-white"
+            class="AR nav-link text-white p-2"
             routerLink="contact"
             routerLinkActive="active"
           >

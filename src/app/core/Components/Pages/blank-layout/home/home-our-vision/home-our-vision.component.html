@@ -73,7 +73,7 @@
                 <p class="h5 fw-bold">التعليم الشامل:</p>
                 <p>
                   نلتزم بتوفير بيئة تعليمية شاملة تدعم جميع الطلاب، بما في ذلك
-                  ذوي الاحتياجات الخاصة، من خلال توفير موارد وأدوات تعليمية
+                  ذوو الاحتياجات الخاصة، من خلال توفير موارد وأدوات تعليمية
                   متخصصة.
                 </p>
               </div>
@@ -112,8 +112,9 @@
         >
           <div class="bg-white p-2">
             <img
+              loading="lazy"
               class="w-100"
-              src="assets/our-vision/section-Image.png"
+              [src]="'assets/our-vision/1.jpg'"
               alt=" our vision backgorund image"
             />
           </div>
@@ -154,7 +155,7 @@
                 <p>
                   نركز على تعليم القيم الأخلاقية والاجتماعية، مثل الاحترام
                   والتعاون والمثابرة، لضمان تطوير طلاب مسؤولين ومواطنين عالميين
-                  واعين.
+                  واعون.
                 </p>
               </div>
               <div
@@ -200,7 +201,7 @@
                 <p>
                   نحتضن التنوع الثقافي ونشجع طلابنا على فهم وتقدير الثقافات
                   المختلفة، مما يساعدهم على أن يصبحوا مواطنين عالميين متفتحين
-                  وواعين.
+                  وواعون.
                 </p>
               </div>
               <div
@@ -216,7 +217,12 @@
       </div>
     </div>
     <div class="text-center">
-      <button class="btn btn-main-secondary Bg-Secondary px-5">للمزيد</button>
+      <button
+        routerLink="/about"
+        class="btn btn-main-secondary Bg-Secondary px-5"
+      >
+        للمزيد
+      </button>
     </div>
   </div>
 </section>

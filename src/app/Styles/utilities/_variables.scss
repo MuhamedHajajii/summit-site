@@ -12,16 +12,16 @@ $Main-Body-Font: "Almarai", sans-serif;
 // =======================================
 // =======================================
 // Colors
-$main-color: #005bb9;
-$secondary-color: #fced2e;
-$third-Color: #6ec1e4;
+$main-color: #345fb4;
+$secondary-color: #fde651;
+$third-Color: #5e5c5c;
 $main-rgba: rgba(0, 0, 0, 0.5);
 // Text
 .Text-Main {
   color: $main-color;
 }
 .Text-Secondary {
-  color: #fced2e;
+  color: $secondary-color;
 }
 .Text-Third {
   color: $third-Color;
@@ -32,7 +32,7 @@ $main-rgba: rgba(0, 0, 0, 0.5);
 }
 
 .text-shadow {
-  text-shadow: 1px 1px #558abb;
+  text-shadow: 1px 1px $main-color;
 }
 
 // background
@@ -41,7 +41,7 @@ $main-rgba: rgba(0, 0, 0, 0.5);
   color: white;
 }
 .Bg-Secondary {
-  background-color: #fced2e;
+  background-color: $secondary-color;
   color: black;
 }
 .Bg-Third {

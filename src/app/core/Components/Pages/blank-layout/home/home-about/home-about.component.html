@@ -17,8 +17,12 @@
         <div class="col-md-6">
           <div class="row g-0" data-aos="fade-up" data-aos-duration="1000">
             @for (item of Images; track item ; let i = $index) {
-            <div (click)="toggleLightBox()" class="col-6 p-2 imgContainer">
+            <div
+              (click)="toggleLightBox()"
+              class="col-12 col-md-6 p-2 imgContainer"
+            >
               <img
+                loading="lazy"
                 [height]="250"
                 class="w-100 rounded-3"
                 [src]="item"
@@ -40,7 +44,10 @@
             الأكاديمية.
           </p>
           <div class="text-center">
-            <button class="btn btn-main-secondary px-5 rounded-pill">
+            <button
+              routerLink="/about"
+              class="btn btn-main-secondary px-5 rounded-pill"
+            >
               للمزيد
             </button>
           </div>
@@ -144,7 +151,11 @@
         [containerStyle]="{ width: '100%' }"
       >
         <ng-template pTemplate="item" let-item>
-          <img [src]="item" style="width: 100%; display: block" />
+          <img
+            loading="lazy"
+            [src]="item"
+            style="width: 100%; display: block"
+          />
         </ng-template>
       </p-galleria>
     </div>

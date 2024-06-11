@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import AOS from 'aos';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { HomeAboutComponent } from './home-about/home-about.component';
 import { HomeCorevaluesComponent } from './home-corevalues/home-corevalues.component';
-import { HomeHeaderComponent } from './home-header/home-header.component';
-import { HomeTestimonialComponent } from './home-testimonial/homt-testimonial.component';
 import { HomeCoursesComponent } from './home-courses/home-courses.component';
-import { HomeTrainingComponent } from './home-training/home-training.component';
-import { HomeTeamComponent } from './home-team/home-team.component';
+import { HomeHeaderComponent } from './home-header/home-header.component';
 import { HomeOurVisionComponent } from './home-our-vision/home-our-vision.component';
+import { HomeTeamComponent } from './home-team/home-team.component';
+import { HomeTestimonialComponent } from './home-testimonial/homt-testimonial.component';
+import { HomeTrainingComponent } from './home-training/home-training.component';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -20,8 +22,32 @@ import { HomeOurVisionComponent } from './home-our-vision/home-our-vision.compon
     HomeTrainingComponent,
     HomeTeamComponent,
     HomeOurVisionComponent,
+    CommonModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      if (this.document.readyState !== 'loading') {
+        AOS.init();
+        AOS.refresh();
+      }
+    }
+  }
+  showComponents: boolean = false;
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    if (window.scrollY > 120) {
+      this.showComponents = true;
+    } else {
+      this.showComponents = false;
+    }
+  }
+}

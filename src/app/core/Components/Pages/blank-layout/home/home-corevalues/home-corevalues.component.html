@@ -1,5 +1,5 @@
 <section>
-  <div class="container mb-3" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container mb-5" data-aos="fade-up" data-aos-duration="1000">
     <hr class="border-3 py-4" />
     <div>
       <div class="text-center mb-5">
@@ -14,7 +14,7 @@
       </div>
       <div>
         <owl-carousel-o [options]="customOptions">
-          @for (item of coreValues; track item; let i = $index) {
+          @for (item of _coreValues.coreValues; track item; let i = $index) {
           <ng-container>
             <ng-template carouselSlide [id]="item.title">
               <div class="Bg-Main text-center rounded-4">
@@ -30,8 +30,10 @@
                       data-aos-delay="100"
                     >
                       <img
+                        loading="lazy"
+                        decoding="async"
                         class="w-100 rounded-circle"
-                        [src]="item.image"
+                        [src]="item.image_1"
                         [alt]="item.title"
                         [title]="item.title"
                       />

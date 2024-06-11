@@ -1,5 +1,4 @@
-import { HomeVideoComponent } from './home-video/home-video.component';
-import AOS from 'aos';
+import { DOCUMENT } from '@angular/common';
 import {
   Component,
   ElementRef,
@@ -8,7 +7,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { HomeVideoComponent } from './home-video/home-video.component';
 
 @Component({
   selector: 'app-home-header',
@@ -24,14 +23,10 @@ export class HomeHeaderComponent {
     private _Renderer2: Renderer2
   ) {}
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      if (this.document.readyState !== 'loading') {
-        AOS.init();
-        AOS.refresh();
-        setTimeout(() => {
-          this.getHeaderBg();
-        }, 1500);
-      }
+    if (this.document.readyState !== 'loading') {
+      setTimeout(() => {
+        this.getHeaderBg();
+      }, 1500);
     }
   }
   @ViewChild('mainSection') mainSection!: ElementRef;

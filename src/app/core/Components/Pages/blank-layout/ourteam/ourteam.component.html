@@ -8,13 +8,13 @@
     <p class="mb-0 AR">فريقنا</p>
   </div>
   <div class="container">
-    @for (item of Team; track item ; let i = $index ; let odd = $odd) {
-
+    @for (item of _Team.Team; track item ; let i = $index ; let odd = $odd) {
     <div [ngClass]="{ AR: odd }" class="row">
       <div class="col-12 col-lg-6">
         <div class="p-5 section__Container">
           <div class="section__OneImage--Container rounded-5">
             <img
+              loading="lazy"
               class="w-100 rounded-5"
               [src]="item.ImageUrl"
               alt="about image"

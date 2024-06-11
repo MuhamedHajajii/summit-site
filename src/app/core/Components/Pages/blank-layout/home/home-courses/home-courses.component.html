@@ -19,6 +19,7 @@
           <div class="flip-content h-100">
             <div class="Front">
               <img
+                loading="lazy"
                 class="w-100 h-100 rounded-3"
                 [src]="item.Image_Url"
                 alt="courses-1"
@@ -32,7 +33,12 @@
                   <h2>{{ item.CourseName }}</h2>
                 </div>
                 <div class="text-center">
-                  <button class="btn btn-main-secondary px-5">المزيد</button>
+                  <button
+                    routerLink="/courses"
+                    class="btn btn-main-secondary px-5"
+                  >
+                    المزيد
+                  </button>
                 </div>
               </div>
             </div>
