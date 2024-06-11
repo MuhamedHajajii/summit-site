@@ -1,4 +1,3 @@
-import AOS from 'aos';
 import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { HomeAboutComponent } from './home-about/home-about.component';
 import { HomeCorevaluesComponent } from './home-corevalues/home-corevalues.component';
@@ -35,10 +34,19 @@ export class HomeComponent {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       if (this.document.readyState !== 'loading') {
-        AOS.init();
-        AOS.refresh();
+        this.loadAOS();
+      } else {
+        this.document.addEventListener('DOMContentLoaded', () =>
+          this.loadAOS()
+        );
       }
     }
+  }
+
+  private async loadAOS() {
+    const { default: AOS } = await import('aos');
+    AOS.init();
+    AOS.refresh();
   }
   showComponents: boolean = false;
 

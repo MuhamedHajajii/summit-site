@@ -31,7 +31,15 @@ export const routes: Routes = [
           import(
             './../app/core/Components/Pages/blank-layout/courses/courses.component'
           ).then((e) => e.CoursesComponent),
-        title: 'SUMMIT - فريقنا',
+        title: 'SUMMIT - كورسات',
+      },
+      {
+        path: 'vision',
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/our-vision/our-vision.component'
+          ).then((e) => e.OurVisionComponent),
+        title: 'SUMMIT - فلسفتنا',
       },
       {
         path: 'ourteam',

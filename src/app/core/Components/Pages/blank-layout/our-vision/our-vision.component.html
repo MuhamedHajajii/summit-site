@@ -1,0 +1,67 @@
+<!-- ============================== -->
+<!-- Header -->
+<!-- ============================== -->
+<div
+  class="Header Text-Secondary d-flex justify-content-center align-items-center"
+>
+  <div class="text-center container">
+    <p
+      data-aos="zoom-out"
+      data-aos-duration="1000"
+      class="Text-Secondary AR Font-Secondary-Cairo fs-1 fw-bold"
+    >
+      فلسفتنا التعليمية
+    </p>
+    <p data-aos="fade-up" data-aos-duration="1000" class="text-white fs-6">
+      في <span class="Text-Secondary fw-bolder text-shadow">ساميت</span> ندرك
+      أهمية إبقاء المتعلمين مندمجين ومتفاعلين في بيئة التعلم عبر الإنترنت؛
+      ولتحقيق ذلك نستخدم مجموعة متنوعة من الاستراتيجيات والأدوات والموارد التي
+      تعزز التعلم النشط والتعاون والتفاعل بين طلابنا منها:
+    </p>
+  </div>
+</div>
+<div class="container">
+  @for (item of _OurVision.Visions.content; track item ; let i = $index ; let
+  odd = $odd) {
+  <div [ngClass]="{ AR: odd }" class="row">
+    <div data-aos="fade-up" data-aos-duration="1000" class="col-12 col-lg-6">
+      <div class="p-5 section__Container">
+        <div class="section__OneImage--Container rounded-5">
+          <img
+            loading="lazy"
+            class="w-100 rounded-5"
+            [src]="item.Image"
+            alt="about image"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 AR p-5">
+      <div
+        class="h-100 d-flex justify-content-evenly align-items-start flex-column"
+      >
+        <div>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="fw-bold h1 Text-Main fw-medium instractor__Name mb-5"
+          >
+            {{ item.Title }}
+          </p>
+          <p data-aos="fade-up" data-aos-duration="1000" class="fs-5">
+            {{ item.Description }}
+          </p>
+        </div>
+        <button
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          routerLink="/contact"
+          class="btn btn-main fw-bold px-5 py-2"
+        >
+          اتصل الان
+        </button>
+      </div>
+    </div>
+  </div>
+  }
+</div>

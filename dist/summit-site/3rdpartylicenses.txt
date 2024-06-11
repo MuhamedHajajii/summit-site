@@ -42,11 +42,6 @@ SOFTWARE.
 
 
 --------------------------------------------------------------------------------
-Package: primeng
-License: "MIT"
-
-
---------------------------------------------------------------------------------
 Package: countup.js
 License: "MIT"
 
@@ -71,6 +66,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 --------------------------------------------------------------------------------
 Package: ngx-countup
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
+Package: primeng
 License: "MIT"
 
 

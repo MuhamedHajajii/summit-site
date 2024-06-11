@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,6 +9,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './about-section-five.component.scss',
 })
 export class AboutSectionFiveComponent {
+  @Input() ShowTitle: boolean = true;
+
   Courses = [
     {
       Image_Url: 'assets/Home/courses/1.jpg',

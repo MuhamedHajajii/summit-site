@@ -32,9 +32,21 @@ export class TeamService {
       ],
     },
     {
+      ImageUrl: 'assets/Home/Home-Team/7.jpg',
+      Instractor_Name: 'جوزيف رفيق',
+      Instractor_Job: 'مسئول قسم اللغة الإنجليزية',
+      Instractor_Info: [
+        'محاضر بريطاني معتمد من جامعة كامبريدج.',
+        'خبرة تفوق 5 سنوات في تدريس اللغة الإنجليزية لغير الناطقين بها.',
+        'عمل كمتحدث رسمي ومدرب لغوي في العديد من المؤتمرات الدولية.',
+        'مشارك في برامج تطوير المناهج الدراسية بالتعاون مع مؤسسات تعليمية دولية.',
+      ],
+    },
+    {
       ImageUrl: 'assets/Home/Home-Team/3.jpg',
       Instractor_Name: 'مايكل ميشيل',
-      Instractor_Job: 'مدير الجودة والاعتماد الأكاديمي',
+      Instractor_Job:
+        'مدير الجودة والاعتماد الأكاديمي ومسئول قسم اللغة  الأسبانية',
       Instractor_Info: [
         'حاصل على ماجستير الترجمة ف اللغة الأسبانية من كليه الألسن جامعة عين شمس',
         'مساعد سفيرة جمهورية الدومينيكان',
@@ -56,17 +68,6 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/5.jpg',
-      Instractor_Name: 'أحمد سراج',
-      Instractor_Job: 'مدير تكنولوجيا التعليم',
-      Instractor_Info: [
-        'بكالوريوس حاسبات وذكاء اصطناعي جامعة بنها',
-        'ITI intensive code camp grad',
-        'Software Quality control Engineer at Systems Egypt',
-        'Software Quality control Engineer at Banque misr',
-      ],
-    },
-    {
       ImageUrl: 'assets/Home/Home-Team/6.jpg',
       Instractor_Name: 'ساره محمد',
       Instractor_Job: 'مسؤول تطوير المدرسين',
@@ -79,14 +80,37 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/7.jpg',
-      Instractor_Name: 'جوزيف رفيق',
-      Instractor_Job: 'مسئول قسم اللغة الإنجليزية',
+      ImageUrl: 'assets/Home/Home-Team/6.jpg',
+      Instractor_Name: 'علي كنعان',
+      Instractor_Job: 'مسئول قسم البرمجة والحاسب',
       Instractor_Info: [
-        'محاضر بريطاني معتمد من جامعة كامبريدج.',
-        'خبرة تفوق 5 سنوات في تدريس اللغة الإنجليزية لغير الناطقين بها.',
-        'عمل كمتحدث رسمي ومدرب لغوي في العديد من المؤتمرات الدولية.',
-        'مشارك في برامج تطوير المناهج الدراسية بالتعاون مع مؤسسات تعليمية دولية.',
+        'ماستر علوم حاسب من الأكاديمية العربية للعلوم والتكنولوجيا AAST',
+        'عضو ورئيس لجان تحكيم ICPC و IOI و ACPC teens',
+        'خبرة 10 سنين في تدريب problem solving لكافة الأعمار',
+        'خبرة ٥ سنين في إدارة وتطوير عملية إنشاء الحلول البرمجية',
+      ],
+    },
+    {
+      ImageUrl: 'assets/Home/Home-Team/5.jpg',
+      Instractor_Name: 'أحمد سراج',
+      Instractor_Job: 'مدير تكنولوجيا التعليم',
+      Instractor_Info: [
+        'بكالوريوس حاسبات وذكاء اصطناعي جامعة بنها',
+        'ITI intensive code camp grad',
+        'Software Quality control Engineer at Systems Egypt',
+        'Software Quality control Engineer at Banque misr',
+      ],
+    },
+    {
+      ImageUrl: 'assets/Home/Home-Team/5.jpg',
+      Instractor_Name: 'هبة معوض',
+      Instractor_Job: 'مسؤولة قسم اللغة الفرنسية',
+      Instractor_Info: [
+        'بكالوريوس حاسبات وذكاء اصطناعي جامعة بنها',
+        'private French teacher with  10+ years experience',
+        'French teacher at Cardiff modern international school',
+        'French teacher at Anglo American semi-international school at new capital city',
+        'French teacher at El Masrawya language school',
       ],
     },
   ];

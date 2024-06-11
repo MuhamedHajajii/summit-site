@@ -5,12 +5,12 @@
   <div
     class="Header Text-Secondary fw-bolder fs-1 d-flex justify-content-center align-items-center"
   >
-    <p class="mb-0 AR">فريقنا</p>
+    <p data-aos="zoom-out" data-aos-duration="1000" class="mb-0 AR">فريقنا</p>
   </div>
   <div class="container">
     @for (item of _Team.Team; track item ; let i = $index ; let odd = $odd) {
     <div [ngClass]="{ AR: odd }" class="row">
-      <div class="col-12 col-lg-6">
+      <div data-aos="fade-up" data-aos-duration="1000" class="col-12 col-lg-6">
         <div class="p-5 section__Container">
           <div class="section__OneImage--Container rounded-5">
             <img
@@ -23,12 +23,22 @@
         </div>
       </div>
       <div class="col-12 col-lg-6 AR p-5">
-        <p class="h1 Text-Main fw-medium instractor__Name mb-5">
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="h1 Text-Main fw-medium instractor__Name mb-5"
+        >
           {{ item.Instractor_Name }} - {{ item.Instractor_Job }}
         </p>
         <ul>
           @for (item of item.Instractor_Info; track $index) {
-          <li class="mb-2 fw-bold AR">{{ item }}</li>
+          <li
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="mb-2 fw-bold AR"
+          >
+            {{ item }}
+          </li>
           }
         </ul>
       </div>

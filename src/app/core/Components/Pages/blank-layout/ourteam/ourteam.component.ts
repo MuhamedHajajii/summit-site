@@ -1,5 +1,5 @@
-import { CommonModule, DOCUMENT } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { TeamService } from '../../../../services/team.service';
 
 @Component({
@@ -10,5 +10,27 @@ import { TeamService } from '../../../../services/team.service';
   styleUrl: './ourteam.component.scss',
 })
 export class OurteamComponent {
-  constructor(public _Team: TeamService) {}
+  constructor(
+    public _Team: TeamService,
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      if (this.document.readyState !== 'loading') {
+        this.loadAOS();
+      } else {
+        this.document.addEventListener('DOMContentLoaded', () =>
+          this.loadAOS()
+        );
+      }
+    }
+  }
+
+  private async loadAOS() {
+    const { default: AOS } = await import('aos');
+    AOS.init();
+    AOS.refresh();
+  }
 }

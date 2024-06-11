@@ -5,7 +5,7 @@
   <div
     class="Header Text-Secondary fw-bolder fs-1 d-flex justify-content-center align-items-center"
   >
-    <p class="mb-0 AR">من نحن ؟</p>
+    <p data-aos="zoom-out" data-aos-duration="1000" class="mb-0 AR">من نحن ؟</p>
   </div>
   <div class="container">
     <!-- ============================== -->
@@ -16,16 +16,22 @@
     <!-- About Section Three -->
     <!-- ============================== -->
     <hr class="border-3 pt-4 mt-4" />
+    @defer(when showComponents === true){
     <app-about-section-three></app-about-section-three>
+    }
   </div>
   <!-- ============================== -->
   <!-- About Section Four -->
   <!-- ============================== -->
+  @defer(when showComponents === true){
   <app-about-section-four></app-about-section-four>
+  }
   <!-- ============================== -->
   <!-- About Section Five -->
   <!-- ============================== -->
   <div class="container">
+    @defer(when showComponents === true){
     <app-about-section-five></app-about-section-five>
+    }
   </div>
 </section>
