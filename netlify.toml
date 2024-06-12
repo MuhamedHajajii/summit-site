@@ -1,6 +1,6 @@
 [build]
-  command = "rm -rf node_modules && npm install --legacy-peer-deps && npm run build"
-  publish = "dist/summit-site/browser/"
+  command = "npm install --force && npm run build"
+  publish = "dist/summit-site/browser"
 
 [build.environment]
   CI = "false"
