@@ -30,3 +30,8 @@
 nav:not(:has([routerLink="home"].active)) {
   background-color: $main-color;
 }
+
+#collapsibleNavId.show {
+  background-color: $main-color;
+  border-radius: 15px;
+}
