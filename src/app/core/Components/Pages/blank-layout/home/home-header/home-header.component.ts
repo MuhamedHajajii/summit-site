@@ -22,13 +22,13 @@ export class HomeHeaderComponent {
     @Inject(PLATFORM_ID) private platformId: Object,
     private _Renderer2: Renderer2
   ) {}
-  ngOnInit() {
-    if (this.document.readyState !== 'loading') {
-      setTimeout(() => {
-        this.getHeaderBg();
-      }, 1500);
-    }
-  }
+  // ngOnInit() {
+  //   if (this.document.readyState !== 'loading') {
+  //     setTimeout(() => {
+  //       this.getHeaderBg();
+  //     }, 1500);
+  //   }
+  // }
   @ViewChild('mainSection') mainSection!: ElementRef;
   getHeaderBg(): void {
     this._Renderer2.addClass(
