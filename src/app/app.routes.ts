@@ -1,46 +1,60 @@
-import { AboutComponent } from './core/Components/Pages/blank-layout/about/about.component';
-import { CoursesComponent } from './core/Components/Pages/blank-layout/courses/courses.component';
-import { HomeComponent } from './core/Components/Pages/blank-layout/home/home.component';
 import { Routes } from '@angular/router';
-import { OurVisionComponent } from './core/Components/Pages/blank-layout/our-vision/our-vision.component';
-import { OurteamComponent } from './core/Components/Pages/blank-layout/ourteam/ourteam.component';
-import { ContactComponent } from './core/Components/Pages/blank-layout/contact/contact.component';
-import { BlankLayoutComponent } from './core/Components/Pages/blank-layout/blank-layout.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: BlankLayoutComponent,
+    loadComponent: () =>
+      import(
+        './core/Components/Pages/blank-layout/blank-layout.component'
+      ).then((e) => e.BlankLayoutComponent),
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       {
         path: 'home',
-        component: HomeComponent,
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/home/home.component'
+          ).then((e) => e.HomeComponent),
         title: 'SUMMIT - الرئيسية',
       },
       {
         path: 'about',
-        component: AboutComponent,
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/about/about.component'
+          ).then((e) => e.AboutComponent),
         title: 'SUMMIT - عن الشركة',
       },
       {
         path: 'courses',
-        component: CoursesComponent,
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/courses/courses.component'
+          ).then((e) => e.CoursesComponent),
         title: 'SUMMIT - كورسات',
       },
       {
         path: 'vision',
-        component: OurVisionComponent,
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/our-vision/our-vision.component'
+          ).then((e) => e.OurVisionComponent),
         title: 'SUMMIT - فلسفتنا',
       },
       {
         path: 'ourteam',
-        component: OurteamComponent,
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/ourteam/ourteam.component'
+          ).then((e) => e.OurteamComponent),
         title: 'SUMMIT - فريقنا',
       },
       {
         path: 'contact',
-        component: ContactComponent,
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/contact/contact.component'
+          ).then((e) => e.ContactComponent),
         title: 'SUMMIT - اتصل بنا',
       },
     ],
