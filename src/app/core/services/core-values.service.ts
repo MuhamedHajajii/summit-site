@@ -28,9 +28,9 @@ export class CoreValuesService {
       image_2: 'assets/About/about-section-2/3.png',
     },
     {
-      title: 'التعاون',
+      title: 'الشفافية',
       pragraph:
-        'نعزز روح التعاون بين الطلاب والمعلمين وأولياء الأمور لتحقيق أهدافنا التعليمية المشتركة.',
+        'نلتزم بالشفافية في جميع جوانب عملنا ونتواصل بوضوح وصراحة مع جميع الأطراف المعنية',
       image_1: 'assets/Home/Core-values/4.png',
       image_2: 'assets/About/about-section-2/4.png',
     },

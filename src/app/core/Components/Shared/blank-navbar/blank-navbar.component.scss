@@ -27,8 +27,8 @@
   transition: 0.3s all;
 }
 
-nav:not(:has([routerLink="home"].active)) {
-  background-color: $main-color;
+nav:not(:has(.nav-link.main.active)) {
+  background-color: $main-color !important;
 }
 
 #collapsibleNavId.show {

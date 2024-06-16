@@ -10,7 +10,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       {
-        path: 'home',
+        path: '',
         loadComponent: () =>
           import(
             './../app/core/Components/Pages/blank-layout/home/home.component'

@@ -19,7 +19,6 @@ import { RouterOutlet } from '@angular/router';
 export class BlankLayoutComponent {
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object,
     private _Renderer2: Renderer2
   ) {}
   @ViewChild('mainLoading') mainLoading!: ElementRef;

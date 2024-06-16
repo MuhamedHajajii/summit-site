@@ -25,23 +25,12 @@ export class BlankNavbarComponent {
   }
   @HostListener('window:scroll')
   onWindowScroll(): void {
-    if (this.router.url === '/home') {
-      if (window.scrollY > 500) {
-        this.addClasses(this.NavBar.nativeElement, ['Bg-Main', 'px-5']);
+    if (this.router.url === '/') {
+      if (scrollY >= 500) {
+        this._Renderer2.addClass(this.NavBar.nativeElement, 'Bg-Main');
       } else {
-        this.removeClasses(this.NavBar.nativeElement, ['Bg-Main', 'px-5']);
+        this._Renderer2.removeClass(this.NavBar.nativeElement, 'Bg-Main');
       }
     }
-  }
-  private addClasses(element: any, classNames: string[]): void {
-    classNames.forEach((className) => {
-      this._Renderer2.addClass(element, className);
-    });
-  }
-
-  private removeClasses(element: any, classNames: string[]): void {
-    classNames.forEach((className) => {
-      this._Renderer2.removeClass(element, className);
-    });
   }
 }

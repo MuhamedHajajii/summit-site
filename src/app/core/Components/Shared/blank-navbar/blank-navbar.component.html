@@ -13,7 +13,7 @@
       </span>
       <a
         class="navbar-brand Font-Secondary-Cairo text-white fw-bold fs-1"
-        routerLink="home"
+        routerLink=""
         >SUMMIT</a
       >
     </div>
@@ -34,9 +34,11 @@
       >
         <li (click)="CloseNavBar()" class="mb-3 mb-lg-0 nav-item mx-1 mx-xl-2">
           <a
+            id="main"
             class="nav-link text-white p-2"
-            routerLink="home"
-            routerLinkActive="active"
+            routerLink=""
+            routerLinkActive="active main"
+            [routerLinkActiveOptions]="{ exact: true }"
           >
             الرئيسية
             <i class="fa-solid fa-house ms-1"></i>
