@@ -1,6 +1,10 @@
 @import "variables";
 .Header {
-  height: 40vh;
+  div {
+    margin-top: 100px;
+  }
+  padding-block: 100px;
+  min-height: 40vh;
   background-image: url("/assets/About/backgrounds/about-backgroud.png");
   background-size: cover;
   position: relative;
