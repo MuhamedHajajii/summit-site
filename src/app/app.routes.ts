@@ -15,7 +15,7 @@ export const routes: Routes = [
           import(
             './../app/core/Components/Pages/blank-layout/home/home.component'
           ).then((e) => e.HomeComponent),
-        title: 'SUMMIT - الرئيسية',
+        title: 'SUMMIT Online School - ساميت اون لاين سكول',
       },
       {
         path: 'about',
