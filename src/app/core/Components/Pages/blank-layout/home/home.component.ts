@@ -48,14 +48,4 @@ export class HomeComponent {
     AOS.init();
     AOS.refresh();
   }
-  showComponents: boolean = false;
-
-  @HostListener('window:scroll')
-  onWindowScroll(): void {
-    if (window.scrollY > 120) {
-      this.showComponents = true;
-    } else {
-      this.showComponents = false;
-    }
-  }
 }

@@ -23,8 +23,7 @@
               decoding="async"
               data-aos="flip-right"
               data-aos-duration="1000"
-              data-aos-delay="100"
-              class="rounded-3"
+              class="rounded-3 ratio ratio-16x9 w-100 object-fit-cover"
               [height]="450"
               [src]="slide.ImageUrl"
               [alt]="slide.Instractor_Name"
@@ -34,17 +33,11 @@
               <p
                 data-aos="flip-left"
                 data-aos-duration="1000"
-                data-aos-delay="100"
                 class="Text-Third fw-bolder my-2 fw-bold"
               >
                 {{ slide.Instractor_Name }}
               </p>
-              <p
-                data-aos="flip-up"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-                class="fw-bold"
-              >
+              <p data-aos="flip-up" data-aos-duration="1000" class="fw-bold">
                 {{ slide.Instractor_Job }}
               </p>
             </div>

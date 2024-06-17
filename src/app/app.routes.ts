@@ -15,7 +15,11 @@ export const routes: Routes = [
           import(
             './../app/core/Components/Pages/blank-layout/home/home.component'
           ).then((e) => e.HomeComponent),
-        title: 'SUMMIT Online School - ساميت اون لاين سكول',
+        data: {
+          title: 'SUMMIT Online School - ساميت اون لاين سكول',
+          description:
+            'تقدم الشركة خدماتها و تساعد الأفراد من مختلف الأعمار في تحقيق رؤيتهم بتوفير تعليم وتدريب عالي الجودة  مقر الشركة في الرياض بالمملكة العربية السعودية',
+        },
       },
       {
         path: 'about',
@@ -23,7 +27,11 @@ export const routes: Routes = [
           import(
             './../app/core/Components/Pages/blank-layout/about/about.component'
           ).then((e) => e.AboutComponent),
-        title: 'SUMMIT - عن الشركة',
+        data: {
+          title: 'SUMMIT - عن الشركة',
+          description:
+            'نحن ملتزمون بتقديم تعليم عالي الجودة يتماشى مع متطلبات المنهج المصري الرسمي مع توفير بيئة تعليمية متقدمة ومتكاملة تتيح للطلاب تحقيق أقصى إمكاناتهم',
+        },
       },
       {
         path: 'courses',
@@ -31,7 +39,11 @@ export const routes: Routes = [
           import(
             './../app/core/Components/Pages/blank-layout/courses/courses.component'
           ).then((e) => e.CoursesComponent),
-        title: 'SUMMIT - كورسات',
+        data: {
+          title: 'SUMMIT - كورسات',
+          description:
+            'أفضل المنصات التعليمية التي تستخدم لتدريس المناهج المختلفة Generative AI British English Programing Spanish German French',
+        },
       },
       {
         path: 'vision',
@@ -39,7 +51,11 @@ export const routes: Routes = [
           import(
             './../app/core/Components/Pages/blank-layout/our-vision/our-vision.component'
           ).then((e) => e.OurVisionComponent),
-        title: 'SUMMIT - فلسفتنا',
+        data: {
+          title: 'SUMMIT - فلسفتنا',
+          description:
+            'ندرك أهمية إبقاء المتعلمين مندمجين ومتفاعلين في بيئة التعلم عبر الإنترنت',
+        },
       },
       {
         path: 'ourteam',
@@ -47,7 +63,11 @@ export const routes: Routes = [
           import(
             './../app/core/Components/Pages/blank-layout/ourteam/ourteam.component'
           ).then((e) => e.OurteamComponent),
-        title: 'SUMMIT - فريقنا',
+        data: {
+          title: 'SUMMIT - فريقنا',
+          description:
+            'استشاري التطوير بمدرسه ساميت عبد الرحمن العربي الرئيس التنفيذي لمدرسة ساميت جورج أمجد',
+        },
       },
       {
         path: 'contact',
@@ -55,7 +75,10 @@ export const routes: Routes = [
           import(
             './../app/core/Components/Pages/blank-layout/contact/contact.component'
           ).then((e) => e.ContactComponent),
-        title: 'SUMMIT - اتصل بنا',
+        data: {
+          title: 'SUMMIT - اتصل بنا',
+          description: 'الرياض المملكه العربيه السعوديه +966582009746',
+        },
       },
     ],
   },
