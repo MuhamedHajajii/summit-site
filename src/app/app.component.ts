@@ -41,7 +41,9 @@ export class AppComponent {
         mergeMap((route) => route.data)
       )
       .subscribe((data) => {
-        this.titleService.setTitle(data['title'] || 'Home');
+        this.titleService.setTitle(
+          data['title'] || 'SUMMIT Online School - ساميت اون لاين سكول'
+        );
         this.metaService.updateTag({
           name: 'description',
           content:

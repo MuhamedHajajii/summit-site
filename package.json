@@ -1,6 +1,9 @@
 {
   "name": "summit-site",
   "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
 "ng": "ng",
 "start": "ng serve",
