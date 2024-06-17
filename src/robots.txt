@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.summitonlineschool.com/sitemap.xml
