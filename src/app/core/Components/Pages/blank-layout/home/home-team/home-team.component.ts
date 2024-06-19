@@ -1,4 +1,4 @@
-import { CommonModule, DOCUMENT } from '@angular/common';
+import { CommonModule, DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { TeamService } from '../../../../../services/team.service';
@@ -6,7 +6,7 @@ import { TeamService } from '../../../../../services/team.service';
 @Component({
   selector: 'app-home-team',
   standalone: true,
-  imports: [CarouselModule, CommonModule],
+  imports: [CarouselModule, CommonModule, NgOptimizedImage],
   templateUrl: './home-team.component.html',
   styleUrl: './home-team.component.scss',
 })

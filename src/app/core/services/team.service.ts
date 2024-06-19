@@ -80,7 +80,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/5.jpg',
+      ImageUrl: 'assets/Home/Home-Team/7.jpg',
       Instractor_Name: 'علي كنعان',
       Instractor_Job: 'مسئول قسم البرمجة والحاسب',
       Instractor_Info: [
@@ -91,7 +91,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/7.jpg',
+      ImageUrl: 'assets/Home/Home-Team/5.jpg',
       Instractor_Name: 'أحمد سراج',
       Instractor_Job: 'مدير تكنولوجيا التعليم',
       Instractor_Info: [
