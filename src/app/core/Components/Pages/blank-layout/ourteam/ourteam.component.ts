@@ -1,5 +1,10 @@
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
 import { TeamService } from '../../../../services/team.service';
 
 @Component({
@@ -27,7 +32,6 @@ export class OurteamComponent {
       }
     }
   }
-
   private async loadAOS() {
     const { default: AOS } = await import('aos');
     AOS.init();

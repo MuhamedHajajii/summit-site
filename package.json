@@ -5,13 +5,13 @@
     "packages/*"
   ],
   "scripts": {
-"ng": "ng",
-"start": "ng serve",
-"purgecss": "node ./src/scripts/purgecss.js",
-"build": "ng build --configuration production && npm run purgecss",
-"watch": "ng build --watch --configuration development",
-"test": "ng; test"
-},
+    "ng": "ng",
+    "start": "ng serve",
+    "purgecss": "node ./src/scripts/purgecss.js",
+    "build": "ng build --configuration production && npm run purgecss",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng; test"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.1.0",
