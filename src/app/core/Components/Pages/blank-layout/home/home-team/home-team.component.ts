@@ -1,12 +1,12 @@
-import { CommonModule, DOCUMENT, NgOptimizedImage } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { TeamService } from '../../../../../services/team.service';
 
 @Component({
   selector: 'app-home-team',
   standalone: true,
-  imports: [CarouselModule, CommonModule, NgOptimizedImage],
+  imports: [CarouselModule, CommonModule],
   templateUrl: './home-team.component.html',
   styleUrl: './home-team.component.scss',
 })

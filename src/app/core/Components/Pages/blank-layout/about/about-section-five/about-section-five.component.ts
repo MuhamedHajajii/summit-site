@@ -1,11 +1,10 @@
-import { NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about-section-five',
   standalone: true,
-  imports: [RouterLink, NgOptimizedImage],
+  imports: [RouterLink],
   templateUrl: './about-section-five.component.html',
   styleUrl: './about-section-five.component.scss',
 })

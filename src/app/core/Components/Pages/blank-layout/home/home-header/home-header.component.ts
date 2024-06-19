@@ -1,4 +1,4 @@
-import { DOCUMENT, NgOptimizedImage } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 import {
   Component,
   ElementRef,
@@ -12,7 +12,7 @@ import { HomeVideoComponent } from './home-video/home-video.component';
 @Component({
   selector: 'app-home-header',
   standalone: true,
-  imports: [HomeVideoComponent, NgOptimizedImage],
+  imports: [HomeVideoComponent],
   templateUrl: './home-header.component.html',
   styleUrl: './home-header.component.scss',
 })
