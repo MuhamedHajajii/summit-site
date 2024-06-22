@@ -1,42 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+            http://www.google.com/schemas/sitemap-image/1.1
+            http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://www.summitonlineschool.com/</loc>
   <lastmod>2024-06-17T00:55:10+00:00</lastmod>
   <priority>1.00</priority>
+  <image:image>
+    <image:loc>https://www.summitonlineschool.com/assets/Summit-Logo/logo2.jpg</image:loc>
+    <image:caption>Summit logo</image:caption>
+  </image:image>
 </url>
 <url>
   <loc>https://www.summitonlineschool.com/about</loc>
   <lastmod>2024-06-17T00:55:10+00:00</lastmod>
   <priority>0.80</priority>
+  <image:image>
+    <image:loc>https://www.summitonlineschool.com/assets/Summit-Logo/logo2.jpg</image:loc>
+    <image:caption>Summit logo</image:caption>
+  </image:image>
 </url>
 <url>
   <loc>https://www.summitonlineschool.com/courses</loc>
   <lastmod>2024-06-17T00:55:10+00:00</lastmod>
   <priority>0.80</priority>
+  <image:image>
+    <image:loc>https://www.summitonlineschool.com/assets/Summit-Logo/logo2.jpg</image:loc>
+    <image:caption>Summit logo</image:caption>
+  </image:image>
 </url>
 <url>
   <loc>https://www.summitonlineschool.com/vision</loc>
   <lastmod>2024-06-17T00:55:10+00:00</lastmod>
   <priority>0.80</priority>
+  <image:image>
+    <image:loc>https://www.summitonlineschool.com/assets/Summit-Logo/logo2.jpg</image:loc>
+    <image:caption>Summit logo</image:caption>
+  </image:image>
 </url>
 <url>
   <loc>https://www.summitonlineschool.com/ourteam</loc>
   <lastmod>2024-06-17T00:55:10+00:00</lastmod>
   <priority>0.80</priority>
+  <image:image>
+    <image:loc>https://www.summitonlineschool.com/assets/Summit-Logo/logo2.jpg</image:loc>
+    <image:caption>Summit logo</image:caption>
+  </image:image>
 </url>
 <url>
   <loc>https://www.summitonlineschool.com/contact</loc>
   <lastmod>2024-06-17T00:55:10+00:00</lastmod>
   <priority>0.80</priority>
+  <image:image>
+    <image:loc>https://www.summitonlineschool.com/assets/Summit-Logo/logo2.jpg</image:loc>
+    <image:caption>Summit logo</image:caption>
+  </image:image>
 </url>
-
 
 </urlset>

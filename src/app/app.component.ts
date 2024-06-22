@@ -42,7 +42,7 @@ export class AppComponent {
       )
       .subscribe((data) => {
         this.titleService.setTitle(
-          data['title'] || 'SUMMIT Online School - ساميت اون لاين سكول'
+          data['title'] || 'SUMMIT Online School - ساميت اونلاين سكول'
         );
         this.metaService.updateTag({
           name: 'description',

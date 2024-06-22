@@ -16,7 +16,7 @@ export const routes: Routes = [
             './../app/core/Components/Pages/blank-layout/home/home.component'
           ).then((e) => e.HomeComponent),
         data: {
-          title: 'SUMMIT Online School - ساميت اون لاين سكول',
+          title: 'SUMMIT Online School - ساميت اونلاين سكول',
           description:
             'تقدم الشركة خدماتها و تساعد الأفراد من مختلف الأعمار في تحقيق رؤيتهم بتوفير تعليم وتدريب عالي الجودة  مقر الشركة في الرياض بالمملكة العربية السعودية',
         },
