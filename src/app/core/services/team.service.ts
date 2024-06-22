@@ -102,7 +102,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/6.jpg',
+      ImageUrl: 'assets/Home/Home-Team/9.jpg',
       Instractor_Name: 'هبة معوض',
       Instractor_Job: 'مسؤولة قسم اللغة الفرنسية',
       Instractor_Info: [
