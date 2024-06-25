@@ -1,8 +1,8 @@
 @import "variables";
 section {
-  background-image: url("/assets/Header-Backgroud.jpg");
+  background-image: url("/assets/Header-Backgroud.svg");
   background-position: center center;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   .container-fluid {
     .row {

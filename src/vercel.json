@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "dist/summit-site/browser/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "dist/summit-site/server/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/summit-site/server/main.js"
+    }
+  ]
+}
