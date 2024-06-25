@@ -8,7 +8,6 @@ export const routes: Routes = [
         './core/Components/Pages/blank-layout/blank-layout.component'
       ).then((e) => e.BlankLayoutComponent),
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
       {
         path: '',
         loadComponent: () =>
