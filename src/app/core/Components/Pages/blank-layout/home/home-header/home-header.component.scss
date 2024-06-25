@@ -25,6 +25,12 @@ section {
   .video__Image {
     filter: blur(1px);
   }
+  .imageConaienr {
+    transition: 0.3s all;
+    &:hover .video__Image {
+      filter: blur(10px);
+    }
+  }
 }
 
 h1 {
