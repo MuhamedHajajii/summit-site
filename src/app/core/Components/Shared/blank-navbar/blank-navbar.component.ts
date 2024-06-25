@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import {
   Component,
   ElementRef,
@@ -10,7 +11,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-blank-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, NgOptimizedImage],
   templateUrl: './blank-navbar.component.html',
   styleUrl: './blank-navbar.component.scss',
 })
