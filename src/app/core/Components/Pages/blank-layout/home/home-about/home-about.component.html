@@ -15,20 +15,21 @@
       <!-- Section Content -->
       <div class="row">
         <div class="col-md-6">
-          <div class="row g-0">
+          <div class="row">
             @for (item of Images; track item ; let i = $index) {
             <div
               (click)="toggleLightBox()"
-              class="col-12 col-md-6 p-2 imgContainer"
+              class="col-12 p-1 col-md-6 imgContainer"
             >
               <img
-                loading="lazy"
-                [height]="250"
-                class="w-100 rounded-3 ratio ratio-1x1"
-                [src]="item"
+                class="rounded-3 p-2 object-fit-cover"
+                [ngSrc]="item"
                 [alt]="item"
+                fill
               />
-              <div class="layer"><i class="fa-regular fa-eye"></i></div>
+              <div class="layer rounded-3">
+                <i class="fa-regular fa-eye"></i>
+              </div>
             </div>
             }
           </div>

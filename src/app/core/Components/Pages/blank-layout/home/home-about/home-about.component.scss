@@ -27,6 +27,7 @@
 }
 .imgContainer {
   position: relative;
+  height: 284px;
 }
 .imgContainer .layer {
   color: white;
@@ -35,7 +36,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  inset: 0.5rem;
+  inset: 0rem;
   background-color: $main-rgba;
   z-index: 5;
   opacity: 0;
