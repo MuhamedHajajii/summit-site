@@ -13,29 +13,31 @@
         </p>
       </div>
       <!-- Section Content -->
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-md-6">
-          <div class="row">
-            @for (item of Images; track item ; let i = $index) {
-            <div
-              (click)="toggleLightBox()"
-              class="col-12 p-1 col-md-6 imgContainer"
-            >
-              <img
-                class="rounded-3 p-2 object-fit-cover"
-                [ngSrc]="item"
-                [alt]="item"
-                fill
-              />
-              <div class="layer rounded-3">
-                <i class="fa-regular fa-eye"></i>
+          <div class="w-100 h-100">
+            <div class="row">
+              @for (item of Images; track item ; let i = $index) {
+              <div
+                (click)="toggleLightBox()"
+                class="col-12 p-1 col-md-6 imgContainer"
+              >
+                <img
+                  class="rounded-3 p-2 object-fit-cover"
+                  [ngSrc]="item"
+                  [alt]="item"
+                  fill
+                />
+                <div class="layer rounded-3">
+                  <i class="fa-regular fa-eye"></i>
+                </div>
               </div>
+              }
             </div>
-            }
           </div>
         </div>
-        <div class="col-md-6 AR">
-          <p class="Text-Main fw-semibold">نظرة عامة</p>
+        <div class="col-md-6 AR align-self-start">
+          <p class="Text-Main fw-semibold mt-3 mb-2">نظرة عامة</p>
           <p class="text-muted">
             في عصر التعليم الرقمي، تبرز مدرستنا الافتراضية كواحدة من المؤسسات
             الرائدة في تقديم المنهج المصري للطلاب المسجلين في السفارة المصرية
