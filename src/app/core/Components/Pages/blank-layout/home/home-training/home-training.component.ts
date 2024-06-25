@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
@@ -6,7 +7,7 @@ import { GalleriaModule } from 'primeng/galleria';
 @Component({
   selector: 'app-home-training',
   standalone: true,
-  imports: [GalleriaModule, ButtonModule, RouterLink],
+  imports: [GalleriaModule, ButtonModule, RouterLink, NgOptimizedImage],
   templateUrl: './home-training.component.html',
   styleUrl: './home-training.component.scss',
 })
