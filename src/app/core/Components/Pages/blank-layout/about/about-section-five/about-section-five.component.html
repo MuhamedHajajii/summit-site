@@ -33,10 +33,10 @@
             <div class="card__content">
               <div class="ratio ratio-1x1">
                 <img
-                  loading="lazy"
-                  class="w-100 h-100 rounded-3 ratio ratio-1x1"
-                  [src]="item.Image_Url"
-                  alt="courses-1"
+                  class="rounded-3 ratio ratio-1x1"
+                  [ngSrc]="item.Image_Url"
+                  alt="item.CourseName"
+                  fill
                 />
               </div>
               <div class="rounded-3">

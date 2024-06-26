@@ -24,12 +24,12 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideClientHydration(),
     [provideAnimations()],
-    {
-      provide: IMAGE_CONFIG,
-      useValue: {
-        disableImageSizeWarning: true,
-        disableImageLazyLoadWarning: true,
-      },
-    },
+    // {
+    //   provide: IMAGE_CONFIG,
+    //   useValue: {
+    //     disableImageSizeWarning: true,
+    //     disableImageLazyLoadWarning: true,
+    //   },
+    // },
   ],
 };
