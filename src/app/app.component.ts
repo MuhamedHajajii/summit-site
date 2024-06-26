@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import {
   ActivatedRoute,
   NavigationEnd,
   Router,
   RouterOutlet,
 } from '@angular/router';
-import { CoreModule } from './core/core.module';
-import { Meta, Title } from '@angular/platform-browser';
 import { filter, map, mergeMap } from 'rxjs';
+import { CoreModule } from './core/core.module';
 interface RouteData {
   title?: string;
   description?: string;
