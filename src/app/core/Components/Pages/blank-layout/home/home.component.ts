@@ -1,4 +1,5 @@
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { HomeAboutComponent } from './home-about/home-about.component';
 import { HomeCorevaluesComponent } from './home-corevalues/home-corevalues.component';
 import { HomeCoursesComponent } from './home-courses/home-courses.component';
@@ -7,7 +8,6 @@ import { HomeOurVisionComponent } from './home-our-vision/home-our-vision.compon
 import { HomeTeamComponent } from './home-team/home-team.component';
 import { HomeTestimonialComponent } from './home-testimonial/homt-testimonial.component';
 import { HomeTrainingComponent } from './home-training/home-training.component';
-import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-home',

@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CountUpModule } from 'ngx-countup';
-// import { CountUpModule } from 'ngx-countup';
 
 @Component({
   selector: 'app-home-testimonial',

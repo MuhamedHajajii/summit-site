@@ -1,12 +1,5 @@
-import { DOCUMENT, NgOptimizedImage } from '@angular/common';
-import {
-  Component,
-  ElementRef,
-  Inject,
-  PLATFORM_ID,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { HomeVideoComponent } from './home-video/home-video.component';
 
 @Component({
@@ -17,18 +10,7 @@ import { HomeVideoComponent } from './home-video/home-video.component';
   styleUrl: './home-header.component.scss',
 })
 export class HomeHeaderComponent {
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object,
-    private _Renderer2: Renderer2
-  ) {}
-  // ngOnInit() {
-  //   if (this.document.readyState !== 'loading') {
-  //     setTimeout(() => {
-  //       this.getHeaderBg();
-  //     }, 1500);
-  //   }
-  // }
+  constructor(private _Renderer2: Renderer2) {}
   @ViewChild('mainSection') mainSection!: ElementRef;
   getHeaderBg(): void {
     this._Renderer2.addClass(
