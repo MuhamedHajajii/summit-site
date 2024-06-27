@@ -2,9 +2,13 @@
   "routes": [
     "/",
     "/about",
+    "/comments",
     "/contact",
     "/courses",
+    "/joinus",
     "/ourteam",
+    "/ourteam/joinus",
+    "/students",
     "/vision"
   ]
 }

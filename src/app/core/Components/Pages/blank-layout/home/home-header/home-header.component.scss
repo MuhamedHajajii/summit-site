@@ -71,3 +71,21 @@ p {
     height: 150px;
   }
 }
+
+.bg-btn-submmit {
+  background-color: #e2cd42;
+  transition: 0.3s;
+  &:hover {
+    animation: submmitAnimation 0.3s infinite alternate;
+    background-color: $main-color;
+    border-color: $secondary-color !important;
+  }
+}
+@keyframes submmitAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}

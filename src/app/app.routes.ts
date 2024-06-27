@@ -67,6 +67,65 @@ export const routes: Routes = [
           description:
             'استشاري التطوير بمدرسه ساميت عبد الرحمن العربي الرئيس التنفيذي لمدرسة ساميت جورج أمجد',
         },
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import(
+                '../app/core/Components/Pages/blank-layout/ourteam/ourteamblank/ourteamblank.component'
+              ).then((e) => e.OurteamblankComponent),
+            data: {
+              title: 'SUMMIT - join us',
+              description:
+                'استشاري التطوير بمدرسه ساميت عبد الرحمن العربي الرئيس التنفيذي لمدرسة ساميت جورج أمجد',
+            },
+          },
+          {
+            path: 'joinus',
+            loadComponent: () =>
+              import(
+                '../app/core/Components/Pages/blank-layout/ourteam/joinusform/joinusform.component'
+              ).then((e) => e.JoinusformComponent),
+            data: {
+              title: 'SUMMIT - join us',
+              description:
+                'استشاري التطوير بمدرسه ساميت عبد الرحمن العربي الرئيس التنفيذي لمدرسة ساميت جورج أمجد',
+            },
+          },
+        ],
+      },
+      {
+        path: 'joinus',
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/forms/teachers-form/teachers-form.component'
+          ).then((e) => e.TeachersFormComponent),
+        data: {
+          title: 'SUMMIT - انضم الينا',
+          description: 'الرياض المملكه العربيه السعوديه +966582009746',
+        },
+      },
+      {
+        path: 'students',
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/forms/students-form/students-form.component'
+          ).then((e) => e.StudentsFormComponent),
+        data: {
+          title: 'SUMMIT - انضم الينا',
+          description: 'الرياض المملكه العربيه السعوديه +966582009746',
+        },
+      },
+      {
+        path: 'comments',
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/forms/students-form/students-form.component'
+          ).then((e) => e.StudentsFormComponent),
+        data: {
+          title: 'SUMMIT - انضم الينا',
+          description: 'الرياض المملكه العربيه السعوديه +966582009746',
+        },
       },
       {
         path: 'contact',

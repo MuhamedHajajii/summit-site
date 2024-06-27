@@ -1,11 +1,12 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { HomeVideoComponent } from './home-video/home-video.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home-header',
   standalone: true,
-  imports: [HomeVideoComponent, NgOptimizedImage],
+  imports: [HomeVideoComponent, NgOptimizedImage, RouterLink],
   templateUrl: './home-header.component.html',
   styleUrl: './home-header.component.scss',
 })

@@ -1,5 +1,10 @@
 
 --------------------------------------------------------------------------------
+Package: @angular/forms
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
 Package: @angular/animations
 License: "MIT"
 
@@ -75,12 +80,12 @@ License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @angular/common
+Package: @angular/router
 License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @angular/router
+Package: @angular/common
 License: "MIT"
 
 
