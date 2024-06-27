@@ -120,8 +120,8 @@ export const routes: Routes = [
         path: 'comments',
         loadComponent: () =>
           import(
-            './../app/core/Components/Pages/blank-layout/forms/students-form/students-form.component'
-          ).then((e) => e.StudentsFormComponent),
+            './../app/core/Components/Pages/blank-layout/forms/feedback-form/feedback-form.component'
+          ).then((e) => e.FeedbackFormComponent),
         data: {
           title: 'SUMMIT - انضم الينا',
           description: 'الرياض المملكه العربيه السعوديه +966582009746',
