@@ -1,2 +1,0 @@
-import './polyfills.server.mjs';
-import{Cb as i,Hb as s,_ as o,mb as r,nb as a}from"./chunk-ZEV7IZ3R.mjs";import"./chunk-VVCT4QZE.mjs";var f=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-teachers-form"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,m){n&1&&(r(0,"p"),i(1,"teachers-form works!"),a())}});let t=e;return t})();export{f as TeachersFormComponent};
