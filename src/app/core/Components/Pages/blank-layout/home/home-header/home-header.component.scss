@@ -50,3 +50,24 @@ p {
 .bg {
   inset: 0;
 }
+
+@media screen and (max-width: 991px) {
+  img.rounded-circle {
+    width: 200px;
+    height: 200px;
+  }
+  img.translate-middle {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 992px) {
+  img.rounded-circle {
+    width: 300px;
+    height: 300px;
+  }
+  img.translate-middle {
+    width: 150px;
+    height: 150px;
+  }
+}
