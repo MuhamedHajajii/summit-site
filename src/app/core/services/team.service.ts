@@ -5,9 +5,10 @@ import { Team } from '../interfaces/team';
   providedIn: 'root',
 })
 export class TeamService {
+  baseImageUrl: string = 'https://lh3.googleusercontent.com/d/';
   Team: Team[] = [
     {
-      ImageUrl: 'assets/Home/Home-Team/1.jpg',
+      ImageUrl: this.baseImageUrl + '1XZuEWJqXHKSpMozRpp-YEDnlUqrW7fQh',
       Instractor_Name: 'جورج أمجد',
       Instractor_Job: 'الرئيس التنفيذي لمدرسة summit',
       Instractor_Info: [
@@ -20,7 +21,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/2.jpg',
+      ImageUrl: this.baseImageUrl + '1JpEwK5EsaTM2mtt_6rvfkwLpsMx5Iqiq',
       Instractor_Name: 'عبد الرحمن العربي',
       Instractor_Job: 'استشاري التطوير بمدرسه ساميت',
       Instractor_Info: [
@@ -32,7 +33,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/8.jpg',
+      ImageUrl: this.baseImageUrl + '1G23pre38KNuFAV9fTvh2mrAT1I2vddgn',
       Instractor_Name: 'جوزيف رفيق',
       Instractor_Job: 'مسئول قسم اللغة الإنجليزية',
       Instractor_Info: [
@@ -43,7 +44,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/3.jpg',
+      ImageUrl: this.baseImageUrl + '1JJnk-kQPPhy3QpQjKmdRn6gpe0-2Sr7X',
       Instractor_Name: 'مايكل ميشيل',
       Instractor_Job:
         'مدير الجودة والاعتماد الأكاديمي ومسئول قسم اللغة  الأسبانية',
@@ -56,7 +57,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/4.jpg',
+      ImageUrl: this.baseImageUrl + '1BJWCCQz_SUe3HgeZ7OiCtFRqeJwUvCLd',
       Instractor_Name: 'ماريان أشرف',
       Instractor_Job: 'مديره الإرشاد الأكاديمي ومسئوله قسم اللغة الألمانية',
       Instractor_Info: [
@@ -68,7 +69,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/6.jpg',
+      ImageUrl: this.baseImageUrl + '1I_ZQjIKEnmdsRuM9IDiyPv9xyZP5sQsr',
       Instractor_Name: 'ساره محمد',
       Instractor_Job: 'مسؤول تطوير المدرسين',
       Instractor_Info: [
@@ -80,7 +81,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/7.jpg',
+      ImageUrl: this.baseImageUrl + '1eM0-6e-jD8Y9ekRt3XnWjnoqXNJaQ91b',
       Instractor_Name: 'علي كنعان',
       Instractor_Job: 'مسئول قسم البرمجة والحاسب',
       Instractor_Info: [
@@ -91,7 +92,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/5.jpg',
+      ImageUrl: this.baseImageUrl + '1lb-LjwOzAgfTa72IZggTybC0HIUGegCt',
       Instractor_Name: 'أحمد سراج',
       Instractor_Job: 'مدير تكنولوجيا التعليم',
       Instractor_Info: [
@@ -102,7 +103,7 @@ export class TeamService {
       ],
     },
     {
-      ImageUrl: 'assets/Home/Home-Team/9.jpg',
+      ImageUrl: this.baseImageUrl + '1N7bog-CXeudkSL50Y4iNmy6Q3fgcvG9Z',
       Instractor_Name: 'هبة معوض',
       Instractor_Job: 'مسؤولة قسم اللغة الفرنسية',
       Instractor_Info: [
