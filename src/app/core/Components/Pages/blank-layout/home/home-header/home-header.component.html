@@ -16,31 +16,31 @@
         <!-- ====================================== -->
         <!-- Open Video Button -->
         <!-- ====================================== -->
-        <div
-          class="d-flex justify-content-center flex-column position-relative h-100 imageConaienr"
-        >
-          <div class="video__Image text-center">
-            <img
-              draggable="false"
-              class="rounded-circle"
-              ngSrc="assets/Summit-Logo/trace.svg"
-              alt="Video-BackGround"
-              width="300"
-              height="300"
-              priority
-            />
-          </div>
-          <div>
-            <img
-              role="button"
-              tabindex="0"
-              (click)="onPlayVideoClick()"
-              width="150"
-              height="150"
-              class="position-absolute top-50 start-50 translate-middle"
-              ngSrc="./assets/play-video.svg"
-              alt="play-video"
-            />
+        <div class="h-100 imageConaienr">
+          <div
+            class="text-center rounded-circle homevideoParent overflow-hidden d-flex justify-content-center align-items-center"
+          >
+            <iframe
+              class="rounded-circle video__Image"
+              src="https://www.youtube.com/embed/Elz3WyF3XBY?autoplay=1&mute=1&si=z26IkGcnDY82jvZK"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <img
+                role="button"
+                tabindex="0"
+                (click)="onPlayVideoClick()"
+                width="150"
+                height="150"
+                class="position-absolute top-50 start-50 translate-middle"
+                ngSrc="./assets/play-video.svg"
+                alt="play-video"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,21 @@
 <!-- Modal -->
 <div (click)="onCloseVideoClick()" class="LightBoxContainer">
-  <div class="lightBoxContent container" (click)="stopPropegation($event)">
-    <div class="text-end">
+  <div
+    class="lightBoxContent container text-center"
+    (click)="stopPropegation($event)"
+  >
+    <div class="text-center">
       <button (click)="onCloseVideoClick()" class="btn-close btn-main"></button>
     </div>
-    <img class="w-100" src="assets/videos/staytuned.jpg" alt="staytuned" />
+    <iframe
+      width="100%"
+      height="500"
+      src="https://www.youtube.com/embed/Elz3WyF3XBY?autoplay=1&si=z26IkGcnDY82jvZK"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
   </div>
 </div>

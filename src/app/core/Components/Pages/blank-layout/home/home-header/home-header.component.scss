@@ -19,7 +19,7 @@ section {
     display: inline-block;
   }
   .video__Image {
-    filter: blur(1px);
+    filter: blur(1.2px);
   }
   .imageConaienr {
     transition: 0.3s all;
@@ -87,5 +87,32 @@ p {
   }
   to {
     transform: scale(1.1);
+  }
+}
+.homevideoParent {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.video__Image {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 992px) {
+  .video__Image,
+  .homevideoParent {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .video__Image,
+  .homevideoParent {
+    width: 200px;
+    height: 200px;
   }
 }
