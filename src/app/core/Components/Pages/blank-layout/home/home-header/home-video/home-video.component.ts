@@ -16,4 +16,9 @@ export class HomeVideoComponent {
   stopPropegation(e: Event): void {
     e.stopPropagation();
   }
+  iFrameFlag: boolean = true;
+  iFrameLoad(): void {
+    this.iFrameFlag = false;
+    console.log('Complete');
+  }
 }

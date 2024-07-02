@@ -24,4 +24,9 @@ export class HomeHeaderComponent {
   onPlayVideoClick(): void {
     this.PlayVideo = !this.PlayVideo;
   }
+  iFrameFlag: boolean = true;
+  iFrameLoad(): void {
+    this.iFrameFlag = false;
+    console.log('Complete');
+  }
 }
