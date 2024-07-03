@@ -20,16 +20,13 @@
           <div
             class="text-center rounded-circle homevideoParent overflow-hidden d-flex justify-content-center align-items-center"
           >
-            <iframe
+            <img
               (load)="iFrameLoad()"
-              class="rounded-circle video__Image"
-              src="https://www.youtube.com/embed/Elz3WyF3XBY?autoplay=1&mute=1&loop=1&playlist=Elz3WyF3XBY&si=z26IkGcnDY82jvZK"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+              class="video__Image"
+              src="https://lh3.googleusercontent.com/d/1hH0OlUaGvIwTy2X6jDd-C_KEkyS2GWgj"
+              referrerpolicy="no-referrer"
+              alt="summit online School logo"
+            />
             @if (iFrameFlag) {
             <div
               class="position-absolute top-0 start-0 end-0 bottom-0 w-100 h-100 placeholder Bg-Main"
