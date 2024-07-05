@@ -4,4 +4,5 @@ export interface Team {
   Instractor_Name: string;
   Instractor_Job: string;
   Instractor_Info: string[];
+  Instractor_VideoUrl: string;
 }

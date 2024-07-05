@@ -2,11 +2,13 @@ import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TeamService } from '../../../../../services/team.service';
+import { VideosComponent } from './videos/videos.component';
+import { Team } from '../../../../../interfaces/team';
 
 @Component({
   selector: 'app-ourteamblank',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, VideosComponent],
   templateUrl: './ourteamblank.component.html',
   styleUrl: './ourteamblank.component.scss',
 })
@@ -32,5 +34,14 @@ export class OurteamblankComponent {
     const { default: AOS } = await import('aos');
     AOS.init();
     AOS.refresh();
+  }
+  cuurentInstractor!: Team;
+  isLightBox: boolean = false;
+  toggleLightBox(cuurentInstractor?: Team): void {
+    this.isLightBox = !this.isLightBox;
+    this.cuurentInstractor = cuurentInstractor as Team;
+  }
+  stopProp(e: Event): void {
+    e.stopPropagation();
   }
 }

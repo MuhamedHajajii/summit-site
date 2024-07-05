@@ -12,43 +12,49 @@
     <div
       class="row position-relative z-2 Font-Secondary-Cairo justify-content-center align-items-center flex-column-reverse flex-md-row"
     >
-      <div class="col-md-6 pt-4 pt-md-0">
+      <div class="col-lg-6 pt-4 pt-md-0 d-none d-lg-block">
         <!-- ====================================== -->
         <!-- Open Video Button -->
         <!-- ====================================== -->
-        <div class="h-100 imageConaienr">
+        <div class="position-relative video__Image">
+          @defer (on viewport){
+          <div class="h-100 video__Image pos">
+            <owl-carousel-o [options]="customOptions">
+              @for (slide of HeaderImages; track slide ; let i = $index) {
+              <ng-container>
+                <ng-template carouselSlide>
+                  <img
+                    loading="eager"
+                    decoding="async"
+                    data-aos="flip-right"
+                    data-aos-duration="1000"
+                    class="rounded-4 ratio ratio-16x9 w-100"
+                    [height]="450"
+                    [src]="slide"
+                    [alt]="slide"
+                    [title]="slide"
+                  />
+                </ng-template>
+              </ng-container>
+              }
+            </owl-carousel-o>
+          </div>
+          }@placeholder {
           <div
-            class="text-center rounded-circle homevideoParent overflow-hidden d-flex justify-content-center align-items-center"
+            class="position-absolute top-0 start-0 end-0 bottom-0 w-100 h-100 placeholder Bg-Main"
+            role="presentation"
           >
             <img
-              (load)="iFrameLoad()"
-              class="video__Image"
+              class="position-absolute top-0 start-0 end-0 bottom-0 w-100 h-100 rounded-4"
               src="https://lh3.googleusercontent.com/d/1hH0OlUaGvIwTy2X6jDd-C_KEkyS2GWgj"
               referrerpolicy="no-referrer"
               alt="summit online School logo"
             />
-            @if (iFrameFlag) {
-            <div
-              class="position-absolute top-0 start-0 end-0 bottom-0 w-100 h-100 placeholder Bg-Main"
-              role="presentation"
-            ></div>
-            }
-            <div>
-              <img
-                role="button"
-                tabindex="0"
-                (click)="onPlayVideoClick()"
-                width="150"
-                height="150"
-                class="position-absolute top-50 start-50 translate-middle"
-                ngSrc="./assets/play-video.svg"
-                alt="play-video"
-              />
-            </div>
           </div>
+          }
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <div
           class="text-center d-flex justify-content-center align-items-center flex-column h-100"
         >
@@ -68,6 +74,30 @@
               />
             </span>
           </p>
+          <div class="position-relative">
+            <div class="logoImage my-3">
+              <img
+                width="30"
+                height="30"
+                class="w-100 rounded-circle"
+                src="https://lh3.googleusercontent.com/d/1hH0OlUaGvIwTy2X6jDd-C_KEkyS2GWgj"
+                referrerpolicy="no-referrer"
+                alt="summit online School logo"
+              />
+            </div>
+            <div>
+              <img
+                role="button"
+                tabindex="0"
+                (click)="onPlayVideoClick()"
+                width="150"
+                height="150"
+                class="position-absolute top-50 start-50 translate-middle"
+                ngSrc="./assets/play-video.svg"
+                alt="play-video"
+              />
+            </div>
+          </div>
           <div>
             <button
               routerLink="students"

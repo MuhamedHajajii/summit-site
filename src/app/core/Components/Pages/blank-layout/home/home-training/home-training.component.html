@@ -7,6 +7,7 @@
         data-aos-duration="1500"
         class="col-12 col-lg-5"
       >
+        @defer {
         <div class="row g-0" data-aos="fade-up" data-aos-duration="1000">
           @for (item of Images; track item ; let i = $index) {
           <div
@@ -25,6 +26,7 @@
           </div>
           }
         </div>
+        }
       </div>
       <div
         data-aos="fade-left"

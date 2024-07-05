@@ -1,0 +1,28 @@
+@if (safeUrl) {
+
+<iframe
+  class="w-100"
+  [src]="safeUrl"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+} @else if (cuurentInstractor.Instractor_VideoUrl == '') {
+
+<div class="position-relative">
+  <img
+    class="w-100 rounded-4 placeholder"
+    height="500"
+    [src]="cuurentInstractor.ImageUrl"
+    referrerpolicy="no-referrer"
+    [alt]="cuurentInstractor.Instractor_Name"
+  />
+  <img
+    class="position-absolute top-50 opacity-25 start-50 translate-middle w-75 Bg-Main rounded-circle"
+    src="assets/staytuned.png"
+    alt="stay tuned"
+  />
+</div>
+}

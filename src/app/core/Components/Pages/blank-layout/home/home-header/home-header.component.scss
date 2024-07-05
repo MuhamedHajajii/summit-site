@@ -19,7 +19,7 @@ section {
     display: inline-block;
   }
   .video__Image {
-    filter: blur(1.2px);
+    // filter: blur(1.2px);
   }
   .imageConaienr {
     transition: 0.3s all;
@@ -50,7 +50,13 @@ p {
 .bg {
   inset: 0;
 }
-
+.logoImage {
+  filter: blur(1px);
+  transition: 0.3s all;
+  &:hover {
+    filter: blur(4px);
+  }
+}
 @media screen and (max-width: 991px) {
   img.rounded-circle {
     width: 200px;
@@ -63,12 +69,12 @@ p {
 }
 @media screen and (min-width: 992px) {
   img.rounded-circle {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
   img.translate-middle {
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
   }
 }
 
@@ -114,4 +120,11 @@ p {
     width: 200px;
     height: 200px;
   }
+}
+
+@media screen and (max-width: 992px) {
+}
+
+.owl-carousel {
+  visibility: hidden;
 }

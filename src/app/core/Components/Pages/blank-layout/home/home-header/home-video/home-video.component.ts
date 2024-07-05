@@ -1,9 +1,11 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home-video',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule],
   templateUrl: './home-video.component.html',
   styleUrl: './home-video.component.scss',
 })

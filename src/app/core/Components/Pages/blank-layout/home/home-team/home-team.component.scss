@@ -40,3 +40,14 @@ p {
   right: 10px;
   transform: translateY(-100%);
 }
+
+:host ::ng-deep .p-button.p-button-contrast,
+:host ::ng-deep .p-button-group.p-button-contrast > .p-button,
+:host ::ng-deep .p-splitbutton.p-button-contrast > .p-button,
+:host ::ng-deep .p-button.p-button-contrast:enabled:focus {
+  border-radius: 50%;
+  width: 50px;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  height: 50px;
+}

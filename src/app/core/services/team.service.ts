@@ -19,6 +19,8 @@ export class TeamService {
         'شهادة في إدارة المشاريع التعليمية (Educational Project Management Certification)',
         'مدرس mathematics ببعض المدارس الدولية سابقا',
       ],
+      Instractor_VideoUrl:
+        'https://www.youtube.com/embed/Elz3WyF3XBY?autoplay=1&loop=1&playlist=Elz3WyF3XBY&si=juBiJcfW13Yxq9gh',
     },
     {
       ImageUrl: this.baseImageUrl + '1JpEwK5EsaTM2mtt_6rvfkwLpsMx5Iqiq',
@@ -31,6 +33,8 @@ export class TeamService {
         'خبره في مجال تطوير المدارس اللون لاين 5 سنين',
         'درست لأكتر من ٢٠٠٠ طالب أون لاين واكترى من ١٢٠٠ أوف لاين',
       ],
+      Instractor_VideoUrl:
+        'https://www.youtube.com/embed/Hst0qgJgdDM?autoplay=1&loop=1&playlist=Hst0qgJgdDM&si=7443wzHxBiWsToaA',
     },
     {
       ImageUrl: this.baseImageUrl + '1G23pre38KNuFAV9fTvh2mrAT1I2vddgn',
@@ -42,6 +46,8 @@ export class TeamService {
         'عمل كمتحدث رسمي ومدرب لغوي في العديد من المؤتمرات الدولية.',
         'مشارك في برامج تطوير المناهج الدراسية بالتعاون مع مؤسسات تعليمية دولية.',
       ],
+      Instractor_VideoUrl:
+        'https://www.youtube.com/embed/txUAWH4MaAU?autoplay=1&loop=1&playlist=txUAWH4MaAU',
     },
     {
       ImageUrl: this.baseImageUrl + '1JJnk-kQPPhy3QpQjKmdRn6gpe0-2Sr7X',
@@ -55,6 +61,7 @@ export class TeamService {
         'professional advisor في تومتوم',
         '⁠مترجم في معرض السلاح الدولي معين من وزارة الدفاع ووزارة الشباب',
       ],
+      Instractor_VideoUrl: '',
     },
     {
       ImageUrl: this.baseImageUrl + '1BJWCCQz_SUe3HgeZ7OiCtFRqeJwUvCLd',
@@ -67,6 +74,7 @@ export class TeamService {
         'عضو ف لجنة تنظيم مهرجان الأقصر للسينيما الأفريقه',
         'مديره حضانة harvest الخاصة',
       ],
+      Instractor_VideoUrl: '',
     },
     {
       ImageUrl: this.baseImageUrl + '1I_ZQjIKEnmdsRuM9IDiyPv9xyZP5sQsr',
@@ -79,6 +87,7 @@ export class TeamService {
         '10 years of experience national and international schools',
         'biotechnology graduate',
       ],
+      Instractor_VideoUrl: '',
     },
     {
       ImageUrl: this.baseImageUrl + '1eM0-6e-jD8Y9ekRt3XnWjnoqXNJaQ91b',
@@ -90,6 +99,8 @@ export class TeamService {
         'خبرة 10 سنين في تدريب problem solving لكافة الأعمار',
         'خبرة ٥ سنين في إدارة وتطوير عملية إنشاء الحلول البرمجية',
       ],
+      Instractor_VideoUrl:
+        'https://www.youtube.com/embed/ZFW-qMnR1GY?autoplay=1&loop=1&playlist=ZFW-qMnR1GY&si=SNJkpS-Btl4Iqn1B',
     },
     {
       ImageUrl: this.baseImageUrl + '1lb-LjwOzAgfTa72IZggTybC0HIUGegCt',
@@ -101,6 +112,7 @@ export class TeamService {
         'Software Quality control Engineer at Systems Egypt',
         'Software Quality control Engineer at Banque misr',
       ],
+      Instractor_VideoUrl: '',
     },
     {
       ImageUrl: this.baseImageUrl + '1N7bog-CXeudkSL50Y4iNmy6Q3fgcvG9Z',
@@ -113,6 +125,7 @@ export class TeamService {
         'French teacher at Anglo American semi-international school at new capital city',
         'French teacher at El Masrawya language school',
       ],
+      Instractor_VideoUrl: '',
     },
   ];
   getAllTeamInfo(): any {}

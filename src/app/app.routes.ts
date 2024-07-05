@@ -138,6 +138,17 @@ export const routes: Routes = [
           description: 'الرياض المملكه العربيه السعوديه +966582009746',
         },
       },
+      {
+        path: 'coursesform',
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/forms/courese-form/courese-form.component'
+          ).then((e) => e.CoureseFormComponent),
+        data: {
+          title: 'SUMMIT - اتصل بنا',
+          description: 'الرياض المملكه العربيه السعوديه +966582009746',
+        },
+      },
     ],
   },
   {

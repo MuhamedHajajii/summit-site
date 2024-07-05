@@ -19,9 +19,10 @@
   }
 }
 .section__Container {
+  height: 600px;
   &:hover {
     .section__OneImage--Container {
-      transform: scale(0.95);
+      // transform: scale(0.95);
     }
   }
   .section__OneImage--Container {
@@ -47,6 +48,11 @@
     }
   }
 }
+@media screen and (max-width: 992px) {
+  .section__Container {
+    height: 300px;
+  }
+}
 .instractor__Name {
   position: relative;
   &::after {
@@ -58,5 +64,35 @@
     background-color: $main-color;
     right: 0;
     top: 100%;
+  }
+}
+
+.col-12 {
+  perspective: 1000px;
+  &:hover {
+    .flip-content {
+      transform: rotateY(180deg);
+    }
+  }
+  .flip-content {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.5s all;
+    backface-visibility: hidden;
+  }
+  .Front,
+  .Back {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .Back {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    .Back__content {
+      transform: translateZ(90px);
+    }
   }
 }

@@ -15,7 +15,7 @@ License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: ngx-owl-carousel-o
+Package: primeng
 License: "MIT"
 
 
@@ -75,7 +75,7 @@ License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: primeng
+Package: ngx-owl-carousel-o
 License: "MIT"
 
 

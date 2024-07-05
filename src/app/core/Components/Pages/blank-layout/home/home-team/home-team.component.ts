@@ -2,11 +2,21 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { TeamService } from '../../../../../services/team.service';
+import { TooltipModule } from 'primeng/tooltip';
+import { ButtonModule } from 'primeng/button';
+import { Team } from '../../../../../interfaces/team';
+import { VideosComponent } from '../../ourteam/ourteamblank/videos/videos.component';
 
 @Component({
   selector: 'app-home-team',
   standalone: true,
-  imports: [CarouselModule, CommonModule],
+  imports: [
+    CarouselModule,
+    CommonModule,
+    TooltipModule,
+    ButtonModule,
+    VideosComponent,
+  ],
   templateUrl: './home-team.component.html',
   styleUrl: './home-team.component.scss',
 })
@@ -16,6 +26,7 @@ export class HomeTeamComponent {
     lazyLoad: true,
     loop: true,
     mouseDrag: true,
+
     touchDrag: true,
     pullDrag: true,
     margin: 15,
@@ -44,4 +55,13 @@ export class HomeTeamComponent {
     },
     nav: true,
   };
+  isToggleLightBox: boolean = false;
+  currentSlide!: Team;
+  clickedImage(clickedImage: Team): void {
+    this.currentSlide = clickedImage;
+    console.log(clickedImage.Instractor_Name);
+  }
+  toggleLightBox(): void {
+    this.isToggleLightBox = !this.isToggleLightBox;
+  }
 }

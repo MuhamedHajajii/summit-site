@@ -10,14 +10,36 @@
   <div class="container p-lg-5">
     @for (item of _Team.Team; track item ; let i = $index ; let odd = $odd) {
     <div [ngClass]="{ AR: odd }" class="row p-lg-5">
-      <div data-aos="fade-up" data-aos-duration="1000" class="col-12 col-lg-6">
-        <div class="p-5 section__Container">
-          <div class="section__OneImage--Container rounded-5">
+      <div
+        (click)="toggleLightBox(item)"
+        role="button"
+        tabindex="0"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="col-12 col-lg-6 p-5"
+      >
+        <div class="flip-content h-100">
+          <div class="p-5 section__Container">
+            <div class="section__OneImage--Container Front rounded-5">
+              <img
+                loading="lazy"
+                class="w-100 h-100 rounded-5 object-fit-fill"
+                [src]="item.ImageUrl"
+                [alt]="item.Instractor_Name"
+              />
+            </div>
+          </div>
+          <div
+            class="Bg-Main Back rounded-4 d-flex justify-content-center align-items-center"
+          >
             <img
-              loading="lazy"
-              class="w-100 h-100 rounded-5 ratio ratio-1x1"
-              [src]="item.ImageUrl"
-              [alt]="item.Instractor_Name"
+              role="button"
+              tabindex="0"
+              width="150"
+              height="150"
+              class="position-absolute top-50 start-50 translate-middle z-3 play"
+              src="assets/play-video.svg"
+              alt="play-video"
             />
           </div>
         </div>
@@ -45,3 +67,11 @@
     <i class="mx-2 fa-solid fa-chalkboard-user"></i> انضم إلينا
   </a>
 </section>
+
+@if (isLightBox) {
+<div (click)="toggleLightBox()" class="LightBoxContainer">
+  <div class="lightBoxContent" (click)="toggleLightBox()">
+    <app-videos [cuurentInstractor]="cuurentInstractor"></app-videos>
+  </div>
+</div>
+}
