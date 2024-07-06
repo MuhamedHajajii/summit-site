@@ -23,17 +23,19 @@
               @for (slide of HeaderImages; track slide ; let i = $index) {
               <ng-container>
                 <ng-template carouselSlide>
-                  <img
-                    loading="eager"
-                    decoding="async"
-                    data-aos="flip-right"
-                    data-aos-duration="1000"
-                    class="rounded-4 ratio ratio-16x9 w-100 h-100"
-                    [height]="450"
-                    [src]="slide"
-                    [alt]="slide"
-                    [title]="slide"
-                  />
+                  <div class="video__Image">
+                    <img
+                      loading="eager"
+                      decoding="async"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                      class="rounded-4 ratio ratio-16x9 w-100 h-100"
+                      [height]="450"
+                      [src]="slide"
+                      [alt]="slide"
+                      [title]="slide"
+                    />
+                  </div>
                 </ng-template>
               </ng-container>
               }
