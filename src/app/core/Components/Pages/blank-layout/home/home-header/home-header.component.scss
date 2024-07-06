@@ -129,7 +129,7 @@ p {
   visibility: hidden;
 }
 
-.no-js .owl-carousel,
-.owl-carousel.owl-loaded {
+:host ::ng-deep .no-js .owl-carousel,
+:host ::ng-deep .owl-carousel.owl-loaded {
   height: 350px;
 }
