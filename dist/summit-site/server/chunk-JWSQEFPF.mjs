@@ -1,2 +1,0 @@
-import './polyfills.server.mjs';
-import{l as m}from"./chunk-23LDTMF2.mjs";import"./chunk-TUAED434.mjs";import{ya as a}from"./chunk-7ZHB7ZVY.mjs";import{Ab as r,Yb as i,Z as n}from"./chunk-CK3PJNKL.mjs";import"./chunk-VVCT4QZE.mjs";var f=(()=>{let e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n({type:e,selectors:[["app-ourteam"]],standalone:!0,features:[i],decls:1,vars:0,template:function(o,s){o&1&&r(0,"router-outlet")},dependencies:[a,m]});let t=e;return t})();export{f as OurteamComponent};

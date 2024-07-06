@@ -75,7 +75,8 @@ export class TeamService {
         'عضو ف لجنة تنظيم مهرجان الأقصر للسينيما الأفريقه',
         'مديره حضانة harvest الخاصة',
       ],
-      Instractor_VideoUrl: '',
+      Instractor_VideoUrl:
+        'https://www.youtube.com/embed/jxO0RVrG18k?autoplay=1&loop=1&playlist=jxO0RVrG18k&si=JsU95AHAP0TsauZd',
     },
     {
       ImageUrl: this.baseImageUrl + '1I_ZQjIKEnmdsRuM9IDiyPv9xyZP5sQsr',
