@@ -128,3 +128,8 @@ p {
 .owl-carousel {
   visibility: hidden;
 }
+
+.no-js .owl-carousel,
+.owl-carousel.owl-loaded {
+  height: 350px;
+}
