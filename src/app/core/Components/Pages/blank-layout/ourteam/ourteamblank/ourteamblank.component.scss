@@ -22,17 +22,15 @@
   height: 600px;
   &:hover {
     .section__OneImage--Container {
-      // transform: scale(0.95);
+      transform: scale(0.95);
     }
   }
   .section__OneImage--Container {
     transition: 0.3s All;
     position: relative;
 
-    img {
+    img.rounded-5 {
       position: relative;
-      bottom: 10px;
-      left: 10px;
       z-index: 2;
     }
     &::after {

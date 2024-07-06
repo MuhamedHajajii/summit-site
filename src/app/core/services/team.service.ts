@@ -47,7 +47,7 @@ export class TeamService {
         'مشارك في برامج تطوير المناهج الدراسية بالتعاون مع مؤسسات تعليمية دولية.',
       ],
       Instractor_VideoUrl:
-        'https://www.youtube.com/embed/txUAWH4MaAU?autoplay=1&loop=1&playlist=txUAWH4MaAU',
+        'https://www.youtube.com/embed/Oi7eEDNNlTQ?autoplay=1&loop=1&playlist=Oi7eEDNNlTQ',
     },
     {
       ImageUrl: this.baseImageUrl + '1JJnk-kQPPhy3QpQjKmdRn6gpe0-2Sr7X',
@@ -61,7 +61,8 @@ export class TeamService {
         'professional advisor في تومتوم',
         '⁠مترجم في معرض السلاح الدولي معين من وزارة الدفاع ووزارة الشباب',
       ],
-      Instractor_VideoUrl: '',
+      Instractor_VideoUrl:
+        'https://www.youtube.com/embed/UpE9Y9rWRrQ?autoplay=1&loop=1&playlist=UpE9Y9rWRrQ',
     },
     {
       ImageUrl: this.baseImageUrl + '1BJWCCQz_SUe3HgeZ7OiCtFRqeJwUvCLd',
@@ -112,7 +113,8 @@ export class TeamService {
         'Software Quality control Engineer at Systems Egypt',
         'Software Quality control Engineer at Banque misr',
       ],
-      Instractor_VideoUrl: '',
+      Instractor_VideoUrl:
+        'https://www.youtube.com/embed/ML5ItSO7q-w?autoplay=1&loop=1&playlist=ML5ItSO7q-w&si=SNJkpS-Btl4Iqn1B',
     },
     {
       ImageUrl: this.baseImageUrl + '1N7bog-CXeudkSL50Y4iNmy6Q3fgcvG9Z',
