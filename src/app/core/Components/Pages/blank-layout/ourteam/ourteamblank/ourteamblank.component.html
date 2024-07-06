@@ -16,7 +16,7 @@
         tabindex="0"
         data-aos="fade-up"
         data-aos-duration="1000"
-        class="col-12 col-lg-6 p-5 mb-3 mb-lg-0"
+        class="col-12 col-lg-6 p-4 p-lg-5 mb-2"
       >
         <div class="section__Container">
           <div class="section__OneImage--Container rounded-5">
@@ -38,11 +38,11 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6 AR p-5">
-        <p class="h1 Text-Main fw-medium instractor__Name mb-5">
+      <div class="col-12 col-lg-6 AR p-1 p-lg-5">
+        <p class="h1 Text-Main fw-medium instractor__Name mb-3">
           {{ item.Instractor_Name }} - {{ item.Instractor_Job }}
         </p>
-        <ul>
+        <ul class="pt-5">
           @for (item of item.Instractor_Info; track $index) {
           <li class="mb-2 fw-bold AR">
             {{ item }}

@@ -19,7 +19,6 @@
   }
 }
 .section__Container {
-  height: 600px;
   &:hover {
     .section__OneImage--Container {
       transform: scale(0.95);
@@ -44,11 +43,6 @@
       border-radius: 2rem;
       z-index: 1;
     }
-  }
-}
-@media screen and (max-width: 992px) {
-  .section__Container {
-    height: 300px;
   }
 }
 .instractor__Name {
