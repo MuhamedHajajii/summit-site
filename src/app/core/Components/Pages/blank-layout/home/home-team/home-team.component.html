@@ -18,14 +18,13 @@
         @for (slide of _Team.Team; track slide ; let I = $index) {
         <ng-container>
           <ng-template carouselSlide [id]="slide.Instractor_Name">
-            <div class="position-relative">
+            <div class="position-relative imageConaienr">
               <img
                 loading="lazy"
                 decoding="async"
                 data-aos="flip-right"
                 data-aos-duration="1000"
-                class="rounded-3 ratio ratio-16x9 w-100"
-                [height]="450"
+                class="rounded-3 ratio ratio-16x9 w-100 object-fit-cover w-100 h-100 ratio ratio-4x3"
                 [src]="slide.ImageUrl"
                 [alt]="slide.Instractor_Name"
                 [title]="slide.Instractor_Name"
