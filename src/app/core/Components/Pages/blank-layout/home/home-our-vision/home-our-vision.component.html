@@ -1,4 +1,4 @@
-<section class="vision__container py-5 mt-3">
+<section class="vision__container py-5 mt-3 px-5">
   <div class="container py-5">
     <div data-aos="fade-up" data-aos-duration="1000">
       <h2 class="h1 Text-Secondary fw-bold text-center">
@@ -10,24 +10,26 @@
     </div>
     <div>
       <div class="row text-white AR">
-        <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+        <div
+          class="col-12 col-lg-4 mb-2 mb-lg-0 d-flex justify-content-between align-items-center flex-column"
+        >
           @for (item of _OurVision.Visions.content | slice:0:4; track $index) {
           <div
-            class="Vision_Whiteline--right p-2 mb-3 vision__shadow"
+            class="Vision_Whiteline--right p-2 pb-1 mb-1 vision__shadow"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <div class="row">
+            <div class="row h-100">
               <div
-                class="col-3 d-flex justify-content-center align-items-center"
+                class="col-3 d-flex justify-content-center align-items-center h-100"
               >
                 <div class="icon__container">
                   <i [class]="item.Icon"></i>
                 </div>
               </div>
-              <div class="col-9 p-3">
-                <p class="h5 fw-bold">{{ item.Title }}</p>
-                <p>{{ item.Description }}</p>
+              <div class="col-9 p-3 pb-1">
+                <p class="h5 fw-bold m-0">{{ item.Title }}</p>
+                <p class="m-0">{{ item.Description }}</p>
               </div>
             </div>
           </div>
@@ -47,17 +49,19 @@
           </div>
         </div>
 
-        <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+        <div
+          class="col-12 col-lg-4 mb-4 mb-lg-0 d-flex justify-content-between align-items-center flex-column"
+        >
           @for (item of _OurVision.Visions.content | slice:4:8; track $index) {
           <div
-            class="Vision_Whiteline--left p-2 mb-3 vision__shadow"
+            class="Vision_Whiteline--left p-2 mb-1 vision__shadow"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <div class="row pe-4">
-              <div class="col-9 p-2">
-                <p class="h5 fw-bold">{{ item.Title }}</p>
-                <p>{{ item.Description }}</p>
+            <div class="row pe-4 h-100">
+              <div class="col-9 p-2 pb-1">
+                <p class="h5 fw-bold m-0">{{ item.Title }}</p>
+                <p class="m-0">{{ item.Description }}</p>
               </div>
               <div
                 class="col-3 d-flex justify-content-center align-items-center"
