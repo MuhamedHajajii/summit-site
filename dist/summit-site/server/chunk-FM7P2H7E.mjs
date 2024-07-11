@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import"./chunk-LT3HGDAU.mjs";import"./chunk-PMEX2PPB.mjs";import{l as i}from"./chunk-C4TVR7GD.mjs";import"./chunk-TQYW45UX.mjs";import"./chunk-7E6YSBE7.mjs";import{Eb as r,aa as n,ac as m}from"./chunk-7O2HSLGY.mjs";import"./chunk-VVCT4QZE.mjs";var g=(()=>{let e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n({type:e,selectors:[["app-summit-forms"]],standalone:!0,features:[m],decls:1,vars:0,template:function(o,a){o&1&&r(0,"router-outlet")},dependencies:[i]});let t=e;return t})();export{g as SummitFormsComponent};

@@ -8,6 +8,7 @@ import {
 } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs';
 import { CoreModule } from './core/core.module';
+import { NgxSpinnerModule } from 'ngx-spinner';
 interface RouteData {
   title?: string;
   description?: string;
@@ -15,7 +16,7 @@ interface RouteData {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CoreModule],
+  imports: [RouterOutlet, CoreModule, NgxSpinnerModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

@@ -6,12 +6,16 @@ import {
   withInMemoryScrolling,
 } from '@angular/router';
 
-import { routes } from './app.routes';
+import { IMAGE_CONFIG } from '@angular/common';
+import {
+  provideHttpClient,
+  withFetch,
+  withInterceptors,
+} from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { IMAGE_CONFIG } from '@angular/common';
-import { provideHttpClient, withFetch } from '@angular/common/http';
-import { EmbedVideo } from 'ngx-embed-video';
+import { routes } from './app.routes';
+import { loadingSpinnerInterceptor } from './core/interceptoro/loading-spinner.interceptor';
 const scrollConfig: InMemoryScrollingOptions = {
   scrollPositionRestoration: 'top',
   anchorScrolling: 'enabled',
@@ -22,7 +26,10 @@ const inMemoryScrollingFeature: InMemoryScrollingFeature =
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, inMemoryScrollingFeature),
-    provideHttpClient(withFetch()),
+    provideHttpClient(
+      withFetch(),
+      withInterceptors([loadingSpinnerInterceptor])
+    ),
     provideClientHydration(),
     provideAnimations(),
     importProvidersFrom(),

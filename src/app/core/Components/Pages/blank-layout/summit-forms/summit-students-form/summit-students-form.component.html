@@ -1,0 +1,227 @@
+<section class="AR h-100">
+  <div class="container">
+    <h2 class="Text-Main text-center">
+      <span class="border-bottom border-3"
+        >Summit Online School Student Registration</span
+      >
+    </h2>
+    <div class="mt-3">
+      <form [formGroup]="StudentsForm" (ngSubmit)="onFormSubmit()">
+        <div class="row justify-content-center">
+          <!-- الاسم الكامل -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="FullName">الاسم الكامل:</label>
+              <!-- requierd -->
+              @if (StudentsForm.get('الاسم الكامل')?.getError('required') &&
+              startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  StudentsForm.get('الاسم الكامل')?.getError('required') &&
+                  startValidation
+              }"
+              class="form-control"
+              formControlName="الاسم الكامل"
+              type="text"
+              name="FullName"
+              id="FullName"
+              autocomplete="name"
+            />
+          </div>
+          <!-- تاريخ الميلاد -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="Birth_Date">تاريخ الميلاد:</label>
+              <!-- requierd -->
+              @if (StudentsForm.get('تاريخ الميلاد')?.getError('required') &&
+              startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  StudentsForm.get('تاريخ الميلاد')?.getError('required') &&
+                  startValidation
+              }"
+              class="form-control"
+              formControlName="تاريخ الميلاد"
+              type="date"
+              name="Birth_Date"
+              id="Birth_Date"
+              autocomplete="bday"
+            />
+          </div>
+
+          <!-- اسم ولي الأمر -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="Guardian">اسم ولي الأمر:</label>
+              <!-- requierd -->
+              @if (StudentsForm.get('اسم ولي الأمر')?.getError('required') &&
+              startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  StudentsForm.get('اسم ولي الأمر')?.getError('required') &&
+                  startValidation
+              }"
+              class="form-control"
+              formControlName="اسم ولي الأمر"
+              type="text"
+              name="Guardian"
+              id="Guardian"
+              autocomplete="name"
+            />
+          </div>
+
+          <!-- رقم هاتف ولي الأمر -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="Phone_Email"
+                >رقم هاتف ولي الأمر:</label
+              >
+              <!-- requierd -->
+              @if (StudentsForm.get('رقم هاتف ولي الأمر')?.getError('required')
+              && startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  StudentsForm.get('رقم هاتف ولي الأمر')?.getError(
+                    'required'
+                  ) && startValidation
+              }"
+              class="form-control"
+              formControlName="رقم هاتف ولي الأمر"
+              type="tel"
+              name="Phone_Email"
+              id="Phone_Email"
+              autocomplete="tel"
+            />
+          </div>
+          <!-- المستوى الدراسي -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="Academic_level"
+                >المستوى الدراسي:</label
+              >
+              <!-- requierd -->
+              @if (StudentsForm.get('المستوى الدراسي')?.getError('required') &&
+              startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <select
+              [ngClass]="{
+                'is-invalid':
+                  StudentsForm.get('المستوى الدراسي')?.getError('required') &&
+                  startValidation
+              }"
+              formControlName="المستوى الدراسي"
+              class="form-select"
+              name="Academic_level"
+              id="Academic_level"
+            >
+              <option disabled selected value="">
+                -- اختر المستوي الدراسى --
+              </option>
+              @for (item of Academic_level; track $index) {
+              <option [value]="item">{{ item }}</option>
+              }
+            </select>
+          </div>
+          <!-- المنهج الدراسى -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="educational_program"
+                >المنهج الدراسى:</label
+              >
+              <!-- requierd -->
+              @if (StudentsForm.get('المنهج الدراسى')?.getError('required') &&
+              startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <select
+              [ngClass]="{
+                'is-invalid':
+                  StudentsForm.get('المنهج الدراسى')?.getError('required') &&
+                  startValidation
+              }"
+              formControlName="المنهج الدراسى"
+              class="form-select"
+              name="educational_program"
+              id="educational_program"
+            >
+              <option selected disabled value="">
+                -- اختر المنج الدراسي --
+              </option>
+              @for (item of educational_program; track $index) {
+              <option [value]="item">{{ item }}</option>
+              }
+            </select>
+          </div>
+          <!-- الجنس -->
+          <div class="my-2 col-md-6 card">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="Birth_Date">الجنس:</label>
+              <!-- requierd -->
+              @if (StudentsForm.get('الجنس')?.getError('required') &&
+              startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="flexRadioDefault1">
+                ولد
+                <input
+                  [ngClass]="{
+                    'is-invalid':
+                      StudentsForm.get('الجنس')?.getError('required') &&
+                      startValidation
+                  }"
+                  class="form-check-input"
+                  type="radio"
+                  id="flexRadioDefault1"
+                  value="ولد"
+                  formControlName="الجنس"
+                  checked
+                />
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="flexRadioDefault2">
+                بنت
+                <input
+                  [ngClass]="{
+                    'is-invalid':
+                      StudentsForm.get('الجنس')?.getError('required') &&
+                      startValidation
+                  }"
+                  class="form-check-input"
+                  type="radio"
+                  id="flexRadioDefault2"
+                  formControlName="الجنس"
+                  value="بنت"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="text-center my-3">
+          <button class="btn-main px-5">تسجيل</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

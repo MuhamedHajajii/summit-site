@@ -149,6 +149,27 @@ export const routes: Routes = [
           description: 'الرياض المملكه العربيه السعوديه +966582009746',
         },
       },
+      {
+        path: 'summit-forms',
+        loadComponent: () =>
+          import(
+            './../app/core/Components/Pages/blank-layout/summit-forms/summit-forms.component'
+          ).then((e) => e.SummitFormsComponent),
+        children: [
+          { path: '', redirectTo: 'students', pathMatch: 'full' },
+          {
+            path: 'students',
+            loadComponent: () =>
+              import(
+                './../app/core/Components/Pages/blank-layout/summit-forms/summit-students-form/summit-students-form.component'
+              ).then((e) => e.SummitStudentsFormComponent),
+            data: {
+              title: 'SUMMIT - Students',
+              description: 'الرياض المملكه العربيه السعوديه +966582009746',
+            },
+          },
+        ],
+      },
     ],
   },
   {
