@@ -5,6 +5,7 @@
         >Summit Online School Student Registration</span
       >
     </h2>
+
     <div class="mt-3">
       <form [formGroup]="StudentsForm" (ngSubmit)="onFormSubmit()">
         <div class="row justify-content-center">
@@ -93,21 +94,40 @@
               && startValidation) {
               <p class="mb-0 fw-bold text-danger">مطلوب*</p>
               }
+              <!-- Pattern -->
+              @if (StudentsForm.get('رقم هاتف ولي الأمر')?.errors &&
+              startValidation && Phone_Email.value !== null &&
+              Phone_Email.value?.length != 0) {
+              <p class="mb-0 fw-bold text-danger">برجاء ادخال رقم هاتف صحيح*</p>
+              }
             </div>
-            <input
-              [ngClass]="{
-                'is-invalid':
-                  StudentsForm.get('رقم هاتف ولي الأمر')?.getError(
-                    'required'
-                  ) && startValidation
-              }"
-              class="form-control"
-              formControlName="رقم هاتف ولي الأمر"
-              type="tel"
+            <ngx-intl-tel-input
+              #Phone_Email
+              [cssClass]="
+                StudentsForm.get('رقم هاتف ولي الأمر')?.getError('required') &&
+                startValidation
+                  ? 'form-control  is-invalid'
+                  : 'form-control '
+              "
+              [enableAutoCountrySelect]="true"
+              [enablePlaceholder]="true"
+              [searchCountryFlag]="true"
+              [searchCountryField]="[
+                SearchCountryField.Iso2,
+                SearchCountryField.Name
+              ]"
+              [separateDialCode]="true"
+              [searchCountryPlaceholder]="'ابحث عن الدولة...'"
+              [selectFirstCountry]="false"
+              [selectedCountryISO]="CountryISO.SaudiArabia"
+              [maxLength]="15"
+              [phoneValidation]="true"
+              [numberFormat]="PhoneNumberFormat.National"
+              [inputId]="'Phone_Email'"
               name="Phone_Email"
-              id="Phone_Email"
-              autocomplete="tel"
-            />
+              formControlName="رقم هاتف ولي الأمر"
+            >
+            </ngx-intl-tel-input>
           </div>
           <!-- المستوى الدراسي -->
           <div class="my-2 col-md-6">
@@ -128,7 +148,7 @@
                   startValidation
               }"
               formControlName="المستوى الدراسي"
-              class="form-select"
+              class="form-select cursor_pointer"
               name="Academic_level"
               id="Academic_level"
             >
@@ -159,7 +179,7 @@
                   startValidation
               }"
               formControlName="المنهج الدراسى"
-              class="form-select"
+              class="form-select cursor_pointer"
               name="educational_program"
               id="educational_program"
             >
@@ -172,49 +192,51 @@
             </select>
           </div>
           <!-- الجنس -->
-          <div class="my-2 col-md-6 card">
-            <div class="d-flex justify-content-between align-items-center">
-              <label class="form-label" for="Birth_Date">الجنس:</label>
-              <!-- requierd -->
-              @if (StudentsForm.get('الجنس')?.getError('required') &&
-              startValidation) {
-              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
-              }
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="flexRadioDefault1">
-                ولد
-                <input
-                  [ngClass]="{
-                    'is-invalid':
-                      StudentsForm.get('الجنس')?.getError('required') &&
-                      startValidation
-                  }"
-                  class="form-check-input"
-                  type="radio"
-                  id="flexRadioDefault1"
-                  value="ولد"
-                  formControlName="الجنس"
-                  checked
-                />
-              </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="flexRadioDefault2">
-                بنت
-                <input
-                  [ngClass]="{
-                    'is-invalid':
-                      StudentsForm.get('الجنس')?.getError('required') &&
-                      startValidation
-                  }"
-                  class="form-check-input"
-                  type="radio"
-                  id="flexRadioDefault2"
-                  formControlName="الجنس"
-                  value="بنت"
-                />
-              </label>
+          <div class="my-2 col-md-6 p-3">
+            <div class="card p-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <label class="form-label" for="Birth_Date">الجنس:</label>
+                <!-- requierd -->
+                @if (StudentsForm.get('الجنس')?.getError('required') &&
+                startValidation) {
+                <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+                }
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ولد
+                  <input
+                    [ngClass]="{
+                      'is-invalid':
+                        StudentsForm.get('الجنس')?.getError('required') &&
+                        startValidation
+                    }"
+                    class="form-check-input"
+                    type="radio"
+                    id="flexRadioDefault1"
+                    value="ولد"
+                    formControlName="الجنس"
+                    checked
+                  />
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  بنت
+                  <input
+                    [ngClass]="{
+                      'is-invalid':
+                        StudentsForm.get('الجنس')?.getError('required') &&
+                        startValidation
+                    }"
+                    class="form-check-input"
+                    type="radio"
+                    id="flexRadioDefault2"
+                    formControlName="الجنس"
+                    value="بنت"
+                  />
+                </label>
+              </div>
             </div>
           </div>
         </div>

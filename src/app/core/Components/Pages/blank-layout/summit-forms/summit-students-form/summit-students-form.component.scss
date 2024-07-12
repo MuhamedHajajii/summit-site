@@ -1,9 +1,9 @@
-// section {
-//   min-height: 100vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
 section {
   margin-block: 150px;
+}
+:host ::ng-deep .iti {
+  width: 100%;
+}
+:host ::ng-deep .selected-dial-code {
+  margin-inline: 5px;
 }

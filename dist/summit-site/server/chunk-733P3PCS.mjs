@@ -1,2 +1,0 @@
-import './polyfills.server.mjs';
-import{l as i}from"./chunk-C4TVR7GD.mjs";import{Eb as r,aa as n,ac as a}from"./chunk-7O2HSLGY.mjs";var c=(()=>{let e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n({type:e,selectors:[["app-blank-layout"]],standalone:!0,features:[a],decls:1,vars:0,template:function(o,s){o&1&&r(0,"router-outlet")},dependencies:[i]});let t=e;return t})();export{c as a};

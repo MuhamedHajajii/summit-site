@@ -4,15 +4,30 @@ import { Component } from '@angular/core';
 import {
   FormControl,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { DropdownModule } from 'primeng/dropdown';
+
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import Swal from 'sweetalert2';
+import {
+  SearchCountryField,
+  CountryISO,
+  PhoneNumberFormat,
+} from 'ngx-intl-tel-input';
 
 @Component({
   selector: 'app-summit-students-form',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [
+    ReactiveFormsModule,
+    CommonModule,
+    NgxIntlTelInputModule,
+    FormsModule,
+    DropdownModule,
+  ],
   templateUrl: './summit-students-form.component.html',
   styleUrl: './summit-students-form.component.scss',
 })
@@ -75,4 +90,8 @@ export class SummitStudentsFormComponent {
       'success'
     ).then(() => {});
   }
+
+  SearchCountryField = SearchCountryField;
+  CountryISO = CountryISO;
+  PhoneNumberFormat = PhoneNumberFormat;
 }
