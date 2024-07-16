@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import {
   FormControl,
@@ -10,13 +9,14 @@ import {
 } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 
-import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
-import Swal from 'sweetalert2';
 import {
-  SearchCountryField,
   CountryISO,
+  NgxIntlTelInputModule,
   PhoneNumberFormat,
+  SearchCountryField,
 } from 'ngx-intl-tel-input';
+import Swal from 'sweetalert2';
+import { FormsApisService } from '../../../../../services/forms-apis.service';
 
 @Component({
   selector: 'app-summit-students-form',
@@ -47,7 +47,7 @@ export class SummitStudentsFormComponent {
     'الثالث الأعدادى',
   ];
   educational_program: string[] = ['عربى', 'لغات'];
-  constructor(private _HttpClient: HttpClient) {}
+  constructor(private _FormsApisService: FormsApisService) {}
   StudentsForm: FormGroup = new FormGroup({
     'الاسم الكامل': new FormControl('', [Validators.required]),
     'تاريخ الميلاد': new FormControl('', [Validators.required]),
@@ -61,16 +61,12 @@ export class SummitStudentsFormComponent {
     this.startValidation = true;
     console.log(this.StudentsForm.value);
     if (this.StudentsForm.valid) {
-      this._HttpClient
-        .post(
-          `https://script.google.com/macros/s/AKfycbwksjQA7y--UG-LDNjCMWNhBKnQa0nGewMYdeKPZWw_OziD3XQVgTQafG9ofLGN42y9/exec`,
-          JSON.stringify(this.StudentsForm.value)
-        )
+      this._FormsApisService
+        .addStudentToSheets(this.StudentsForm.value)
         .subscribe({
           next: (response: any) => {
             this.startValidation = false;
             this.StudentsForm.reset();
-            console.log(response);
             this.alertWithSuccess(response.message);
           },
           error: (err) => {

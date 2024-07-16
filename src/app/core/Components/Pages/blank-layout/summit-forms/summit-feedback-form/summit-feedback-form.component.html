@@ -1,1 +1,161 @@
-<p>summit-feedback-form works!</p>
+<section class="AR h-100">
+  <div class="container">
+    <h2 class="Text-Main text-center">
+      <span class="border-bottom border-3"
+        >نموذج الشكاوى والاقتراحات - مدرسة القمة الإلكترونية</span
+      >
+    </h2>
+
+    <div class="mt-3">
+      <form [formGroup]="FeedBackForm" (ngSubmit)="onFormSubmit()">
+        <div class="row justify-content-center">
+          <!-- الاسم الكامل -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="FullName"
+                >الاسم الكامل:(اختياري)</label
+              >
+            </div>
+            <input
+              class="form-control"
+              formControlName="الاسم الكامل"
+              type="text"
+              name="FullName"
+              id="FullName"
+              autocomplete="name"
+            />
+          </div>
+          <!-- البريد اللإلكتروني -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="email"
+                >البريد اللإلكتروني:(اختياري)</label
+              >
+            </div>
+            <input
+              class="form-control"
+              formControlName="البريد اللإلكتروني"
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+            />
+          </div>
+          <!-- رقم هاتف -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="Phone_Email"
+                >رقم هاتف:(اختياري)</label
+              >
+            </div>
+            <ngx-intl-tel-input
+              [cssClass]="
+                FeedBackForm.get('رقم هاتف')?.getError('required') &&
+                startValidation
+                  ? 'form-control  is-invalid'
+                  : 'form-control '
+              "
+              [enableAutoCountrySelect]="true"
+              [enablePlaceholder]="true"
+              [searchCountryFlag]="true"
+              [searchCountryField]="[
+                SearchCountryField.Iso2,
+                SearchCountryField.Name
+              ]"
+              [separateDialCode]="true"
+              [searchCountryPlaceholder]="'ابحث عن الدولة...'"
+              [selectFirstCountry]="false"
+              [selectedCountryISO]="CountryISO.SaudiArabia"
+              [maxLength]="15"
+              [phoneValidation]="false"
+              [numberFormat]="PhoneNumberFormat.National"
+              [inputId]="'Phone_Email'"
+              name="Phone_Email"
+              formControlName="رقم هاتف"
+            >
+            </ngx-intl-tel-input>
+          </div>
+          <!-- نوع البلاغ -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="feedback">نوع البلاغ:</label>
+              <!-- requierd -->
+              @if (FeedBackForm.get('نوع البلاغ')?.getError('required') &&
+              startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <select
+              [ngClass]="{
+                'is-invalid':
+                  FeedBackForm.get('نوع البلاغ')?.getError('required') &&
+                  startValidation
+              }"
+              formControlName="نوع البلاغ"
+              class="form-select cursor_pointer"
+              name="feedback"
+              id="feedback"
+            >
+              <option disabled selected value="">-- اختر البلاغ --</option>
+              <option>شكوي</option>
+              <option>أقتراح</option>
+            </select>
+          </div>
+          <!-- الموضوع -->
+          <div class="my-2 col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="subject">الموضوع:</label>
+              <!-- requierd -->
+              @if (FeedBackForm.get('الموضوع')?.getError('required') &&
+              startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  FeedBackForm.get('الموضوع')?.getError('required') &&
+                  startValidation
+              }"
+              class="form-control"
+              formControlName="الموضوع"
+              type="text"
+              name="subject"
+              id="subject"
+              autocomplete="off"
+            />
+          </div>
+          <!-- تفاصيل الشكوي او الاقتراح -->
+          <div class="my-2 col-12">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="form-label" for="message"
+                >تفاصيل الشكوي او الاقتراح:</label
+              >
+              <!-- requierd -->
+              @if (FeedBackForm.get('تفاصيل الشكوي او
+              الاقتراح')?.getError('required') && startValidation) {
+              <p class="mb-0 fw-bold text-danger">مطلوب*</p>
+              }
+            </div>
+            <textarea
+              [ngClass]="{
+                'is-invalid':
+                  FeedBackForm.get('تفاصيل الشكوي او الاقتراح')?.getError(
+                    'required'
+                  ) && startValidation
+              }"
+              class="form-control"
+              formControlName="تفاصيل الشكوي او الاقتراح"
+              name="message"
+              id="message"
+              rows="5"
+            ></textarea>
+          </div>
+        </div>
+        <div class="text-center my-3">
+          <button class="btn-main px-5">تسجيل</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

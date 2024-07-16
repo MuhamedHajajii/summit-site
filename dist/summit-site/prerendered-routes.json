@@ -11,7 +11,10 @@
     "/ourteam/joinus",
     "/students",
     "/summit-forms",
+    "/summit-forms/courses",
+    "/summit-forms/feedback",
     "/summit-forms/students",
+    "/summit-forms/teachers",
     "/vision"
   ]
 }

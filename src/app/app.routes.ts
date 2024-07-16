@@ -168,6 +168,39 @@ export const routes: Routes = [
               description: 'الرياض المملكه العربيه السعوديه +966582009746',
             },
           },
+          {
+            path: 'courses',
+            loadComponent: () =>
+              import(
+                './../app/core/Components/Pages/blank-layout/summit-forms/summit-courses-form/summit-courses-form.component'
+              ).then((e) => e.SummitCoursesFormComponent),
+            data: {
+              title: 'SUMMIT - Courses',
+              description: 'الرياض المملكه العربيه السعوديه +966582009746',
+            },
+          },
+          {
+            path: 'teachers',
+            loadComponent: () =>
+              import(
+                './../app/core/Components/Pages/blank-layout/summit-forms/summit-teachers-form/summit-teachers-form.component'
+              ).then((e) => e.SummitTeachersFormComponent),
+            data: {
+              title: 'SUMMIT - Teacher',
+              description: 'الرياض المملكه العربيه السعوديه +966582009746',
+            },
+          },
+          {
+            path: 'feedback',
+            loadComponent: () =>
+              import(
+                './../app/core/Components/Pages/blank-layout/summit-forms/summit-feedback-form/summit-feedback-form.component'
+              ).then((e) => e.SummitFeedbackFormComponent),
+            data: {
+              title: 'SUMMIT - Feedback',
+              description: 'الرياض المملكه العربيه السعوديه +966582009746',
+            },
+          },
         ],
       },
     ],
