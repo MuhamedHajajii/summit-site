@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 47px;
-  height: 47px;
+  min-width: 47px;
+  min-height: 47px;
   border: 2px solid transparent;
   cursor: pointer;
   &:hover {
