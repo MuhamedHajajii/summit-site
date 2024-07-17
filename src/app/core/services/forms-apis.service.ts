@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -26,10 +27,11 @@ export class FormsApisService {
       JSON.stringify(studentData)
     );
   }
-  addTeacherToSheets(studentData: {}): Observable<any> {
+  addTeacherToSheets(TeacherData: {}): Observable<any> {
     return this._HttpClient.post(
-      `https://script.google.com/macros/s/AKfycbzcyqM_ldoek2P6_VdbvPLDIkMRuvbppsKahZzELBFzuazKrzlpD8j4ln3b179y5Z7s/exec`,
-      studentData
+      `https://script.google.com/macros/s/AKfycbyv45bhH9-9EUFvMbNyb6Ohmc7si-J83z96JA5nuXyhVfEigk1uMxZN9P_JDC_uTDcE5w/exec`,
+      TeacherData
     );
   }
+  /** ============================== */
 }

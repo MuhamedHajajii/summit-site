@@ -15,9 +15,10 @@ import {
   PhoneNumberFormat,
   SearchCountryField,
 } from 'ngx-intl-tel-input';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { RadioButtonModule } from 'primeng/radiobutton';
 import Swal from 'sweetalert2';
 import { FormsApisService } from '../../../../../services/forms-apis.service';
-import { RadioButtonModule } from 'primeng/radiobutton';
 @Component({
   selector: 'app-summit-teachers-form',
   standalone: true,
@@ -33,37 +34,46 @@ import { RadioButtonModule } from 'primeng/radiobutton';
   styleUrl: './summit-teachers-form.component.scss',
 })
 export class SummitTeachersFormComponent {
+  SearchCountryField = SearchCountryField;
+
+  CountryISO = CountryISO;
+
+  PhoneNumberFormat = PhoneNumberFormat;
+
   startValidation: boolean = false;
+
   cv!: File;
+
   Gender: string[] = ['ولد', 'بنت'];
+
   educational_program: string[] = ['عربى', 'لغات'];
-  constructor(private _FormsApisService: FormsApisService) {}
+
   TeachersForm: FormGroup = new FormGroup({
-    'الاسم الكامل': new FormControl('', [Validators.required]),
-    'تاريخ الميلاد': new FormControl('', [Validators.required]),
-    'البريد اللإلكتروني': new FormControl('', [Validators.required]),
-    'رقم الواتساب': new FormControl('', [Validators.required]),
-    'مستوى المؤهل': new FormControl('', [Validators.required]),
-    'المؤهل الأكاديمي': new FormControl('', [Validators.required]),
-    'الماده التى يتم تدريسها': new FormControl('', [Validators.required]),
-    'سنوات الخبرة في التدريس': new FormControl('', [Validators.required]),
-    'المراحل الدراسية التي تم تدريسها': new FormControl('', [
+    Full_Name: new FormControl('', [Validators.required]),
+    Birth_Date: new FormControl('', [Validators.required]),
+    Email: new FormControl('', [Validators.required]),
+    WhatsappNumber: new FormControl('', [Validators.required]),
+    Qualification_Level: new FormControl('', [Validators.required]),
+    Academic_Qualification: new FormControl('', [Validators.required]),
+    Subject_Taught: new FormControl('', [Validators.required]),
+    Years_of_Teaching_Experience: new FormControl('', [Validators.required]),
+    Educational_Stages_Taught: new FormControl('', [Validators.required]),
+    Languages_of_Instruction: new FormControl('', [Validators.required]),
+    Professional_Training_and_Certificates: new FormControl('', [
       Validators.required,
     ]),
-    'اللغات التي تستطيع التدريس بها': new FormControl('', [
-      Validators.required,
-    ]),
-    'التدريب المهني والشهادات': new FormControl('', [Validators.required]),
-    'الراتب المتوقع': new FormControl('', [Validators.required]),
-    ملاحظات: new FormControl(''),
+    Expected_Salary: new FormControl('', [Validators.required]),
+    Notes: new FormControl(''),
   });
+
+  constructor(
+    private _FormsApisService: FormsApisService,
+    private _NgxSpinnerService: NgxSpinnerService
+  ) {}
   onFormSubmit(cvInput: HTMLInputElement): void {
     this.startValidation = true;
     if (this.TeachersForm.valid && cvInput.files && cvInput.files.length > 0) {
       const formData = new FormData();
-      Object.keys(this.TeachersForm.value).forEach((key) => {
-        formData.append(key, this.TeachersForm.get(key)?.value);
-      });
       formData.append('cvFile', cvInput.files[0]);
       formData.append('cvFileMimeType', cvInput.files[0].type);
       formData.append('cvFileName', cvInput.files[0].name);
@@ -81,27 +91,62 @@ export class SummitTeachersFormComponent {
     }
   }
 
-  onFileChange(e: any): void {
-    console.log(e);
-    if (e.target.files.length > 0) {
-      this.cv = e.target.files[0];
-    }
-  }
-
   alertWithSuccess(message: string) {
-    Swal.fire(
-      "Summit' Says Thank you...",
-      `
-      ${message}
-      Will be in touch with you ASAP
-      `,
-      'success'
-    ).then(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    Swal.fire({
+      text: `${message},  Summit will be in touch with you ASAP`,
+      animation: true,
+      heightAuto: false,
+      icon: 'success',
+      title: 'Summit Career',
+      didClose() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
     });
   }
 
-  SearchCountryField = SearchCountryField;
-  CountryISO = CountryISO;
-  PhoneNumberFormat = PhoneNumberFormat;
+  /**=================================== */
+  /**=================================== */
+  /**=================================== */
+
+  handle(CV?: any): void {
+    this.startValidation = true;
+    if (this.TeachersForm.valid && CV.value && CV.value.length > 0) {
+      if (CV) {
+        this._NgxSpinnerService.show();
+      }
+
+      let url =
+        'https://script.google.com/macros/s/AKfycbzcyqM_ldoek2P6_VdbvPLDIkMRuvbppsKahZzELBFzuazKrzlpD8j4ln3b179y5Z7s/exec';
+      if (CV) {
+        let fr = new FileReader();
+        fr.addEventListener('loadend', () => {
+          let res = fr.result;
+          let spt = res?.toString().split('base64,')[1];
+          let obj = {
+            base64: spt,
+            type: CV.files[0].type as string,
+            name: CV.files[0].name as string,
+            data: JSON.stringify(this.TeachersForm.value),
+          };
+          console.log(obj);
+          fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(obj),
+          })
+            .then((r) => r.text())
+            .then((data) => this.alertWithSuccess(data))
+            .then((data) => {
+              console.log(data);
+              this._NgxSpinnerService.hide();
+              this.TeachersForm.reset();
+              CV.value = '';
+              this.startValidation = false;
+            })
+            .catch((error) => console.error('Error:', error));
+        });
+        fr.readAsDataURL(CV.files[0]);
+      }
+    }
+  }
+  /**==================================== */
 }

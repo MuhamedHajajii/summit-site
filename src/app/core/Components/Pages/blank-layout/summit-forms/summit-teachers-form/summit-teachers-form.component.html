@@ -1,15 +1,17 @@
 <section class="AR h-100">
   <div class="container">
     <h2 class="Text-Main text-center">
-      <span class="border-bottom border-3"
-        >Summit Online School Courses Registration</span
+      <span class="border-bottom border-3 fw-bold"
+        >Summit Online School Teachers Application Form</span
       >
     </h2>
 
+    <!-- <input (change)="handle()" type="file" accept="image/" /> -->
+
     <div class="mt-3">
-      <form [formGroup]="TeachersForm" (ngSubmit)="onFormSubmit(CV)">
+      <form [formGroup]="TeachersForm" (ngSubmit)="handle(CV)">
         <div class="row justify-content-center">
-          <!-- الاسم الكامل -->
+          <!-- Full_Name -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -17,7 +19,7 @@
                   >الاسم الكامل: <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('الاسم الكامل')?.getError('required') &&
+                @if (TeachersForm.get('Full_Name')?.getError('required') &&
                 startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
@@ -25,11 +27,11 @@
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('الاسم الكامل')?.getError('required') &&
+                    TeachersForm.get('Full_Name')?.getError('required') &&
                     startValidation
                 }"
                 class="form-control"
-                formControlName="الاسم الكامل"
+                formControlName="Full_Name"
                 type="text"
                 name="FullName"
                 id="FullName"
@@ -37,7 +39,7 @@
               />
             </div>
           </div>
-          <!-- البريد اللإلكتروني -->
+          <!-- Email -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -45,20 +47,19 @@
                   >البريد اللإلكتروني: <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('البريد
-                اللإلكتروني')?.getError('required') && startValidation) {
+                @if (TeachersForm.get('Email')?.getError('required') &&
+                startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
               </div>
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('البريد اللإلكتروني')?.getError(
-                      'required'
-                    ) && startValidation
+                    TeachersForm.get('Email')?.getError('required') &&
+                    startValidation
                 }"
                 class="form-control"
-                formControlName="البريد اللإلكتروني"
+                formControlName="Email"
                 type="email"
                 name="email"
                 id="email"
@@ -66,7 +67,7 @@
               />
             </div>
           </div>
-          <!-- تاريخ الميلاد -->
+          <!-- Birth_Date -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -74,7 +75,7 @@
                   >تاريخ الميلاد: <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('تاريخ الميلاد')?.getError('required') &&
+                @if (TeachersForm.get('Birth_Date')?.getError('required') &&
                 startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
@@ -82,11 +83,11 @@
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('تاريخ الميلاد')?.getError('required') &&
+                    TeachersForm.get('Birth_Date')?.getError('required') &&
                     startValidation
                 }"
                 class="form-control"
-                formControlName="تاريخ الميلاد"
+                formControlName="Birth_Date"
                 type="date"
                 name="Birth_Date"
                 id="Birth_Date"
@@ -94,7 +95,7 @@
               />
             </div>
           </div>
-          <!-- رقم الواتساب -->
+          <!-- WhatsappNumber -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -102,14 +103,14 @@
                   >رقم الواتساب: <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('رقم الواتساب')?.getError('required') &&
+                @if (TeachersForm.get('WhatsappNumber')?.getError('required') &&
                 startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
                 <!-- Pattern -->
-                @if (TeachersForm.get('رقم الواتساب')?.errors && startValidation
-                && Phone_Email.value !== null && Phone_Email.value?.length != 0)
-                {
+                @if (TeachersForm.get('WhatsappNumber')?.errors &&
+                startValidation && Phone_Email.value !== null &&
+                Phone_Email.value?.length != 0) {
                 <p class="mb-0 fw-bold text-danger">
                   برجاء ادخال رقم هاتف صحيح*
                 </p>
@@ -118,7 +119,7 @@
               <ngx-intl-tel-input
                 #Phone_Email
                 [cssClass]="
-                  TeachersForm.get('رقم الواتساب')?.getError('required') &&
+                  TeachersForm.get('WhatsappNumber')?.getError('required') &&
                   startValidation
                     ? 'form-control  is-invalid'
                     : 'form-control '
@@ -139,12 +140,12 @@
                 [numberFormat]="PhoneNumberFormat.National"
                 [inputId]="'Phone_Email'"
                 name="Phone_Email"
-                formControlName="رقم الواتساب"
+                formControlName="WhatsappNumber"
               >
               </ngx-intl-tel-input>
             </div>
           </div>
-          <!-- مستوى المؤهل -->
+          <!-- Qualification_Level -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -152,19 +153,21 @@
                   >مستوى المؤهل: <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('مستوى المؤهل')?.getError('required') &&
-                startValidation) {
+                @if
+                (TeachersForm.get('Qualification_Level')?.getError('required')
+                && startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
               </div>
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('مستوى المؤهل')?.getError('required') &&
-                    startValidation
+                    TeachersForm.get('Qualification_Level')?.getError(
+                      'required'
+                    ) && startValidation
                 }"
                 class="form-control"
-                formControlName="مستوى المؤهل"
+                formControlName="Qualification_Level"
                 type="text"
                 name="qualifications"
                 id="qualifications"
@@ -173,7 +176,7 @@
             </div>
           </div>
 
-          <!-- المؤهل الأكاديمي -->
+          <!-- Academic_Qualification -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -183,7 +186,8 @@
                   >المؤهل الأكاديمي: <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('المؤهل الأكاديمي')?.getError('required')
+                @if
+                (TeachersForm.get('Academic_Qualification')?.getError('required')
                 && startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
@@ -191,12 +195,12 @@
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('المؤهل الأكاديمي')?.getError(
+                    TeachersForm.get('Academic_Qualification')?.getError(
                       'required'
                     ) && startValidation
                 }"
                 class="form-control"
-                formControlName="المؤهل الأكاديمي"
+                formControlName="Academic_Qualification"
                 type="text"
                 name="qualifications_level"
                 id="qualifications_level"
@@ -204,7 +208,7 @@
               />
             </div>
           </div>
-          <!-- الماده التى يتم تدريسها -->
+          <!-- Subject_Taught -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -221,12 +225,11 @@
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('الماده التى يتم تدريسها')?.getError(
-                      'required'
-                    ) && startValidation
+                    TeachersForm.get('Subject_Taught')?.getError('required') &&
+                    startValidation
                 }"
                 class="form-control"
-                formControlName="الماده التى يتم تدريسها"
+                formControlName="Subject_Taught"
                 type="text"
                 name="subjects"
                 id="subjects"
@@ -234,7 +237,7 @@
               />
             </div>
           </div>
-          <!-- سنوات الخبرة في التدريس -->
+          <!-- Years_of_Teaching_Experience -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -243,20 +246,21 @@
                   <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('الماده التى يتم
-                تدريسها')?.getError('required') && startValidation) {
+                @if
+                (TeachersForm.get('Years_of_Teaching_Experience')?.getError('required')
+                && startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
               </div>
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('سنوات الخبرة في التدريس')?.getError(
+                    TeachersForm.get('Years_of_Teaching_Experience')?.getError(
                       'required'
                     ) && startValidation
                 }"
                 class="form-control"
-                formControlName="سنوات الخبرة في التدريس"
+                formControlName="Years_of_Teaching_Experience"
                 type="text"
                 name="years"
                 id="years"
@@ -264,7 +268,7 @@
               />
             </div>
           </div>
-          <!-- المراحل الدراسية التي تم تدريسها -->
+          <!-- Educational_Stages_Taught -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -273,20 +277,21 @@
                   <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('الماده التى يتم
-                تدريسها')?.getError('required') && startValidation) {
+                @if
+                (TeachersForm.get('Educational_Stages_Taught')?.getError('required')
+                && startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
               </div>
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get(
-                      'المراحل الدراسية التي تم تدريسها'
-                    )?.getError('required') && startValidation
+                    TeachersForm.get('Educational_Stages_Taught')?.getError(
+                      'required'
+                    ) && startValidation
                 }"
                 class="form-control"
-                formControlName="المراحل الدراسية التي تم تدريسها"
+                formControlName="Educational_Stages_Taught"
                 type="text"
                 name="teaching_level"
                 id="teaching_level"
@@ -294,7 +299,7 @@
               />
             </div>
           </div>
-          <!-- اللغات التي تستطيع التدريس بها -->
+          <!-- Languages_of_Instruction -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -303,20 +308,21 @@
                   <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('الماده التى يتم
-                تدريسها')?.getError('required') && startValidation) {
+                @if
+                (TeachersForm.get('Languages_of_Instruction')?.getError('required')
+                && startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
               </div>
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get(
-                      'اللغات التي تستطيع التدريس بها'
-                    )?.getError('required') && startValidation
+                    TeachersForm.get('Languages_of_Instruction')?.getError(
+                      'required'
+                    ) && startValidation
                 }"
                 class="form-control"
-                formControlName="اللغات التي تستطيع التدريس بها"
+                formControlName="Languages_of_Instruction"
                 type="text"
                 name="teaching_subjects"
                 id="teaching_subjects"
@@ -324,7 +330,7 @@
               />
             </div>
           </div>
-          <!-- التدريب المهني والشهادات -->
+          <!-- Professional_Training_and_Certificates -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -333,20 +339,21 @@
                   <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('الماده التى يتم
-                تدريسها')?.getError('required') && startValidation) {
+                @if
+                (TeachersForm.get('Professional_Training_and_Certificates')?.getError('required')
+                && startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
               </div>
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('التدريب المهني والشهادات')?.getError(
-                      'required'
-                    ) && startValidation
+                    TeachersForm.get(
+                      'Professional_Training_and_Certificates'
+                    )?.getError('required') && startValidation
                 }"
                 class="form-control"
-                formControlName="التدريب المهني والشهادات"
+                formControlName="Professional_Training_and_Certificates"
                 type="text"
                 name="certifications"
                 id="certifications"
@@ -354,7 +361,7 @@
               />
             </div>
           </div>
-          <!-- الراتب المتوقع -->
+          <!-- Expected_Salary -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -364,19 +371,19 @@
                   >الراتب المتوقع: <span class="text-danger">*</span></label
                 >
                 <!-- requierd -->
-                @if (TeachersForm.get('الماده التى يتم
-                تدريسها')?.getError('required') && startValidation) {
+                @if ( TeachersForm.get('Expected_Salary')?.getError('required')
+                && startValidation) {
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
               </div>
               <input
                 [ngClass]="{
                   'is-invalid':
-                    TeachersForm.get('الراتب المتوقع')?.getError('required') &&
+                    TeachersForm.get('Expected_Salary')?.getError('required') &&
                     startValidation
                 }"
                 class="form-control"
-                formControlName="الراتب المتوقع"
+                formControlName="Expected_Salary"
                 type="text"
                 name="salary_expictations"
                 id="salary_expictations"
@@ -384,7 +391,7 @@
               />
             </div>
           </div>
-          <!-- السيرة الزاتية(CV) -->
+          <!-- CV -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -396,12 +403,12 @@
                 <p class="mb-0 fw-bold text-danger">مطلوب*</p>
                 }
               </div>
+              <!-- (change)="onFileChange($event)" -->
               <input
                 #CV
                 [ngClass]="{
                   'is-invalid': startValidation && CV.value.length == 0
                 }"
-                (change)="onFileChange($event)"
                 class="form-control p-2"
                 type="file"
                 name="cv"
@@ -410,7 +417,7 @@
               />
             </div>
           </div>
-          <!-- ملاحظات -->
+          <!-- Notes -->
           <div class="my-2 col-md-12">
             <div class="p-4 shadow rounded-5">
               <div class="d-flex justify-content-between align-items-center">
@@ -420,7 +427,7 @@
               </div>
               <textarea
                 rows="5"
-                formControlName="ملاحظات"
+                formControlName="Notes"
                 class="form-control"
                 name="remarks"
                 id="remarks"

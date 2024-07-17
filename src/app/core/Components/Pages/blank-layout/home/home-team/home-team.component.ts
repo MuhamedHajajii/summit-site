@@ -6,6 +6,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { ButtonModule } from 'primeng/button';
 import { Team } from '../../../../../interfaces/team';
 import { VideosComponent } from '../../ourteam/ourteamblank/videos/videos.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home-team',
@@ -16,6 +17,7 @@ import { VideosComponent } from '../../ourteam/ourteamblank/videos/videos.compon
     TooltipModule,
     ButtonModule,
     VideosComponent,
+    RouterLink,
   ],
   templateUrl: './home-team.component.html',
   styleUrl: './home-team.component.scss',

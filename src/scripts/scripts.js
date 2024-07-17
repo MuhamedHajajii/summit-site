@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // find the styles css file
-const files = getFilesFromPath('./dist', '.css');
+const files = getFilesFromPath('../../dist/summit-site/browser', '.css');
 let data = [];
 
 if (!files && files.length <= 0) {
@@ -13,7 +13,7 @@ return;
 
 for (let f of files) {
 // get original file size
-const originalSize = getFilesizeInKiloBytes('./dist/' + f) + 'kb';
+const originalSize = getFilesizeInKiloBytes('../../dist/summit-site/browser' + f) + 'kb';
 var o = { file: f, originalSize: originalSize, newSize: '' };
 data.push(o);
 }
@@ -26,7 +26,7 @@ console.log();
 
 for (let d of data) {
 // get new file size
-const newSize = getFilesizeInKiloBytes('./dist/' + d.file) + 'kb';
+const newSize = getFilesizeInKiloBytes('../../dist/summit-site/browser' + d.file) + 'kb';
 d.newSize = newSize;
 }
 console.table(data);
