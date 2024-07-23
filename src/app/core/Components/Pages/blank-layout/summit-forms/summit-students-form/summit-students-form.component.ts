@@ -50,7 +50,7 @@ export class SummitStudentsFormComponent {
   constructor(private _FormsApisService: FormsApisService) {}
   StudentsForm: FormGroup = new FormGroup({
     'الاسم الكامل': new FormControl('', [Validators.required]),
-    'تاريخ الميلاد': new FormControl('', [Validators.required]),
+    'تاريخ الميلاد': new FormControl(''),
     الجنس: new FormControl('', [Validators.required]),
     'اسم ولي الأمر': new FormControl('', [Validators.required]),
     'رقم هاتف ولي الأمر': new FormControl('', [Validators.required]),
