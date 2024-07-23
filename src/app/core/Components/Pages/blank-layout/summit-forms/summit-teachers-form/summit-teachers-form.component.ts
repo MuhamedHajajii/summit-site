@@ -53,15 +53,8 @@ export class SummitTeachersFormComponent {
     Birth_Date: new FormControl('', [Validators.required]),
     Email: new FormControl('', [Validators.required]),
     WhatsappNumber: new FormControl('', [Validators.required]),
-    Qualification_Level: new FormControl('', [Validators.required]),
-    Academic_Qualification: new FormControl('', [Validators.required]),
     Subject_Taught: new FormControl('', [Validators.required]),
-    Years_of_Teaching_Experience: new FormControl('', [Validators.required]),
     Educational_Stages_Taught: new FormControl('', [Validators.required]),
-    Languages_of_Instruction: new FormControl('', [Validators.required]),
-    Professional_Training_and_Certificates: new FormControl('', [
-      Validators.required,
-    ]),
     Expected_Salary: new FormControl('', [Validators.required]),
     Notes: new FormControl(''),
   });

@@ -145,69 +145,7 @@
               </ngx-intl-tel-input>
             </div>
           </div>
-          <!-- Qualification_Level -->
-          <div class="my-2 col-md-6">
-            <div class="p-4 shadow rounded-5">
-              <div class="d-flex justify-content-between align-items-center">
-                <label class="form-label cursor_pointer" for="qualifications"
-                  >مستوى المؤهل: <span class="text-danger">*</span></label
-                >
-                <!-- requierd -->
-                @if
-                (TeachersForm.get('Qualification_Level')?.getError('required')
-                && startValidation) {
-                <p class="mb-0 fw-bold text-danger">مطلوب*</p>
-                }
-              </div>
-              <input
-                [ngClass]="{
-                  'is-invalid':
-                    TeachersForm.get('Qualification_Level')?.getError(
-                      'required'
-                    ) && startValidation
-                }"
-                class="form-control"
-                formControlName="Qualification_Level"
-                type="text"
-                name="qualifications"
-                id="qualifications"
-                autocomplete="off"
-              />
-            </div>
-          </div>
 
-          <!-- Academic_Qualification -->
-          <div class="my-2 col-md-6">
-            <div class="p-4 shadow rounded-5">
-              <div class="d-flex justify-content-between align-items-center">
-                <label
-                  class="form-label cursor_pointer"
-                  for="qualifications_level"
-                  >المؤهل الأكاديمي: <span class="text-danger">*</span></label
-                >
-                <!-- requierd -->
-                @if
-                (TeachersForm.get('Academic_Qualification')?.getError('required')
-                && startValidation) {
-                <p class="mb-0 fw-bold text-danger">مطلوب*</p>
-                }
-              </div>
-              <input
-                [ngClass]="{
-                  'is-invalid':
-                    TeachersForm.get('Academic_Qualification')?.getError(
-                      'required'
-                    ) && startValidation
-                }"
-                class="form-control"
-                formControlName="Academic_Qualification"
-                type="text"
-                name="qualifications_level"
-                id="qualifications_level"
-                autocomplete="off"
-              />
-            </div>
-          </div>
           <!-- Subject_Taught -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
@@ -237,37 +175,7 @@
               />
             </div>
           </div>
-          <!-- Years_of_Teaching_Experience -->
-          <div class="my-2 col-md-6">
-            <div class="p-4 shadow rounded-5">
-              <div class="d-flex justify-content-between align-items-center">
-                <label class="form-label cursor_pointer" for="years"
-                  >سنوات الخبرة في التدريس:
-                  <span class="text-danger">*</span></label
-                >
-                <!-- requierd -->
-                @if
-                (TeachersForm.get('Years_of_Teaching_Experience')?.getError('required')
-                && startValidation) {
-                <p class="mb-0 fw-bold text-danger">مطلوب*</p>
-                }
-              </div>
-              <input
-                [ngClass]="{
-                  'is-invalid':
-                    TeachersForm.get('Years_of_Teaching_Experience')?.getError(
-                      'required'
-                    ) && startValidation
-                }"
-                class="form-control"
-                formControlName="Years_of_Teaching_Experience"
-                type="text"
-                name="years"
-                id="years"
-                autocomplete="off"
-              />
-            </div>
-          </div>
+
           <!-- Educational_Stages_Taught -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
@@ -299,68 +207,7 @@
               />
             </div>
           </div>
-          <!-- Languages_of_Instruction -->
-          <div class="my-2 col-md-6">
-            <div class="p-4 shadow rounded-5">
-              <div class="d-flex justify-content-between align-items-center">
-                <label class="form-label cursor_pointer" for="teaching_subjects"
-                  >اللغات التي تستطيع التدريس بها:
-                  <span class="text-danger">*</span></label
-                >
-                <!-- requierd -->
-                @if
-                (TeachersForm.get('Languages_of_Instruction')?.getError('required')
-                && startValidation) {
-                <p class="mb-0 fw-bold text-danger">مطلوب*</p>
-                }
-              </div>
-              <input
-                [ngClass]="{
-                  'is-invalid':
-                    TeachersForm.get('Languages_of_Instruction')?.getError(
-                      'required'
-                    ) && startValidation
-                }"
-                class="form-control"
-                formControlName="Languages_of_Instruction"
-                type="text"
-                name="teaching_subjects"
-                id="teaching_subjects"
-                autocomplete="off"
-              />
-            </div>
-          </div>
-          <!-- Professional_Training_and_Certificates -->
-          <div class="my-2 col-md-6">
-            <div class="p-4 shadow rounded-5">
-              <div class="d-flex justify-content-between align-items-center">
-                <label class="form-label cursor_pointer" for="certifications"
-                  >التدريب المهني والشهادات:
-                  <span class="text-danger">*</span></label
-                >
-                <!-- requierd -->
-                @if
-                (TeachersForm.get('Professional_Training_and_Certificates')?.getError('required')
-                && startValidation) {
-                <p class="mb-0 fw-bold text-danger">مطلوب*</p>
-                }
-              </div>
-              <input
-                [ngClass]="{
-                  'is-invalid':
-                    TeachersForm.get(
-                      'Professional_Training_and_Certificates'
-                    )?.getError('required') && startValidation
-                }"
-                class="form-control"
-                formControlName="Professional_Training_and_Certificates"
-                type="text"
-                name="certifications"
-                id="certifications"
-                autocomplete="off"
-              />
-            </div>
-          </div>
+
           <!-- Expected_Salary -->
           <div class="my-2 col-md-6">
             <div class="p-4 shadow rounded-5">
