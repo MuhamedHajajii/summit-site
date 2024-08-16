@@ -14,10 +14,10 @@ import { GalleriaModule } from 'primeng/galleria';
 export class HomeAboutComponent {
   value = 200;
   Images: string[] = [
-    'assets/Home/Home-About/1.webp',
-    'assets/Home/Home-About/2.webp',
-    'assets/Home/Home-About/3.webp',
-    'assets/Home/Home-About/4.webp',
+    'assets/new/1.jpg',
+    'assets/new/2.jpg',
+    'assets/new/3.jpg',
+    'assets/new/4.jpg',
   ];
   isLightBoxOpen: boolean = false;
   toggleLightBox(): void {
